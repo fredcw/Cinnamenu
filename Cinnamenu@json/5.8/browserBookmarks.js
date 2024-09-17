@@ -84,7 +84,6 @@ const readFirefoxBookmarks = function(appInfo, profileDir) {
             'WHERE moz_bookmarks.fk NOT NULL AND moz_bookmarks.title NOT ' +
             'NULL AND moz_bookmarks.type = 1'
         );
-    } catch(e) {}
 
         // Gda binding seems buggy on Ubuntu 18.04 with error:
         // "Unsupported type void, deriving from fundamental void"
