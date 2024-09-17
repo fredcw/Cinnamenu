@@ -18,6 +18,7 @@ const {TextIconApplet, AllowedLayout, AppletPopupMenu, PopupResizeHandler} = imp
 const {SignalManager} = imports.misc.signalManager;
 const {launch_all} = imports.ui.searchProviderManager;
 const {AppletSettings} = imports.ui.settings;
+const Mainloop = imports.mainloop;
 
 const {_, graphemeBaseChars, searchStr} = require('./utils');
 const {Display} = require('./display');
@@ -404,6 +405,34 @@ class CinnamenuApplet extends TextIconApplet {
         }
     }
 
+    updateAfterXappFavoriteFileChange() {
+        this.display.sidebar.populate();
+        this.display.categoriesView.update();//in case fav files category needs adding/removing
+        this.display.updateMenuSize();
+        if (this.currentCategory === 'favorite_files') {
+            this.setActiveCategory(this.currentCategory);
+        }
+    }
+
+    xappGetIsFavoriteFile(uri) {
+        const favs = XApp.Favorites.get_default();
+        return favs.find_by_uri(uri) !== null;
+    }
+
+    xappAddFavoriteFile(uri) {
+        const favs = XApp.Favorites.get_default();
+        favs.add(uri);
+        //xapp favs list doesn't update synchronously after adding fav so add small
+        //delay before updating menu.
+        Mainloop.timeout_add(100, () => { this.updateAfterXappFavoriteFileChange(); });
+    }
+
+    xappRemoveFavoriteFile(uri) {
+        const favs = XApp.Favorites.get_default();
+        favs.remove(uri);
+        this.updateAfterXappFavoriteFileChange();
+    }
+
     getIsFolderCategory(path) {
         const index = this.settings.folderCategories.indexOf(path);
         return index > -1;
@@ -691,9 +720,10 @@ class CinnamenuApplet extends TextIconApplet {
                     }
                 }
             } else if (focusedSidebarItemExists) {
-                if (this.settings.sidebarPlacement === SidebarPlacement.TOP ||
-                                this.settings.sidebarPlacement === SidebarPlacement.BOTTOM) {
+                if (this.settings.sidebarPlacement === SidebarPlacement.TOP) {
                     tabRight();
+                } else if (this.settings.sidebarPlacement === SidebarPlacement.BOTTOM) {
+                    tabLeft();
                 } else {
                     sidebarButtons[getNextSidebarItemIndex()].handleEnter();
                 }
@@ -737,9 +767,10 @@ class CinnamenuApplet extends TextIconApplet {
                     }
                 }
             } else if (focusedSidebarItemExists) {
-                if (this.settings.sidebarPlacement === SidebarPlacement.TOP ||
-                    this.settings.sidebarPlacement === SidebarPlacement.BOTTOM) {
+                if (this.settings.sidebarPlacement === SidebarPlacement.TOP) {
                     tabLeft();
+                } else if (this.settings.sidebarPlacement === SidebarPlacement.BOTTOM) {
+                    tabRight();
                 } else {
                     sidebarButtons[getPreviousSidebarItemIndex()].handleEnter();
                 }
@@ -1124,7 +1155,7 @@ class CinnamenuApplet extends TextIconApplet {
                 this.display.appsView.populate_add(applicationResults, _('Applications'));
             }
             if (fileResults.length > 0) {
-                this.display.appsView.populate_add(fileResults, _('files'));
+                this.display.appsView.populate_add(fileResults, _('Files'));
             }
             if (otherResults.length > 0) {
                 this.display.appsView.populate_add(otherResults, _('Other search results'));

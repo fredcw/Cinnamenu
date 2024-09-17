@@ -2,8 +2,6 @@ const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
-const XApp = imports.gi.XApp;
-const Mainloop = imports.mainloop;
 const Main = imports.ui.main;
 const {PopupBaseMenuItem, PopupMenu, PopupSeparatorMenuItem} = imports.ui.popupMenu;
 const {getUserDesktopDir, changeModeGFile} = imports.misc.fileUtils;
@@ -153,7 +151,7 @@ class ContextMenu {
     }
 
     openAppsView(event) {
-        //e is used to position context menu at mouse coords.
+        //event is used to position context menu at mouse coords.
         this.contextMenuButtons.forEach(button => button.destroy());
         this.contextMenuButtons = [];
 
@@ -350,28 +348,17 @@ class ContextMenu {
         }
 
         //add/remove favorite
-        const favs = XApp.Favorites.get_default();
         this.menu.addMenuItem(new PopupSeparatorMenuItem(this.appThis));
-        const updateAfterFavFileChange = () => {
-            this.appThis.display.sidebar.populate();
-            this.appThis.display.categoriesView.update();//in case fav files category needs adding/removing
-            this.appThis.display.updateMenuSize();
-            if (this.appThis.currentCategory === 'favorite_files') {
-                this.appThis.setActiveCategory(this.appThis.currentCategory);
-            }
-        };
-        if (favs.find_by_uri(app.uri)) { //favorite
+        if (this.appThis.xappGetIsFavoriteFile(app.uri)) { //favorite
             addMenuItem( new ContextMenuItem(this.appThis, _('Remove from favorites'), 'starred',
-                                                    () => { favs.remove(app.uri);
-                                                            updateAfterFavFileChange();
-                                                            this.close(); } ));
+                    () => {
+                        this.appThis.xappRemoveFavoriteFile(app.uri);
+                        this.close();
+                    } ));
         } else {
             addMenuItem( new ContextMenuItem(this.appThis, _('Add to favorites'), 'non-starred',
                     () => {
-                        favs.add(app.uri);
-                        //favs list doesn't update synchronously after adding fav so add small
-                        //delay before updating menu
-                        Mainloop.timeout_add(100, () => { updateAfterFavFileChange(); });
+                        this.appThis.xappAddFavoriteFile(app.uri);
                         this.close();
                     }));
         }

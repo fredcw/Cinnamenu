@@ -36,30 +36,47 @@ class SidebarButton {
             this.actor.add_actor(this.icon);
         }
 
-        if (this.app && this.app.isApplication) { //----------dnd--------------
-            this.actor._delegate = {
-                    handleDragOver: (source) => {
-                            if (source.isDraggableApp === true && source.id !== this.app.id) {
-                                this.actor.set_opacity(40);
-                                return DragMotionResult.MOVE_DROP;
-                            }
-                            return DragMotionResult.NO_DROP; },
-                    handleDragOut: () => { this.actor.set_opacity(255); },
-                    acceptDrop: (source) => {
-                            if (source.isDraggableApp === true && source.id !== this.app.id) {
-                                this.actor.set_opacity(255);
-                                this.appThis.addFavoriteAppToPos(source.id, this.app.id);
-                                return true;
-                            } else {
-                                this.actor.set_opacity(255);
-                                return DragMotionResult.NO_DROP;
-                            } },
-                    getDragActorSource: () => this.actor,
-                    _getDragActor: () => new Clutter.Clone({source: this.actor}),
-                    getDragActor: () => new Clutter.Clone({source: this.icon}),
-                    id: this.app.id,
-                    isDraggableApp: true
-            };
+        //----------dnd--------------
+        this.actor._delegate = { //make all sidebar items a drag target for apps and files
+            handleDragOver: (source) => {
+                if (source.isDraggableApp) {
+                    if (this.app && this.app.isApplication && source.id !== this.app.id) {
+                        this.actor.set_opacity(40);
+                    }
+                    return DragMotionResult.MOVE_DROP;
+                } else if (source.isDraggableFile) {
+                    return DragMotionResult.MOVE_DROP;
+                }
+                return DragMotionResult.NO_DROP; },
+            handleDragOut: () => { 
+                if (this.app && this.app.isApplication) {
+                    this.actor.set_opacity(255);
+                } },
+            acceptDrop: (source) => {
+                if (source.isDraggableApp) {
+                    if (this.app && this.app.isApplication && source.id !== this.app.id) {
+                        this.actor.set_opacity(255);
+                        this.appThis.addFavoriteAppToPos(source.id, this.app.id);
+                        return true;
+                    } else if (!(this.app && this.app.isApplication)) {
+                        this.appThis.appFavorites.addFavorite(source.id);
+                        return true;
+                    }
+                    return DragMotionResult.NO_DROP
+                } else if (source.isDraggableFile){
+                    this.appThis.xappAddFavoriteFile(source.uri);
+                    return true;
+                } },
+        };
+
+        if (this.app && this.app.isApplication) { //make sidebar apps draggable
+            Object.assign(this.actor._delegate, {
+                getDragActorSource: () => this.actor,
+                _getDragActor: () => new Clutter.Clone({source: this.actor}),
+                getDragActor: () => new Clutter.Clone({source: this.icon}),
+                id: this.app.id,
+                isDraggableApp: true
+            });
 
             this.draggable = makeDraggable(this.actor);
             this.signals.connect(this.draggable, 'drag-begin', () => hideTooltipIfVisible());

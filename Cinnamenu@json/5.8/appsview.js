@@ -93,39 +93,66 @@ class AppButton {
         this._setNewAppHighlightClass();
 
         //----------dnd--------------
+        
         if (this.app.isApplication) {
+            //make apps drag targets (they only act as drag targets when currentCategory is favorite_apps)
             this.actor._delegate = {
                 handleDragOver: (source) => {
-                        if (source.isDraggableApp && source.id !== this.app.id &&
-                                                        this.appThis.currentCategory === 'favorite_apps') {
-                            this._resetAllAppsOpacity();
-                            this.actor.set_opacity(40);
-                            return DragMotionResult.MOVE_DROP;
-                        }
-                        return DragMotionResult.NO_DROP; },
+                    if (source.isDraggableApp && source.id !== this.app.id &&
+                                                    this.appThis.currentCategory === 'favorite_apps') {
+                        this._resetAllAppsOpacity();
+                        this.actor.set_opacity(40);
+                        return DragMotionResult.MOVE_DROP;
+                    }
+                    return DragMotionResult.NO_DROP; },
                 handleDragOut: () => {  this.actor.set_opacity(255); },
                 acceptDrop: (source) => {
-                        if (source.isDraggableApp && source.id !== this.app.id &&
-                                                        this.appThis.currentCategory === 'favorite_apps') {
-                            this.actor.set_opacity(255);
-                            this.appThis.addFavoriteAppToPos(source.id, this.app.id);
-                            return true;
-                        } else {
-                            this.actor.set_opacity(255);
-                            return DragMotionResult.NO_DROP;
-                        } },
+                    if (source.isDraggableApp && source.id !== this.app.id &&
+                                                    this.appThis.currentCategory === 'favorite_apps') {
+                        this.actor.set_opacity(255);
+                        this.appThis.addFavoriteAppToPos(source.id, this.app.id);
+                        return true;
+                    } else {
+                        this.actor.set_opacity(255);
+                        return DragMotionResult.NO_DROP;
+                    } }
+            };
+            
+            // make apps draggable.
+            Object.assign(this.actor._delegate, {
                 getDragActorSource: () => this.actor,
                 _getDragActor: () => new Clutter.Clone({source: this.actor}),
                 getDragActor: () => new Clutter.Clone({source: this.icon}),
                 id: this.app.id,
                 get_app_id: () => this.app.id, //used when eg. dragging to panel launcher
                 isDraggableApp: true
-            };
+            });
 
             this.draggable = makeDraggable(this.actor);
             this.signals.connect(this.draggable, 'drag-begin', () => hideTooltipIfVisible());
             //this.signals.connect(this.draggable, 'drag-cancelled', (...args) => this._onDragCancelled(...args));
             this.signals.connect(this.draggable, 'drag-end', () => this._resetAllAppsOpacity());
+        }
+
+        //make files and folders draggable
+        if (this.app.isFolderviewFile || this.app.isDirectory || this.app.isRecentFile ) {
+            this.actor._delegate = {
+                handleDragOver: (source) => { return DragMotionResult.NO_DROP; },
+                handleDragOut: () => {},
+                acceptDrop: (source) => { return DragMotionResult.NO_DROP; },
+                getDragActorSource: () => this.actor,
+                _getDragActor: () => new Clutter.Clone({source: this.actor}),
+                getDragActor: () => new Clutter.Clone({source: this.icon}),
+                id: this.app.id,
+                get_app_id: () => this.app.id, //used when eg. dragging to panel launcher
+                isDraggableFile: true,
+                uri: this.app.uri
+            };
+
+            this.draggable = makeDraggable(this.actor);
+            this.signals.connect(this.draggable, 'drag-begin', () => hideTooltipIfVisible());
+            //this.signals.connect(this.draggable, 'drag-cancelled', (...args) => this._onDragCancelled(...args));
+            //this.signals.connect(this.draggable, 'drag-end', () => this._resetAllAppsOpacity());
         }
 
         //this.signals.connect(this.actor, 'button-press-event', (...args) => this.handleButtonPress(...args));
@@ -215,13 +242,14 @@ class AppButton {
             return Clutter.EVENT_STOP;
         }  
         const SHOW_SEARCH_MARKUP_IN_TOOLTIP = true;
-        let tooltipMarkup = '<span>' + wordWrap((this.app.nameWithSearchMarkup &&
-                                        SHOW_SEARCH_MARKUP_IN_TOOLTIP && this.appThis.searchActive) ?
-                                        this.app.nameWithSearchMarkup : this.app.name) + '</span>';
+        const name = (this.app.nameWithSearchMarkup && SHOW_SEARCH_MARKUP_IN_TOOLTIP &&
+            this.appThis.searchActive) ? this.app.nameWithSearchMarkup : this.app.name;
+        let tooltipMarkup = '<span>' + wordWrap(name) + '</span>';
         if (this.app.description) {
-            tooltipMarkup += '\n<span size="small">' + wordWrap((this.app.descriptionWithSearchMarkup &&
-                                SHOW_SEARCH_MARKUP_IN_TOOLTIP && this.appThis.searchActive) ?
-                                this.app.descriptionWithSearchMarkup : this.app.description) + '</span>';
+            const des = (this.app.descriptionWithSearchMarkup && SHOW_SEARCH_MARKUP_IN_TOOLTIP &&
+                this.appThis.searchActive) ? this.app.descriptionWithSearchMarkup :
+                this.app.description;
+            tooltipMarkup += '\n<span size="small">' + wordWrap(des) + '</span>';
         }
         tooltipMarkup = tooltipMarkup.replace(/&/g, '&amp;');
         let [x, y] = this.actor.get_transformed_position();
