@@ -6,7 +6,7 @@ Cinnamenu is a full featured alternative to the standard Cinnamon menu with grid
 
 ### Installation
 
-Download [Cinnamenu.zip](https://github.com/fredcw/Cinnamenu/blob/main/Cinnamenu.zip) and extract into `~/.local/share/cinnamon/applets/`.
+Download [Cinnamenu.zip](https://github.com/fredcw/Cinnamenu/raw/main/Cinnamenu.zip) and extract into `~/.local/share/cinnamon/applets/`.
 
 Delete the old version (`~/.local/share/cinnamon/applets/Cinnamenu@json`) first if you are upgrading.
 
