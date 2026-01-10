@@ -47,7 +47,7 @@ class AppButton {
                                             (Math.round(this.applet.getAppIconSize() * 0.85)) + 'px;'});
             this.icon.get_clutter_text().set_text(this.app.emoji);
         } else if (this.app.isApplication) {//isApplication
-            this.icon = this.app.create_icon_texture(this.applet.getAppIconSize());
+            this.icon = this.applet.getAppIcon(this.app, this.applet.getAppIconSize());
         } else if (this.app.iconFactory) {//isPlace
             this.icon = this.app.iconFactory(this.applet.getAppIconSize());
             if (!this.icon) {

@@ -270,7 +270,8 @@ class Sidebar {
             }
         ));
         this.items.push(new SidebarButton(
-            this.applet, newSidebarIcon('system-log-out'),
+            this.applet,
+            newSidebarIcon('system-log-out'),
             null,
             _('Logout'),
             _('Leave the session'),
@@ -309,7 +310,7 @@ class Sidebar {
                 }
                 this.items.push(new SidebarButton(
                     this.applet,
-                    fav.create_icon_texture(this.applet.settings.sidebarIconSize),
+                    this.applet.getAppIcon(fav, this.applet.settings.sidebarIconSize),
                     fav,
                     fav.name,
                     fav.description,

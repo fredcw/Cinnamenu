@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: Cinnamenu\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
-"POT-Creation-Date: 2024-08-06 22:42-0400\n"
-"PO-Revision-Date: 2023-08-11 20:42+0200\n"
+"POT-Creation-Date: 2025-11-30 00:16-0500\n"
+"PO-Revision-Date: 2025-12-31 22:56+0100\n"
 "Last-Translator: erwn16 <elmar_wein@web.de>\n"
 "Language-Team: de\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 msgid "Initializing"
 msgstr "Initialisiere"
@@ -48,8 +48,9 @@ msgstr "Keine kürzlich verwendeten Dateien oder Apps"
 msgid "Settings"
 msgstr "Einstellungen"
 
-msgid "Files"
-msgstr ""
+#. 5.8/applet.js:1128
+msgid "files"
+msgstr "Dateien"
 
 msgid "Other search results"
 msgstr "Andere Suchergebnisse"
@@ -216,6 +217,11 @@ msgstr "Bildschirmsperre"
 msgid "Lock the screen"
 msgstr "Den Bildschirm sperren"
 
+#. 4.0/applet.js:1094
+msgid "Applications and files"
+msgstr "Apps und Dateien"
+
+#. 3.2/applet.js:92
 msgid "Type to search..."
 msgstr "Suchbegriff eingeben …"
 
@@ -255,8 +261,6 @@ msgstr "Persönlicher Ordner"
 msgid "Browse network"
 msgstr "Im Netz suchen"
 
-msgid "Applications and files"
-msgstr "Apps und Dateien"
 
 msgid "Open"
 msgstr "Öffnen"
@@ -526,9 +530,24 @@ msgstr "Emojis in Suchergebnissen anzeigen"
 msgid "Web search option"
 msgstr "Suchmaschine für Web-Suche auswählen"
 
+
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Custom"
+msgstr ""
+
 msgid "Show an internet search option in search results"
 msgstr "Ergebnisse der Internet-Suche zu Suchergebnissen hinzufügen"
 
+#. 5.8->settings-schema.json->web-search-custom-url->description
+msgid "URL for custom search"
+msgstr "URL für benutzerdefinierte Suche"
+
+#. 5.8->settings-schema.json->web-search-custom-url->tooltip
+msgid "Enter the URL that is prepended to the search query."
+msgstr "URL eingeben, die gesucht werden soll."
+
+#. 5.8->settings-schema.json->web-suggestions->description
+#. 4.0->settings-schema.json->web-suggestions->description
 msgid "Web search suggestions"
 msgstr "Vorschläge der Web-Suche"
 

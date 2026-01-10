@@ -6,18 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
-"issues\n"
-"POT-Creation-Date: 2024-08-06 22:42-0400\n"
-"PO-Revision-Date: 2024-09-28 19:25+0200\n"
-"Last-Translator: Claudiux <claude.clerc@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/issues\n"
+"POT-Creation-Date: 2025-11-30 00:16-0500\n"
+"PO-Revision-Date: 2025-11-30 12:50+0100\n"
+"Last-Translator: FabRCT\n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.4.2\n"
 
 msgid "Initializing"
 msgstr "Initialisation"
@@ -217,6 +215,11 @@ msgstr "Verrouiller l'écran"
 msgid "Lock the screen"
 msgstr "Verrouille l'écran"
 
+#. 4.0/applet.js:1094
+msgid "Applications and files"
+msgstr "Applications et fichiers"
+
+#. 3.2/applet.js:92
 msgid "Type to search..."
 msgstr "Tapez pour rechercher..."
 
@@ -257,9 +260,6 @@ msgstr "Dossier personnel"
 
 msgid "Browse network"
 msgstr "Parcourir le réseau"
-
-msgid "Applications and files"
-msgstr "Applications et fichiers"
 
 msgid "Open"
 msgstr "Ouvrir"
@@ -531,8 +531,15 @@ msgid "Web search option"
 msgstr "Option de recherche sur le Web"
 
 msgid "Show an internet search option in search results"
-msgstr ""
-"Afficher une option de recherche Internet dans les résultats de recherche"
+msgstr "Afficher une option de recherche Internet dans les résultats de recherche"
+
+#. 5.8->settings-schema.json->web-search-custom-url->description
+msgid "URL for custom search"
+msgstr "URL pour la recherche personnalisée"
+
+#. 5.8->settings-schema.json->web-search-custom-url->tooltip
+msgid "Enter the URL that is prepended to the search query."
+msgstr "Saisissez l'URL à ajouter en tête de la requête de recherche."
 
 msgid "Web search suggestions"
 msgstr "Suggestions de recherche sur le Web"

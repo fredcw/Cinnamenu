@@ -75,8 +75,11 @@ class AppButton {
         clutterText.ellipsize = EllipsizeMode.END;
 
         //-------------actor---------------------
-        this.actor = new St.BoxLayout({ vertical: !isListView, reactive: true,
-                                            accessible_role: Atk.Role.MENU_ITEM});
+        this.actor = new St.BoxLayout({
+            vertical: !isListView,
+            reactive: true,
+            accessible_role: Atk.Role.MENU_ITEM
+        });
 
         if (!isListView) {
             this.setGridButtonWidth();
@@ -95,6 +98,7 @@ class AppButton {
         this._setNewAppHighlightClass();
 
         //----------dnd--------------
+        
         if (this.app.isApplication) {
             this.actor._delegate = {
                 handleDragOver: (source) => {
@@ -207,7 +211,7 @@ class AppButton {
 
         if (event) {//mouse
             this.appThis.display.clearFocusedActors();
-        } else {//keyboard navigation
+        } else { // Keyboard navigation
             scrollToButton(this, this.appThis.settings.enableAnimation);
         }
         this._setButtonStyleSelected();
@@ -227,6 +231,7 @@ class AppButton {
             tooltipMarkup += '\n<span size="small">' + wordWrap(des) + '</span>';
         }
         tooltipMarkup = tooltipMarkup.replace(/&/g, '&amp;');
+        
         let [x, y] = this.actor.get_transformed_position();
         let {width, height} = this.actor;
         let center_x = false; //should tooltip x pos. be centered on x
@@ -398,8 +403,11 @@ class AppsView {
         this.appsViewSignals = new SignalManager(null);
 
         this.applicationsListBox = new St.BoxLayout({ vertical: true });
-        this.applicationsGridBox = new St.Bin({ style_class: 'menu-applications-grid-box',
-                                                                x_fill: true, y_fill: true });
+        this.applicationsGridBox = new St.Bin({
+            style_class: 'menu-applications-grid-box',
+            x_fill: true,
+            y_fill: true
+        });
         this.applicationsGridLayout = new Clutter.Actor({ layout_manager: new Clutter.GridLayout() });
         this.applicationsGridBox.set_child(this.applicationsGridLayout);
         this.headerText = new St.Label({ style_class: 'menu-applications-header-text' });

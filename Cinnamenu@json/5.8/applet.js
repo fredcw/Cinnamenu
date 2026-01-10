@@ -389,6 +389,26 @@ class CinnamenuApplet extends TextIconApplet {
         }
     }
 
+    getAppIcon(app, size) {
+        let icon = app.create_icon_texture(size);
+        if (icon instanceof St.Icon) {
+            const gicon = icon.get_gicon();
+            if (gicon?.get_names) {
+                const iconTheme = Gtk.IconTheme.get_default();
+                const hasAnyIcon = gicon.get_names()
+                    .some(name => iconTheme.lookup_icon(name, icon.icon_size, 0));
+                if (!hasAnyIcon) {
+                    icon = new St.Icon({
+                        icon_name: 'application-x-executable',
+                        icon_size: size,
+                        icon_type: St.IconType.FULLCOLOR
+                    });
+                }
+            }
+        }
+        return icon;
+    }
+
     addFavoriteAppToPos(add_id, pos_id) {
         const pos = this.appFavorites._getIds().indexOf(pos_id);
         if (pos >= 0) { //move

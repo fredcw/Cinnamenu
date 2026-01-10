@@ -1,23 +1,22 @@
 # CINNAMENU
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is put in the public domain.
 # jaszhix, 2017
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Cinnamenu@json 5.4.14\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
-"POT-Creation-Date: 2024-08-06 22:42-0400\n"
-"PO-Revision-Date: 2022-05-31 18:11+0100\n"
-"Last-Translator: Google translate\n"
+"POT-Creation-Date: 2026-01-07 15:15-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.8\n"
 
 msgid "Initializing"
 msgstr "Inicializēšana"
@@ -26,7 +25,7 @@ msgid "Find files..."
 msgstr "Atrast failus..."
 
 msgid "Please wait..."
-msgstr "Lūdzu uzgaidiet..."
+msgstr "Lūdzu uzgaidi..."
 
 msgid "Applications"
 msgstr "Lietojumprogrammas"
@@ -47,10 +46,11 @@ msgid "No recent Items"
 msgstr "Nav nesenu vienumu"
 
 msgid "Settings"
-msgstr ""
+msgstr "Iestatījumi"
 
+#. 5.8/applet.js:1128
 msgid "Files"
-msgstr ""
+msgstr "Faili"
 
 msgid "Other search results"
 msgstr "Citi meklēšanas rezultāti"
@@ -65,7 +65,7 @@ msgid "Emoji"
 msgstr "Emocijzīme"
 
 msgid "Click to copy"
-msgstr "Noklikšķiniet, lai kopētu"
+msgstr "Noklikšķini, lai kopētu"
 
 msgid "Clear List"
 msgstr "Notīrīt sarakstu"
@@ -80,7 +80,7 @@ msgid "Error while opening file:"
 msgstr "Kļūda, atverot failu:"
 
 msgid "Too many entries - showing first 1000 entries only"
-msgstr "Pārāk daudz ierakstu — tiek rādīti tikai pirmie 1000 ieraksti"
+msgstr "Pārāk daudz ierakstu - tiek rādīti tikai pirmie 1000 ieraksti"
 
 msgid "All applications"
 msgstr "Visas lietojumprogrammas"
@@ -98,36 +98,36 @@ msgid "Favorite apps"
 msgstr "Iecienītākās lietotnes"
 
 msgid "light skin tone"
-msgstr "gaišs ādas tonis"
+msgstr "gaišs ādiņas tonis"
 
 msgid "medium-light skin tone"
-msgstr "vidēji gaišs ādas tonis"
+msgstr "vidēji gaišs ādiņas tonis"
 
 msgid "medium skin tone"
-msgstr "vidējs ādas tonis"
+msgstr "vidējs ādiņas tonis"
 
 msgid "medium-dark skin tone"
-msgstr "vidēji tumšs ādas tonis"
+msgstr "vidēji tumšs ādiņas tonis"
 
 msgid "dark skin tone"
-msgstr "tumšs ādas tonis"
+msgstr "tumšs ādiņas tonis"
 
-#, fuzzy
+#. 5.8/contextmenu.js:134 4.0/contextmenu.js:134
 msgid "Remove category"
-msgstr "Atiestatīt kategoriju secību"
+msgstr "Noņemt kategoriju"
 
 msgid "Reset category order"
 msgstr "Atiestatīt kategoriju secību"
 
 msgid "List settings apps separately"
-msgstr ""
+msgstr "Rādīt iestatījumu lietotnes atsevišķi"
 
 msgid "Single list style"
-msgstr ""
+msgstr "Viena saraksta stils"
 
-#, fuzzy
+#. 5.8/contextmenu.js:183 4.0/contextmenu.js:183
 msgid "Hide hidden files"
-msgstr "Rādīt slēptos failus"
+msgstr "Slēpt slēptos failus"
 
 msgid "Show hidden files"
 msgstr "Rādīt slēptos failus"
@@ -151,7 +151,7 @@ msgid "Uninstall"
 msgstr "Atinstalēt"
 
 msgid "App Info"
-msgstr ""
+msgstr "Lietotnes informācija"
 
 msgid "This file is no longer available"
 msgstr "Šis fails vairs nav pieejams"
@@ -162,9 +162,9 @@ msgstr "Atvērt ar"
 msgid "Other application..."
 msgstr "Cita lietojumprogramma..."
 
-#, fuzzy
+#. 5.8/contextmenu.js:384 4.0/contextmenu.js:390
 msgid "Add folder as category"
-msgstr "Rādīt iecienītāko lietotņu kategoriju"
+msgstr "Pievienot mapi kā kategoriju"
 
 msgid "Open containing folder"
 msgstr "Atveriet mapi, kas satur"
@@ -176,37 +176,37 @@ msgid "Error while moving file to trash:"
 msgstr "Pārvietojot failu uz miskasti, radās kļūda:"
 
 msgid "Smileys & Emotion"
-msgstr ""
+msgstr "Smaidiņi un emocijas"
 
 msgid "People & Body"
-msgstr ""
+msgstr "Cilvēki un ķermenis"
 
 msgid "Animals & Nature"
-msgstr ""
+msgstr "Dzīvnieki un daba"
 
 msgid "Food & Drink"
-msgstr ""
+msgstr "Pārtika un dzērieni"
 
 msgid "Travel & Places"
-msgstr ""
+msgstr "Ceļošana un vietas"
 
 msgid "Activities"
-msgstr ""
+msgstr "Aktivitātes"
 
 msgid "Objects"
-msgstr ""
+msgstr "Objekti"
 
 msgid "Symbols"
-msgstr ""
+msgstr "Simboli"
 
 msgid "Flags"
-msgstr ""
+msgstr "Karogi"
 
 msgid "Quit"
 msgstr "Beidz"
 
 msgid "Shutdown the computer"
-msgstr "Izslēdziet datoru"
+msgstr "Izslēdz datoru"
 
 msgid "Logout"
 msgstr "Izlogoties"
@@ -218,10 +218,14 @@ msgid "Lock screen"
 msgstr "Bloķēšanas ekrāns"
 
 msgid "Lock the screen"
-msgstr "Bloķējiet ekrānu"
+msgstr "Bloķē ekrānu"
+
+#. 4.0/applet.js:1094
+msgid "Applications and files"
+msgstr "Lietojumprogrammas un faili"
 
 msgid "Type to search..."
-msgstr "Ierakstiet, lai meklētu..."
+msgstr "Ieraksti, lai meklētu..."
 
 msgid "No description available"
 msgstr "Apraksts nav pieejams"
@@ -233,7 +237,7 @@ msgid "Bookmarks"
 msgstr "Grāmatzīmes"
 
 msgid "gir1.2-gda-5.0 package required for Firefox and Midori bookmarks."
-msgstr "Firefox un Midori grāmatzīmēm nepieciešama pakotne gir1.2-gda-5.0."
+msgstr "gir1.2-gda-5.0 pakotne ir nepieciešama Firefox un Midori grāmatzīmēm."
 
 msgid "No recent files"
 msgstr "Nav jaunāko failu"
@@ -248,19 +252,16 @@ msgid "List View"
 msgstr "Saraksta skats"
 
 msgid "Switch to grid view"
-msgstr "Pārslēdzieties uz režģa skatu"
+msgstr "Pārslēdzies uz režģa skatu"
 
 msgid "Switch to list view"
-msgstr "Pārslēdzieties uz saraksta skatu"
+msgstr "Pārslēdzies uz saraksta skatu"
 
 msgid "Home"
 msgstr "Mājas"
 
 msgid "Browse network"
 msgstr "Pārlūkot tīklu"
-
-msgid "Applications and files"
-msgstr "Lietojumprogrammas un faili"
 
 msgid "Open"
 msgstr "Atvērt"
@@ -269,19 +270,19 @@ msgid "Search"
 msgstr "Meklēt"
 
 msgid "Start in"
-msgstr "Sāciet iekšā"
+msgstr "Sāc iekš"
 
 msgid "Select a folder"
-msgstr "Izvēlieties mapi"
+msgstr "Izvēlies mapi"
 
 msgid "Follow symlinks"
-msgstr "Sekojiet simbolu saitēm"
+msgstr "Seko simbolu saitēm"
 
 msgid "Search hidden"
 msgstr "Meklēt paslēptu"
 
 msgid "Use regular expressions"
-msgstr "Izmantojiet regulāras izteiksmes"
+msgstr "Izmanto regulāras izteiksmes"
 
 msgid "Stop"
 msgstr "Stop"
@@ -302,29 +303,29 @@ msgid "Searching: "
 msgstr "Meklēšana: "
 
 msgid "Error: insufficient permissions to read folder "
-msgstr "Kļūda: nepietiek atļaujas, lai lasītu mapi "
+msgstr "Kļūda: nepietiek atļaujas, lai nolasītu mapi "
 
 msgid "Search Completed"
 msgstr "Meklēšana pabeigta"
 
 msgid "Skipping"
-msgstr "Izlaižot"
+msgstr "Izlaižu"
 
 msgid " - directory already searched"
-msgstr " - katalogs jau ir meklēts"
+msgstr " - katalogs jau tika meklēts"
 
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
 msgstr ""
-"Šis izvēlnes vienums nav saistīts ar nevienu pakotni. Vai tomēr vēlaties to "
+"Šis izvēlnes vienums nav saistīts ar nevienu pakotni. Vai tomēr vēlies to "
 "noņemt no izvēlnes?"
 
 msgid "The following packages will be removed:"
-msgstr "Tiks noņemti šādi iepakojumi:"
+msgstr "Tiks noņemtas šādas pakotnes:"
 
 msgid "Packages to be removed"
-msgstr "Pakas, kas jāizņem"
+msgstr "Pakotnes, kas jānoņem"
 
 #, python-format
 msgid "Cannot remove package %s as it is required by other packages."
@@ -332,7 +333,7 @@ msgstr "Nevar noņemt pakotni %s, jo to pieprasa citas pakotnes."
 
 #, python-format
 msgid "Package %s is a dependency of the following packages:"
-msgstr "Pakotne %s ir atkarība no šādām pakotnēm:"
+msgstr "Pakotne %s ir atkarīga no šādām pakotnēm:"
 
 msgid "Cinnamenu"
 msgstr "Cinnamenu"
@@ -354,7 +355,7 @@ msgid "Appearance"
 msgstr "Izskats"
 
 msgid "Tips"
-msgstr ""
+msgstr "Padomi"
 
 msgid "Content"
 msgstr "Saturs"
@@ -375,15 +376,15 @@ msgid "Grid"
 msgstr "Režģis"
 
 msgid "View applications as list or grid"
-msgstr "Skatiet lietojumprogrammas kā sarakstu vai režģi"
+msgstr "Skati lietojumprogrammas kā sarakstu vai režģi"
 
 #, fuzzy
 msgid "Show sidebar"
-msgstr "Rādīt izlasi sānjoslā"
+msgstr "Rādīt sānu joslu"
 
 #, fuzzy
 msgid "Show the sidebar in the menu"
-msgstr "Rādīt izvēlnē mājas mapes kategoriju"
+msgstr "Rādīt sānu joslu izvēlnē"
 
 msgid "Sidebar location"
 msgstr "Sānjoslas atrašanās vieta"
@@ -401,7 +402,7 @@ msgid "Right"
 msgstr "Pa labi"
 
 msgid "Choose where to show the sidebar"
-msgstr "Izvēlieties, kur rādīt sānjoslu"
+msgstr "Izvēlies, kur rādīt sānjoslu"
 
 msgid "Show favorites on sidebar"
 msgstr "Rādīt izlasi sānjoslā"
@@ -410,14 +411,15 @@ msgid "None"
 msgstr "Nav"
 
 msgid "Apps only"
-msgstr ""
+msgstr "Tikai lietotnes"
 
 msgid "Files only"
-msgstr ""
+msgstr "Tikai faili"
 
-#, fuzzy
+#. 5.8->settings-schema.json->sidebar-favorites->options
+#. 4.0->settings-schema.json->sidebar-favorites->options
 msgid "Apps and files"
-msgstr "Lietojumprogrammas un faili"
+msgstr "Programmas un faili"
 
 msgid "Show your favorite apps and file icons on the sidebar"
 msgstr "Sānjoslā parādiet iecienītākās lietotnes un failu ikonas"
@@ -432,15 +434,15 @@ msgid "Under titles"
 msgstr "Zem nosaukumiem"
 
 msgid "Choose where to show application descriptions"
-msgstr "Izvēlieties, kur rādīt lietojumprogrammu aprakstus"
+msgstr "Izvēlies, kur rādīt lietojumprogrammu aprakstus"
 
 #, fuzzy
 msgid "Show categories"
-msgstr "Rādīt kategoriju ikonas"
+msgstr "Rādīt kategorijas"
 
 #, fuzzy
 msgid "Show list of application categories"
-msgstr "Rādīt lietojumprogrammu ikonas"
+msgstr "Rādīt lietojumprogrammu kategoriju sarakstu"
 
 msgid "Show bookmarks and places"
 msgstr "Rādīt grāmatzīmes un vietas"
@@ -458,7 +460,7 @@ msgid "Show favorite apps category"
 msgstr "Rādīt iecienītāko lietotņu kategoriju"
 
 msgid "Show your favorite apps category in the menu"
-msgstr "Parādiet izvēlnē savu iecienītāko lietotņu kategoriju"
+msgstr "Rādīt izvēlnē savu iecienītāko lietotņu kategoriju"
 
 msgid "Show home folder"
 msgstr "Rādīt mājas mapi"
@@ -468,23 +470,23 @@ msgstr "Rādīt izvēlnē mājas mapes kategoriju"
 
 #, fuzzy
 msgid "Show emoji category"
-msgstr "Rādīt iecienītāko lietotņu kategoriju"
+msgstr "Rādīt emocijzīmju kategoriju"
 
 #, fuzzy
 msgid "Show emoji category in the menu"
-msgstr "Rādīt izvēlnē mājas mapes kategoriju"
+msgstr "Izvēlnē rādīt emocijzīmju kategoriju"
 
 msgid "Open the menu editor"
-msgstr "Atveriet izvēlnes redaktoru"
+msgstr "Atver izvēlnes redaktoru"
 
 msgid "Keyboard shortcut to open and close the menu"
 msgstr "Tastatūras īsinājumtaustiņš, lai atvērtu un aizvērtu izvēlni"
 
 msgid "Open menu on hover"
-msgstr "Atveriet izvēlni, novietojot kursoru"
+msgstr "Atver izvēlni, novietojot kursoru"
 
 msgid "Open the menu when I move my mouse over the panel icon"
-msgstr "Atveriet izvēlni, kad pārvietoju peles kursoru virs paneļa ikonas"
+msgstr "Atvērt izvēlni, kad es pārvietoju peles kursoru virs paneļa ikonas"
 
 msgid "milliseconds"
 msgstr "milisekundes"
@@ -493,22 +495,22 @@ msgid "Menu hover delay"
 msgstr "Izvēlnes kursora aizkave"
 
 msgid "Use menu animations"
-msgstr "Izmantojiet izvēlnes animācijas"
+msgstr "Izmantot izvēlnes animācijas"
 
 msgid "Animate the menu on open and close"
-msgstr "Animējiet izvēlni, atverot un aizverot"
+msgstr "Animēt izvēlni, atverot un aizverot"
 
 msgid "Activate categories on click"
-msgstr "Aktivizējiet kategorijas, noklikšķinot"
+msgstr "Aktivizēt kategorijas, noklikšķinot"
 
 msgid "Activate categories on click instead of on hover"
-msgstr "Aktivizējiet kategorijas, noklikšķinot, nevis virzot kursoru"
+msgstr "Aktivizēt kategorijas, noklikšķinot, nevis virzot kursoru"
 
 msgid "Open menu on category:"
 msgstr "Atvērt izvēlni kategorijā:"
 
 msgid "Always open the menu with this category selected"
-msgstr "Vienmēr atveriet izvēlni ar atlasītu šo kategoriju"
+msgstr "Vienmēr atvērt izvēlni ar atlasītu šo kategoriju"
 
 msgid "Last used category"
 msgstr "Pēdējā lietotā kategorija"
@@ -518,7 +520,7 @@ msgstr "Iespējot automātisko ritināšanu"
 
 msgid "Autoscroll the application list on mouse hover"
 msgstr ""
-"Automātiski ritiniet lietojumprogrammu sarakstu, novietojot peles kursoru"
+"Automātiski ritināt lietojumprogrammu sarakstu, novietojot peles kursoru"
 
 msgid "Show hidden files in folder view"
 msgstr "Rādīt slēptos failus mapes skatā"
@@ -532,12 +534,23 @@ msgstr "Rādīt emocijzīmes meklēšanas rezultātos"
 msgid "Web search option"
 msgstr "Tīmekļa meklēšanas opcija"
 
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Custom"
+msgstr "Pielāgota"
+
 msgid "Show an internet search option in search results"
 msgstr "Rādīt meklēšanas rezultātos interneta meklēšanas opciju"
 
-#, fuzzy
+#. 5.8->settings-schema.json->web-search-custom-url->description
+msgid "URL for custom search"
+msgstr "Pielāgotās meklēšanas URL"
+
+#. 5.8->settings-schema.json->web-search-custom-url->tooltip
+msgid "Enter the URL that is prepended to the search query."
+msgstr "Ievadi URL, kas tiek pievienots meklēšanas vaicājuma sākumā."
+
 msgid "Web search suggestions"
-msgstr "Tīmekļa meklēšanas opcija"
+msgstr "Tīmekļa meklēšanas ieteikumi"
 
 msgid ""
 "With web search option, also show search suggestions. (Note: Search "
@@ -548,7 +561,7 @@ msgid "Search home folder"
 msgstr "Meklēt mājas mapē"
 
 msgid "When searching, also search my home folder for files"
-msgstr "Veicot meklēšanu, meklējiet failus arī manā mājas mapē"
+msgstr "Veicot meklēšanu, meklēt failus arī manā mājas mapē"
 
 msgid "Web history search"
 msgstr "Meklēšana tīmekļa vēsturē"
@@ -558,8 +571,8 @@ msgid ""
 "Opera, Vivaldi, Brave)\n"
 "Note: Firefox/LibreWolf history is not currently supported."
 msgstr ""
-"Veicot meklēšanu, meklējiet arī manas pārlūkprogrammas vēsturē (Google "
-"Chrome, Chromium, Opera, Vivaldi, Brave)\n"
+"Veicot meklēšanu, meklēt arī manas pārlūkprogrammas vēsturē (Google Chrome, "
+"Chromium, Opera, Vivaldi, Brave)\n"
 "Piezīme: Firefox vēsture pašlaik netiek atbalstīta."
 
 msgid "Web bookmarks search"
@@ -572,17 +585,17 @@ msgid ""
 "gir1.2-gda-5.0 (Debian based distributions inc. Ubuntu & Linux Mint) or "
 "package libgda6 (Arch based distributions) and restart your computer."
 msgstr ""
-"Veicot meklēšanu, meklējiet arī manas pārlūkprogrammas tīmekļa grāmatzīmes "
-"(Google Chrome, Firefox, Chromium, Opera, Vivaldi, Brave, LibreWolf)\n"
-"Piezīme. Lai meklētu Firefox grāmatzīmes, jums būs jāinstalē pakotne gir1.2-"
-"gda-5.0 (Debian balstīti izplatījumi, ieskaitot Ubuntu & Linux Mint) vai "
-"pakotnē libgda6 (arh balstīti izplatījumi) un restartējiet datoru."
+"Veicot meklēšanu, meklēt arī mana pārlūka tīmekļa grāmatzīmēs (Google "
+"Chrome, Firefox, Chromium, Opera, Vivaldi, Brave)\n"
+"Piezīme: Lai meklētu Firefox grāmatzīmes tev būs jāinstalē pakotne gir1.2-"
+"gda-5.0 (Debian bāzēts izplatījums tostarp. Ubuntu un Linux Mint) vai "
+"pakotne libgda (Arch bāzēts izplatījums) un jārestartē dators."
 
 msgid "Wikipedia search"
 msgstr "Wikipedia meklēšana"
 
 msgid "Show some Wikipedia results"
-msgstr "Parādiet dažus Wikipedia rezultātus"
+msgstr "Parādīt dažus Wikipedia rezultātus"
 
 msgid "Wikipedia language"
 msgstr "Vikipēdijas valoda"
@@ -596,32 +609,32 @@ msgid ""
 "for web bookmarks search.\n"
 msgstr ""
 "\n"
-"Piezīme. Dažas meklēšanas opcijas joprojām var izmantot pat tad, ja neesat "
-"tās šeit iespējojis, pievienojot meklēšanas vienuma prefiksu.\n"
-"Piemēram: lai meklētu emocijzīmi, ierakstiet “e heart”, lai atrastu sirsniņu "
-"emocijzīmes. Tāpat izmantojiet prefiksus “f” failu meklēšanai, “h” tīmekļa "
-"vēsturei un “b” tīmekļa grāmatzīmju meklēšanai.\n"
+"Piezīme: Dažas meklēšanas opcijas joprojām var izmantot, pat ja neesi tās "
+"šeit iespējojis, pievienojot prefiksu savam meklēšanas vaicājumam.\n"
+"Piemēram: lai meklētu emocijzīmi, ieraksti 'e heart', lai atrastu sirds "
+"emocijzīmes. Tāpat izmanto prefiksus 'f ' failu meklēšanai, 'h ' tīmekļa "
+"vēsturei un 'b ' tīmekļa grāmatzīmju meklēšanai.\n"
 
 msgid "Use a custom icon"
-msgstr "Izmantojiet pielāgotu ikonu"
+msgstr "Izmantot pielāgotu ikonu"
 
 msgid "Use a custom icon in the panel"
-msgstr "Izmantojiet pielāgotu ikonu panelī"
+msgstr "Izmantot pielāgotu ikonu panelī"
 
 msgid "Panel icon"
 msgstr "Paneļa ikona"
 
 msgid "Use a custom icon size"
-msgstr "Izmantojiet pielāgotu ikonas izmēru"
+msgstr "Izmantot pielāgotu ikonas izmēru"
 
 msgid "Use a custom size for the panel icon"
-msgstr "Izmantojiet pielāgotu izmēru paneļa ikonai"
+msgstr "Izmantot pielāgotu izmēru paneļa ikonai"
 
 msgid "Panel icon size (pixels)"
 msgstr "Paneļa ikonas izmērs (pikseļos)"
 
 msgid "Choose a custom size for the panel icon"
-msgstr "Izvēlieties pielāgotu paneļa ikonas izmēru"
+msgstr "Izvēlēties pielāgotu paneļa ikonas izmēru"
 
 msgid "Panel text"
 msgstr "Paneļa teksts"
@@ -642,42 +655,47 @@ msgid "Sidebar icon size (pixels)"
 msgstr "Sānjoslas ikonas izmērs (pikseļos)"
 
 msgid "Use sidebar box style"
-msgstr "Izmantojiet sānjoslas lodziņu stilu"
+msgstr "Izmantot sānjoslas lodziņu stilu"
 
 msgid "Use a sidebar box style"
-msgstr "Izmantojiet sānjoslas kastes stilu"
+msgstr "Izmantot sānjoslas kastes stilu"
 
 msgid "Use tile style"
-msgstr "Izmantojiet flīžu stilu"
+msgstr "Izmantot flīžu stilu"
 
 msgid ""
 "Use a tile style for the application buttons (Note: may not work on some "
 "themes)"
 msgstr ""
-"Lietojumprogrammu pogām izmantojiet flīžu stilu (piezīme: var nedarboties ar "
+"Lietojumprogrammu pogām izmantot flīžu stilu (piezīme: var nedarboties ar "
 "dažiem motīviem)"
 
-#, fuzzy
+#. 5.8->settings-schema.json->info1->description
+#. 4.0->settings-schema.json->info1->description
 msgid ""
 "\n"
 "• Drag on the menu edge to change the menu size."
 msgstr ""
 "\n"
-"Informācija/padoms: velciet uz izvēlnes malas, lai mainītu izvēlnes izmēru.\n"
+"• Velc uz izvēlnes malas, lai mainītu izvēlnes lielumu."
 
-#, fuzzy
+#. 5.8->settings-schema.json->info2->description
+#. 4.0->settings-schema.json->info2->description
 msgid ""
 "\n"
 "• Drag and drop menu categories to change their order."
 msgstr ""
 "\n"
-"Informācija/padoms: velciet uz izvēlnes malas, lai mainītu izvēlnes izmēru.\n"
+"• Velc un nomet izvēlnes kategorijas, lai mainītu to secību."
 
 msgid ""
 "\n"
 "• Folders can be set up and removed as menu categories by right-clicking on "
 "them."
 msgstr ""
+"\n"
+"• Mapes var iestatīt un noņemt kā izvēlnes kategorijas, uz tām noklikšķinot "
+"ar labo peles pogu."
 
 msgid ""
 "\n"
@@ -687,6 +705,12 @@ msgid ""
 "ctrl-d — Open .desktop file of currently highlighted app in default text "
 "editor.\n"
 msgstr ""
+"\n"
+"• Papildu taustiņu iespējas:\n"
+"ctrl-p — Atvērt pašlaik iezīmētās lietotnes palaidēja rekvizītu "
+"dialoglodziņu.\n"
+"ctrl-d — Atvērt pašlaik iezīmētās lietotnes .desktop failu noklusējuma "
+"teksta redaktorā.\n"
 
 msgid "Search Providers"
 msgstr "Meklēšanas pakalpojumu sniedzēji"
@@ -707,8 +731,8 @@ msgid ""
 "Show your browser's web bookmarks in the menu.\n"
 "Note: Install package gir1.2-gda-5.0 to read firefox bookmarks."
 msgstr ""
-"Izvēlnē parādiet pārlūkprogrammas tīmekļa grāmatzīmes.\n"
-"Piezīme. Lai lasītu Firefox grāmatzīmes, instalējiet pakotni gir1.2-gda-5.0."
+"Izvēlnē rādīt pārlūkprogrammas tīmekļa grāmatzīmes.\n"
+"Piezīme: Instalēt pakotnes gir1.2-GDA-5.0, lai lasītu Firefox grāmatzīmes."
 
 msgid "Enable searching of open windows"
 msgstr "Iespējot atvērto logu meklēšanu"
@@ -744,7 +768,7 @@ msgid "Tooltip delay"
 msgstr "Rīka padoma aizkave"
 
 msgid "Use a custom menu height"
-msgstr "Izmantojiet pielāgotu izvēlnes augstumu"
+msgstr "Izmantot pielāgotu izvēlnes augstumu"
 
 msgid "Custom menu height (pixels)"
 msgstr "Pielāgots izvēlnes augstums (pikseļos)"
