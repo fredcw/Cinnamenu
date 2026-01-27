@@ -108,16 +108,19 @@ class CinnamenuApplet extends TextIconApplet {
 
         this.signals.connect(Main.themeManager, 'theme-set', () => {
             this._updateIconAndLabel();
-            Mainloop.timeout_add(0, () => {
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 0.0, () => {
                 refreshDisplay();
-                return false;
+                return GLib.SOURCE_REMOVE;
             });
         });
         this.iconTheme = Gtk.IconTheme.get_default();
         this.signals.connect(this.iconTheme, 'changed', () => this._updateIconAndLabel());
         this.signals.connect(this.appSystem, 'installed-changed', () => {
             this.apps.installedChanged();
-            refreshDisplay();
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 1000.0, () => {
+                refreshDisplay();
+                return GLib.SOURCE_REMOVE;
+            });
         });
         this.signals.connect(this.appFavorites, 'changed', () => {
             if (this.display) { // Check if display is initialised.
@@ -990,9 +993,9 @@ class CinnamenuApplet extends TextIconApplet {
                                 this.setActiveCategory('emoji:');
                                 Meta.later_add(Meta.LaterType.IDLE,
                                     () => {
-                                        Mainloop.timeout_add(100, () => {
+                                        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 100.0, () => {
                                             this.setActiveCategory('emoji:' + category.name);
-                                            return false;
+                                            return GLib.SOURCE_REMOVE;
                                         });
                                     }
                                 );
@@ -1617,11 +1620,15 @@ class CinnamenuApplet extends TextIconApplet {
      */
 
     listFavoriteApps() {
-        const res = this.appFavorites.getFavorites();
-        res.forEach(favApp => {
-            favApp.name = favApp.get_name();
-            favApp.description = favApp.get_description();
-            favApp.isApplication = true;
+        const res = [];
+        const favApps = this.appFavorites.getFavorites();
+        favApps.forEach(favApp => {
+            if (favApp && this.appSystem.lookup_app(favApp.get_id())) {
+                favApp.name = favApp.get_name();
+                favApp.description = favApp.get_description();
+                favApp.isApplication = true;
+                res.push(favApp);
+            }
         });
         return res;
     }
@@ -2038,7 +2045,8 @@ class Apps { // This obj provides the .app objects for all the applications cate
             this._initAppCategories();
         }
 
-        return this._appsByCategory[categoryMenuId];
+        const apps = this._appsByCategory[categoryMenuId];
+        return apps ? apps : [];
     }
 
     searchApplications(pattern) {

@@ -28,13 +28,13 @@ class AppButton {
         this.signals = new SignalManager(null);
 
         //----------ICON---------------------------------------------
-        if (this.app.icon) { //isSearchResult(excl. emoji), isClearRecentsButton, isBackButton
+        if (this.app.icon) { // isSearchResult(excl. emoji), isClearRecentsButton, isBackButton
             this.icon = this.app.icon;
-        } else if (this.app.icon_filename) { //some of isSearchResult
+        } else if (this.app.icon_filename) { // some of isSearchResult
             const gicon = new Gio.FileIcon({file: Gio.file_new_for_path(this.app.icon_filename)});
             this.icon = new St.Icon({gicon: gicon, icon_size: this.appThis.getAppIconSize()});
-        } else if (this.app.gicon) { //isRecentFile, isFavoriteFile,
-                                    //isFolderviewFile/Directory, some of isSearchResult
+        } else if (this.app.gicon) { // isRecentFile, isFavoriteFile,
+                                     // isFolderviewFile/Directory, some of isSearchResult
             let gicon = this.app.gicon;
             if (!this.app.isSearchResult) {
                 gicon = getThumbnail_gicon(this.app.uri, this.app.mimeType) || gicon;
@@ -238,7 +238,7 @@ class AppButton {
         if (this.appThis.settings.applicationsViewMode === ApplicationsViewMode.LIST) {
             x += 175 * global.ui_scale;
             y += height + 8 * global.ui_scale;
-        } else {//grid view
+        } else { // grid view
             x += Math.floor(width / 2);
             y += height + 8 * global.ui_scale;
             center_x = true;
@@ -301,13 +301,13 @@ class AppButton {
                 this.appThis.menu.close();
             } catch (e) {
                 Main.notify(_('Error while opening file:'), e.message);
-                //don't menu.close()
+                // don't menu.close()
             }
         } else if (this.app.isClearRecentsButton) {
             this.appThis.recentApps.clear();
             this.appThis.recentManagerDefault.purge_items();
             this.appThis.setActiveCategory('recents');
-            //don't menu.close
+            // don't menu.close
         } else if (this.app.isSearchResult || this.app.isPlace) {
             this.app.activate(this.app);
             this.appThis.menu.close();

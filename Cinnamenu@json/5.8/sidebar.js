@@ -1,4 +1,5 @@
 const Gio = imports.gi.Gio;
+const GLib = imports.gi.GLib
 const Gtk = imports.gi.Gtk;
 const Atk = imports.gi.Atk;
 const Clutter = imports.gi.Clutter;
@@ -288,8 +289,8 @@ class Sidebar {
             () => {
                 const screensaver_settings = new Gio.Settings({
                                             schema_id: 'org.cinnamon.desktop.screensaver' });
-                const screensaver_dialog = Gio.file_new_for_path('/usr/bin/cinnamon-screensaver-command');
-                if (screensaver_dialog.query_exists(null)) {
+                const screensaver_dialog = GLib.find_program_in_path("cinnamon-screensaver-command");
+                if (screensaver_dialog) {
                     if (screensaver_settings.get_boolean('ask-for-away-message')) {
                         Util.spawnCommandLine('cinnamon-screensaver-lock-dialog');
                     } else {

@@ -36,12 +36,12 @@
 
 .menu-category-button:highlighted, /*Used to highlight category containing newly installed apps.*/
 .menu-category-button-selected:highlighted {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .gridmenu .menu-applications-inner-box {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .menu-applications-grid-box {
@@ -67,13 +67,13 @@
 }
 
 .menu-applications-subheading-clickable:hover {
-  background-color: rgba(128,128,128,0.2);
-  border-radius: 4px;
+    background-color: rgba(128,128,128,0.2);
+    border-radius: 4px;
 }
 
 .menu-applications-grid-box .menu-application-button,
 .menu-applications-grid-box .menu-application-button-selected {
-  padding: 10px 2px;
+    padding: 10px 2px;
 }
 
 .menu-application-button:highlighted, /*Used to highlight newly installed apps in list or grid view.*/
@@ -84,9 +84,9 @@
 .menu-applications-grid-box .menu-application-button-label,
 .menu-applications-grid-box .menu-application-button-label:ltr,
 .menu-applications-grid-box .menu-application-button-label:rtl {
-  text-align: center;
-  padding-left: 0px;
-  padding-right: 0px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .menu-application-button:highlighted, /*Used to highlight newly installed apps in list or grid view.*/
@@ -95,13 +95,13 @@
 }
 
 .gridmenu .menu-categories-box {
-  padding-left: 6px;
-  padding-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .gridmenu .menu-search-box, .gridmenu .menu-search-box:ltr, .gridmenu .menu-search-box:rtl {
-  min-width: 160px;
-  padding: 0px 8px;
+    min-width: 160px;
+    padding: 0px 8px;
 }
 
 #menu-search-entry {}
@@ -110,23 +110,23 @@
 
 
 .gridmenu-sidebar-box {
-  padding: 0px 6px;
+    padding: 0px 6px;
 }
 
 .gridmenu.sidebar-left .gridmenu-sidebar-box {
-  padding-right: 24px;
+    padding-right: 24px;
 }
 
 .gridmenu.sidebar-right .gridmenu-sidebar-box {
-  padding-left: 16px;
+    padding-left: 16px;
 }
 
 .gridmenu.sidebar-left .gridmenu-middle-pane,
 .gridmenu.sidebar-right .gridmenu-middle-pane,
 .gridmenu.sidebar-bottom .gridmenu-middle-pane {
-  padding-bottom: 12px;
+    padding-bottom: 12px;
 }
 
 .gridmenu.sidebar-top .gridmenu-middle-pane {
-  padding-top: 12px;
+    padding-top: 12px;
 }
