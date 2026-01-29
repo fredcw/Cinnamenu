@@ -69,9 +69,8 @@ class CinnamenuApplet extends TextIconApplet {
         this.menuManager.addMenu(this.menu);
         this.signals = new SignalManager(null);
         this.appSystem = Cinnamon.AppSystem.get_default();
-        this._canUninstallApps = GLib.file_test("/usr/bin/cinnamon-remove-application",
-                                                GLib.FileTest.EXISTS);
-        this._pamacManagerAvailable = GLib.file_test("/usr/bin/pamac-manager", GLib.FileTest.EXISTS);
+        this._canUninstallApps = GLib.find_program_in_path("cinnamon-remove-application");
+        this._pamacManagerAvailable = GLib.find_program_in_path("pamac-manager");
         const searchFilesMenuItem = new PopupIconMenuItem(_('Find files...'), 'system-search',
                                                                         St.IconType.SYMBOLIC, false);
         this._applet_context_menu.addMenuItem(searchFilesMenuItem);

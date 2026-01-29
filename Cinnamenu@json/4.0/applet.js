@@ -331,7 +331,7 @@ class CinnamenuApplet extends TextIconApplet {
         Util.spawnCommandLine('cinnamon-menu-editor');
     }
 
-    _onEnableRecentsChange () {
+    _onEnableRecentsChange() {
         const recentFilesEnabled = this.privacy_settings.get_boolean(REMEMBER_RECENT_KEY);
         this.recentsEnabled = this.settings.showRecents && recentFilesEnabled;
     };
@@ -359,9 +359,9 @@ class CinnamenuApplet extends TextIconApplet {
                 this.set_applet_icon_path(__meta.path + '/icon.png');
                 /*let iconName = global.settings.get_string('app-menu-icon-name');*/
             }
-        } catch(e) {
+        } catch (e) {
             global.logWarning('Cinnamenu: Could not load icon file ' + this.settings.menuIcon +
-                                                                            ' for menu button');
+                ' for menu button');
         }
         if (this.settings.menuIconCustom && this.settings.menuIcon === '' ||
                             this.settings.menuIconSizeCustom && this.settings.menuIconSize === 0) {
@@ -925,8 +925,8 @@ class CinnamenuApplet extends TextIconApplet {
                 EMOJI_CATEGORIES.forEach(category => {
                     if (category.name == emojiCategory) {
                         this.display.appsView.populate_add(
-                                                this.listEmojiByRange(category.start, category.end),
-                                                category.name + ' ▽',//🞃⏷▽⯆
+                            this.listEmojiByRange(category.start, category.end),
+                            category.name + ' ▽',//🞃⏷▽⯆
                             () => this.setActiveCategory('emoji:')
                         );
                     } else {
@@ -1158,20 +1158,20 @@ class CinnamenuApplet extends TextIconApplet {
             }
 
             otherResults.push({
-                            isSearchResult: true,
+                isSearchResult: true,
                 name: ans_str,
-                            description: _('Click to copy'),
-                            deleteAfterUse: true,
-                            icon: new St.Icon({
-                                icon_name: 'accessories-calculator',
-                                icon_type: St.IconType.FULLCOLOR,
-                                icon_size: this.getAppIconSize()
-                            }),
-                            activate: () => {
-                                    const clipboard = St.Clipboard.get_default();
+                description: _('Click to copy'),
+                deleteAfterUse: true,
+                icon: new St.Icon({
+                    icon_name: 'accessories-calculator',
+                    icon_type: St.IconType.FULLCOLOR,
+                    icon_size: this.getAppIconSize()
+                }),
+                activate: () => {
+                    const clipboard = St.Clipboard.get_default();
                     clipboard.set_text(St.ClipboardType.CLIPBOARD, ans_str);
                 }
-                         });
+            });
             calculatorResult = pattern_raw + " = " + ans_str;
         }
 
@@ -1198,10 +1198,10 @@ class CinnamenuApplet extends TextIconApplet {
             });
 
             otherResults.push({
-                        isSearchResult: true,
-                        name: pattern_raw,
-                        description: '',
-                        deleteAfterUse: true,
+                isSearchResult: true,
+                name: pattern_raw,
+                description: '',
+                deleteAfterUse: true,
                 icon: new St.Icon({
                     gicon: gicon,
                     icon_size: this.getAppIconSize()
@@ -1478,7 +1478,7 @@ class CinnamenuApplet extends TextIconApplet {
                                                                         this.getAppIconSize());
                     } else if (providerResult.icon_filename) {
                         providerResult.icon = new St.Icon({
-                                gicon: new Gio.FileIcon({
+                            gicon: new Gio.FileIcon({
                                     file: Gio.file_new_for_path(providerResult.icon_filename)}),
                             icon_size: this.getAppIconSize()
                         });
@@ -1612,10 +1612,10 @@ class CinnamenuApplet extends TextIconApplet {
         } else {
             res.push({
                 name: _('Clear List'),
-                        description: '',
+                description: '',
                 icon: new St.Icon({
                     icon_name: 'edit-clear',
-                                            icon_type: St.IconType.SYMBOLIC,
+                    icon_type: St.IconType.SYMBOLIC,
                     icon_size: this.getAppIconSize()
                 }),
                 isClearRecentsButton: true
@@ -1647,29 +1647,29 @@ class CinnamenuApplet extends TextIconApplet {
             res.push(place);
         });
         res.splice(2, 0, {
-                id: 'special:trash',
-                name: _('Trash'),
-                description: _('Trash'),
-                isPlace: true,
-                activate: () => Util.spawnCommandLine('xdg-open trash:'),
+            id: 'special:trash',
+            name: _('Trash'),
+            description: _('Trash'),
+            isPlace: true,
+            activate: () => Util.spawnCommandLine('xdg-open trash:'),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'user-trash',
-                                                    icon_type: St.IconType.FULLCOLOR,
+                icon_type: St.IconType.FULLCOLOR,
                 icon_size: size
             })
-                        });
+        });
         res.splice(2, 0, {
-                id: 'special:computer',
-                name: _('Computer'),
-                description: _('Computer'),
-                isPlace: true,
-                activate: () => Util.spawnCommandLine('xdg-open computer:'),
+            id: 'special:computer',
+            name: _('Computer'),
+            description: _('Computer'),
+            isPlace: true,
+            activate: () => Util.spawnCommandLine('xdg-open computer:'),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'computer',
-                                                    icon_type: St.IconType.FULLCOLOR,
+                icon_type: St.IconType.FULLCOLOR,
                 icon_size: size
             })
-                        });
+        });
 
         return res;
     }
@@ -1703,10 +1703,10 @@ class CinnamenuApplet extends TextIconApplet {
             } else {
                 res.push({
                     name: info.display_name,
-                            description: Gio.File.new_for_uri(info.uri).get_path(),
-                            gicon: Gio.content_type_get_icon(info.cached_mimetype),
-                            isFavoriteFile: true,
-                            mimeType: info.cached_mimetype,
+                    description: Gio.File.new_for_uri(info.uri).get_path(),
+                    gicon: Gio.content_type_get_icon(info.cached_mimetype),
+                    isFavoriteFile: true,
+                    mimeType: info.cached_mimetype,
                     uri: info.uri
                 });
             }
@@ -1757,12 +1757,12 @@ class CinnamenuApplet extends TextIconApplet {
                 const isDirectory = next.get_file_type() === Gio.FileType.DIRECTORY;
                 res.push({
                     name: next.get_name(),
-                            gicon: next.get_icon(),
-                            uri: file.get_uri(),
-                            mimeType: next.get_content_type(),
-                            isDirectory: isDirectory,
-                            description: '',
-                            isFolderviewFile: !isDirectory,
+                    gicon: next.get_icon(),
+                    uri: file.get_uri(),
+                    mimeType: next.get_content_type(),
+                    isDirectory: isDirectory,
+                    description: '',
+                    isFolderviewFile: !isDirectory,
                     deleteAfterUse: true
                 });
                 file = null;

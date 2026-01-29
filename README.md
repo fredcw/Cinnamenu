@@ -2,7 +2,7 @@
 
 Cinnamenu
 ========
-_Version: 5.5.17 (updated 27/1/26)_ (Fav apps bugfix)
+_Version: 5.5.18 (updated 29/1/26)_ (App info bugfix)
 
 Cinnamenu is a full featured alternative to the standard Cinnamon menu with grid layout and customisation options.
 

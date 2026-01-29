@@ -329,7 +329,7 @@ class ContextMenu {
         if (this.applet._canUninstallApps) {
             addMenuItem( new ContextMenuItem(this.applet, _('Uninstall'), 'edit-delete',
                 () => {
-                    Util.spawnCommandLine("/usr/bin/cinnamon-remove-application '" +
+                    Util.spawnCommandLine("cinnamon-remove-application '" +
                                                 app.get_app_info().get_filename() + "'");
                     this.applet.menu.close();
                 }
@@ -340,7 +340,16 @@ class ContextMenu {
         if (this.applet._pamacManagerAvailable) {
             addMenuItem( new ContextMenuItem(this.applet, _('App Info'), 'dialog-information',
                 () => {
-                    Util.spawnCommandLine("/usr/bin/pamac-manager --details-id=" + app.id);
+                    try {
+                        const decoder = new TextDecoder('utf-8');
+                        const appId = app.id.replace(/:flatpak$/, "");
+                        const filePath = Gio.DesktopAppInfo.new(appId)?.get_filename();
+                        const [res, stdout, stderr, status] = GLib.spawn_command_line_sync(`pacman -Qqo ${filePath}`);
+                        const pkgName = decoder.decode(stdout).trim();
+                        GLib.spawn_command_line_async(`pamac-manager --details=${pkgName}`);
+                    } catch (e) {
+                        global.logError("Failed to launch Pamac: " + e.message);
+                    }
                     this.applet.menu.close();
                 }
             ));
