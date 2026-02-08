@@ -23,7 +23,6 @@ const {AppletSettings} = require('./settings');
 const {_, graphemeBaseChars, searchStr} = require('./utils');
 const {Display} = require('./display');
 const {getWebBookmarksAsync} = require('./browserBookmarks');
-const {wikiSearch, clearWikiSearchCache} = require('./wikipediaSearch');
 const {searchBrowserHistory} = require('./browserHistory');
 const {EMOJI, EMOJI_CATEGORIES} = require('./emoji');
 const {searchSuggestions} = require('./suggestions');
@@ -225,8 +224,6 @@ class CinnamenuApplet extends TextIconApplet {
         { key: 'enable-home-folder-search', value: 'searchHomeFolder',      cb: null },
         { key: 'enable-web-history-search', value: 'enableWebHistorySearch', cb: null },
         { key: 'enable-web-bookmarks-search', value: 'enableWebBookmarksSearch', cb: null },
-        { key: 'enable-wikipedia-search',   value: 'enableWikipediaSearch', cb: null },
-        { key: 'wikipedia-language',        value: 'wikipediaLanguage',     cb: clearWikiSearchCache },
 
         { key: 'menu-icon-custom',          value: 'menuIconCustom',        cb: this._updateIconAndLabel },
         { key: 'menu-icon',                 value: 'menuIcon',              cb: this._updateIconAndLabel },
@@ -1280,15 +1277,6 @@ class CinnamenuApplet extends TextIconApplet {
                     showResults();
                 });
             });
-        }
-
-        //---Wikipedia search----
-        if (this.settings.enableWikipediaSearch && pattern_raw.length > 1 && !PREFIX_USED) {
-            wikiSearch(pattern_raw, this.settings.wikipediaLanguage, (wikiResults) => {
-                if (this.searchActive && thisSearchId === this.currentSearchId && wikiResults.length > 0) {
-                    otherResults = otherResults.concat(wikiResults);
-                    showResults();
-                } });
         }
 
         //---emoji search------

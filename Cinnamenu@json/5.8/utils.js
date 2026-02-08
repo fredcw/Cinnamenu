@@ -298,6 +298,41 @@ var scrollToButton = (button, enableAnimation) => {
     }
 }
 
+
+function _launchPamac(pkgName) {
+    GLib.spawn_command_line_async(`pamac-manager --details=${pkgName}`);
+}
+
+// launch pamac-manager on app page
+function launchPamacForApp(app) {
+    if (app.get_is_flatpak()) {
+        // pamac-manager doesn't open on page of flatpak apps even if flatpak
+        // is enabled but let's launch it anyway so user can search for it.
+        const pkgName = app.get_flatpak_app_id();
+        _launchPamac(pkgName);
+    } else {
+        const filePath = app.desktop_file_path;
+        if (!filePath) return;
+        
+        const proc = Gio.Subprocess.new(
+            ['pacman', '-Qqo', filePath],
+            Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
+        );
+        proc.communicate_utf8_async(null, null, (obj, res) => {
+            try {
+                let [success, stdout, stderr] = obj.communicate_utf8_finish(res);
+                if (success && stdout) {
+                    const foundPkg = stdout.trim();
+                    _launchPamac(foundPkg);
+                }
+            } catch (e) {
+                global.logError("pacman check failed: " + e.message);
+            }
+        });
+    }
+}
+
+
 module.exports = {
     _,
     wordWrap,
@@ -307,5 +342,6 @@ module.exports = {
     hideTooltipIfVisible,
     searchStr,
     getChromiumProfileDirs,
-    scrollToButton
+    scrollToButton,
+    launchPamacForApp
 };

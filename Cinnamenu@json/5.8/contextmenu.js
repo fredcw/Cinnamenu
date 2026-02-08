@@ -10,7 +10,7 @@ const {getUserDesktopDir, changeModeGFile} = imports.misc.fileUtils;
 const {SignalManager} = imports.misc.signalManager;
 const Util = imports.misc.util;
 
-const {_} = require('./utils');
+const {_, launchPamacForApp} = require('./utils');
 const {MODABLE, MODED} = require('./emoji');
 
 class ContextMenuItem extends PopupBaseMenuItem {
@@ -299,7 +299,7 @@ class ContextMenu {
                     const destFile = Gio.file_new_for_path(userDesktopPath + '/' + file.get_basename());
                     try {
                         file.copy( destFile, 0, null, null);
-                        changeModeGFile(destFile, 755);
+                        changeModeGFile(destFile, "755");
                     } catch(e) {
                         global.logError('Cinnamenu: Error creating desktop file', e.message);
                     }
@@ -340,16 +340,7 @@ class ContextMenu {
         if (this.applet._pamacManagerAvailable) {
             addMenuItem( new ContextMenuItem(this.applet, _('App Info'), 'dialog-information',
                 () => {
-                    try {
-                        const decoder = new TextDecoder('utf-8');
-                        const appId = app.id.replace(/:flatpak$/, "");
-                        const filePath = Gio.DesktopAppInfo.new(appId)?.get_filename();
-                        const [res, stdout, stderr, status] = GLib.spawn_command_line_sync(`pacman -Qqo ${filePath}`);
-                        const pkgName = decoder.decode(stdout).trim();
-                        GLib.spawn_command_line_async(`pamac-manager --details=${pkgName}`);
-                    } catch (e) {
-                        global.logError("Failed to launch Pamac: " + e.message);
-                    }
+                    launchPamacForApp(app);
                     this.applet.menu.close();
                 }
             ));
@@ -358,7 +349,7 @@ class ContextMenu {
         // Properties
         addMenuItem( new ContextMenuItem(this.applet, _('Properties'), 'document-properties-symbolic',
             () => {
-                Util.spawnCommandLine('cinnamon-desktop-editor -mlauncher -o ' + app.desktop_file_path);
+                Util.spawnCommandLine("cinnamon-desktop-editor -mlauncher -o " + GLib.shell_quote(app.desktop_file_path));
                 this.applet.menu.close();
             }
         ));
