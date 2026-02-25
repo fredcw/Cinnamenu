@@ -75,6 +75,7 @@ class ContextMenu {
         this.contextMenuBox.add_actor(this.menu.actor);
         
         this.contextMenuButtons = [];
+        this._openContainingFolderUsingDBus = true;
         this.isOpen = false;
     }
 
@@ -444,8 +445,12 @@ class ContextMenu {
             this.menu.addMenuItem(new PopupSeparatorMenuItem(this.applet));
             addMenuItem(new ContextMenuItem(this.applet, _('Open containing folder'), 'go-jump',
                 () => {
-                    const fileBrowser = Gio.AppInfo.get_default_for_type('inode/directory', true);
-                    fileBrowser.launch([folder], null);
+                    if (!(this._openContainingFolderUsingDBus && this._openContainingFolderViaDBus(app.uri))) {
+                        // Do not attempt to use DBus again once it's failed.
+                        this._openContainingFolderUsingDBus = false;
+                        const fileBrowser = Gio.AppInfo.get_default_for_type('inode/directory', true);
+                        fileBrowser.launch([folder], null);
+                    }
                     this.applet.menu.close();
                 }
             ));
@@ -476,6 +481,29 @@ class ContextMenu {
             }
         }
         return true; // success.
+    }
+
+    _openContainingFolderViaDBus(uri) {
+        try {
+            Gio.DBus.session.call_sync(
+                "org.freedesktop.FileManager1",
+                "/org/freedesktop/FileManager1",
+                "org.freedesktop.FileManager1",
+                "ShowItems",
+                new GLib.Variant("(ass)", [
+                    [uri],
+                    global.get_pid().toString()
+                ]),
+                null,
+                Gio.DBusCallFlags.NONE,
+                1000,
+                null
+            );
+        } catch (e) {
+            global.log(`Could not open containing folder via DBus: ${e}`);
+            return false;
+        }
+        return true;
     }
 
     getCurrentlyFocusedMenuItem() {

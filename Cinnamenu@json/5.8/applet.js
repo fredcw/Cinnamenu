@@ -10,7 +10,6 @@ const Meta = imports.gi.Meta;
 const Main = imports.ui.main;
 const Util = imports.misc.util;
 const GnomeSession = imports.misc.gnomeSession;
-const AppletManager = imports.ui.appletManager;
 const {ScreenSaverProxy} = imports.misc.screenSaver;
 const {PopupMenuManager, PopupIconMenuItem} = imports.ui.popupMenu;
 const {getAppFavorites} = imports.ui.appFavorites;
@@ -498,7 +497,7 @@ class CinnamenuApplet extends TextIconApplet {
         // this.panel.peekPanel(); //no longer works on cinnamon 5.4.x
 
         // Center menu if applet in center zone of top or bottom panel.
-        const appletDefinition = AppletManager.getAppletDefinition({applet_id: this.instance_id});
+        const appletDefinition = Main.AppletManager.getAppletDefinition({applet_id: this.instance_id});
         if ((this.orientation === St.Side.BOTTOM || this.orientation === St.Side.TOP) &&
                                                     appletDefinition.location_label === 'center') {
             const monitor = Main.layoutManager.findMonitorForActor(this.menu.actor);
