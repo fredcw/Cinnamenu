@@ -125,7 +125,7 @@ class Display {
             x_align: St.Align.START,
             y_align: St.Align.MIDDLE
         });
-        
+
         //=============menu================
         const section = new PopupMenuSection();
         section.actor.add_actor(this.mainBox);
@@ -206,7 +206,7 @@ class Display {
         // ----------height--------
         // Note: the stored menu height value is middlePane + bottomPane which is smaller than the
         // menu's actual height. CategoriesView and sidebar height are not automatically
-        // set because ScrollBox.set_policy Gtk.PolicyType.NEVER pushes other items off the menu.
+        // set because ScrollBox.set_policy St.PolicyType.NEVER pushes other items off the menu.
         let appsHeight = newHeight - this.bottomPane.height;
         appsHeight = Math.max(appsHeight, 200); // Set minimum height.
 
@@ -220,7 +220,7 @@ class Display {
             const verticalPadding = Math.max(themeNode.get_length('padding-top') +
                                              themeNode.get_length('padding-bottom'),
                                              themeNode.get_length('padding') * 2);
-                    
+
             //set sidebarScrollBox height
             this.sidebar.sidebarScrollBox.set_height(-1); // Undo previous set_height().
             this.sidebar.sidebarScrollBox.set_height(Math.min(appsHeight - verticalPadding,

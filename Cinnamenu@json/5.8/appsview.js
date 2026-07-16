@@ -1,5 +1,4 @@
 const Gio = imports.gi.Gio;
-const Gtk = imports.gi.Gtk;
 const GLib = imports.gi.GLib;
 const Clutter = imports.gi.Clutter;
 const St = imports.gi.St;
@@ -104,7 +103,7 @@ class AppButton {
         this._setNewAppHighlightClass();
 
         //----------dnd--------------
-        
+
         if (this.app.isApplication) {
             //make apps drag targets (they only act as drag targets when currentCategory is favorite_apps)
             this.actor._delegate = {
@@ -128,7 +127,7 @@ class AppButton {
                         return DragMotionResult.NO_DROP;
                     } }
             };
-            
+
             // make apps draggable.
             Object.assign(this.actor._delegate, {
                 getDragActorSource: () => this.actor,
@@ -177,7 +176,7 @@ class AppButton {
     _setButtonStyleSelected() {
         this.has_focus = true;
         this.actor.set_style_class_name('menu-application-button-selected');
-        
+
         if (this.applet.settings.useTileStyle) this._addTileStyle();
     }
 
@@ -188,7 +187,7 @@ class AppButton {
         };
 
         const isColorLight = (col) => (col.red + col.green + col.blue) > 381;
-        
+
         const lightenOrDarkenColor = (col) => { //lighten a dark color or darken a light color
             const amt = isColorLight(col) ? -15 : 15;
             col.red += amt;
@@ -248,14 +247,14 @@ class AppButton {
         //------show tooltip
         if (this.applet.settings.descriptionPlacement != DescriptionPlacement.TOOLTIP) {
             return Clutter.EVENT_STOP;
-        }  
-        
+        }
+
         let tooltipMarkup = '<span>' + wordWrap(this.app.name) + '</span>';
         if (this.app.description) {
             tooltipMarkup += '\n<span size="small">' + wordWrap(this.app.description) + '</span>';
         }
         tooltipMarkup = tooltipMarkup.replace(/&/g, '&amp;');
-        
+
         let [x, y] = this.actor.get_transformed_position();
         let {width, height} = this.actor;
         let center_x = false; //should tooltip x pos. be centered on x
@@ -368,7 +367,7 @@ class AppButton {
             this.applet.recentApps.add(this.app.id);
             Util.spawn([__meta.path + '/rar.sh', this.app.get_app_info().get_executable()]);
             this.applet.menu.close();
-        } 
+        }
     }
 
     openContextMenu(e) {
@@ -507,7 +506,7 @@ class AppsView {
         this.appsViewSignals.connect(vscrollApplications, 'scroll-stop',
                                                 () => { this.applet.menu.passEvents = false; });
         this.applicationsScrollBox.add_actor(this.bugfixBox);
-        this.applicationsScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        this.applicationsScrollBox.set_policy(St.PolicyType.NEVER, St.PolicyType.AUTOMATIC);
         this.applicationsScrollBox.set_clip_to_allocation(true);
         this.applicationsScrollBox.set_auto_scrolling(this.applet.settings.enableAutoScroll);
         this.applicationsScrollBox.set_mouse_scrolling(true);
@@ -678,7 +677,7 @@ class AppsView {
         const minColumnWidth = Math.max(140, this.applet.settings.appsGridIconSize * 1.2);
         const columns = Math.floor(gridBoxUsableWidth / (minColumnWidth * global.ui_scale));
         const columnWidth = Math.floor(gridBoxUsableWidth / columns);
-        
+
         return {columnWidth: columnWidth, columns: columns};
     }
 

@@ -6,7 +6,7 @@ const XApp = imports.gi.XApp;
 const Meta = imports.gi.Meta;
 const Main = imports.ui.main;
 const {PopupBaseMenuItem, PopupMenu, PopupSeparatorMenuItem} = imports.ui.popupMenu;
-const {getUserDesktopDir, changeModeGFile} = imports.misc.fileUtils;
+const {changeModeGFile} = imports.misc.fileUtils;
 const {SignalManager} = imports.misc.signalManager;
 const Util = imports.misc.util;
 
@@ -73,7 +73,7 @@ class ContextMenu {
         this.menu.actor.hide();
         this.contextMenuBox = new St.BoxLayout({ style_class: '', vertical: true, reactive: true });
         this.contextMenuBox.add_actor(this.menu.actor);
-        
+
         this.contextMenuButtons = [];
         this._openContainingFolderUsingDBus = true;
         this.isOpen = false;
@@ -168,7 +168,7 @@ class ContextMenu {
                 this.close();
             }
         ));
-        
+
         this._showMenu(e, buttonActor);
     }
 
@@ -215,7 +215,7 @@ class ContextMenu {
                             }));
             }
         }
-        
+
         this._showMenu(event);
     }
 
@@ -241,9 +241,9 @@ class ContextMenu {
         }
 
         let [cx, cy] = this.contextMenuBox.get_transformed_position();
-        
+
         this.menu.actor.set_anchor_point(Math.round(cx - mx), Math.round(cy - my));
-        
+
         // This context menu doesn't have an St.Side and so produces errors in .xsession-errors.
         // Enable animation here for the sole reason that it spams .xsession-errors less. Can't add an
         // St.Side because in some themes it looks like it should be attached to a panel but isn't.
@@ -292,7 +292,7 @@ class ContextMenu {
         ));
 
         //Add to desktop
-        const userDesktopPath = getUserDesktopDir();
+        const userDesktopPath = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
         if (userDesktopPath) {
             addMenuItem( new ContextMenuItem(this.applet, _('Add to desktop'), 'computer',
                 () => {
@@ -330,14 +330,13 @@ class ContextMenu {
         if (this.applet._canUninstallApps) {
             addMenuItem( new ContextMenuItem(this.applet, _('Uninstall'), 'edit-delete',
                 () => {
-                    Util.spawnCommandLine("cinnamon-remove-application '" +
-                                                app.get_app_info().get_filename() + "'");
+                    Util.spawn(["cinnamon-remove-application", app.get_app_info().get_filename()]);
                     this.applet.menu.close();
                 }
             ));
         }
 
-        // show app info 
+        // show app info
         if (this.applet._pamacManagerAvailable) {
             addMenuItem( new ContextMenuItem(this.applet, _('App Info'), 'dialog-information',
                 () => {
@@ -350,7 +349,7 @@ class ContextMenu {
         // Properties
         addMenuItem( new ContextMenuItem(this.applet, _('Properties'), 'document-properties-symbolic',
             () => {
-                Util.spawnCommandLine("cinnamon-desktop-editor -mlauncher -o " + GLib.shell_quote(app.desktop_file_path));
+                Util.spawn(["cinnamon-desktop-editor", "-mlauncher", "-o", app.desktop_file_path]);
                 this.applet.menu.close();
             }
         ));
@@ -397,7 +396,7 @@ class ContextMenu {
             });
             addMenuItem( new ContextMenuItem(this.applet, _('Other application...'), null,
                 () => {
-                    Util.spawnCommandLine('nemo-open-with ' + app.uri);
+                    Util.spawn(['nemo-open-with', app.uri]);
                     this.applet.menu.close();
                 }
             ));
@@ -510,7 +509,7 @@ class ContextMenu {
         if (!this.isOpen) {
             return -1;
         }
-        
+
         let focusedButton = this.contextMenuButtons.findIndex(button => button.has_focus);
         if (focusedButton < 0) {
             focusedButton = 0;

@@ -1,6 +1,5 @@
 const Gio = imports.gi.Gio;
-const GLib = imports.gi.GLib
-const Gtk = imports.gi.Gtk;
+const GLib = imports.gi.GLib;
 const Atk = imports.gi.Atk;
 const Clutter = imports.gi.Clutter;
 const Util = imports.misc.util;
@@ -55,7 +54,7 @@ class SidebarButton {
                 }
                 return DragMotionResult.NO_DROP;
             },
-            handleDragOut: () => { 
+            handleDragOut: () => {
                 if (this.app && this.app.isApplication) {
                     this.actor.set_opacity(255);
                 }
@@ -157,7 +156,7 @@ class SidebarButton {
         // show tooltip
         if (this.applet.settings.descriptionPlacement === DescriptionPlacement.NONE) {
             return Clutter.EVENT_STOP;
-        }  
+        }
         let [x, y] = this.actor.get_transformed_position();
         x += this.actor.width + 2 * global.ui_scale;
         y += this.actor.height + 6 * global.ui_scale;
@@ -227,7 +226,7 @@ class Sidebar {
 
         this.sidebarScrollBox = new St.ScrollView({ y_align: St.Align.MIDDLE, style_class: 'vfade gridmenu-sidebar-scrollbox' });
         this.sidebarScrollBox.add_actor(this.innerBox);
-        this.sidebarScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.NEVER);
+        this.sidebarScrollBox.set_policy(St.PolicyType.NEVER, St.PolicyType.NEVER);
         this.sidebarScrollBox.set_clip_to_allocation(true);
         this.sidebarScrollBox.set_auto_scrolling(this.applet.settings.enableAutoScroll);
         this.sidebarScrollBox.set_mouse_scrolling(true);
@@ -292,9 +291,9 @@ class Sidebar {
                 const screensaver_dialog = GLib.find_program_in_path("cinnamon-screensaver-command");
                 if (screensaver_dialog) {
                     if (screensaver_settings.get_boolean('ask-for-away-message')) {
-                        Util.spawnCommandLine('cinnamon-screensaver-lock-dialog');
+                        Util.spawn(['cinnamon-screensaver-lock-dialog']);
                     } else {
-                        Util.spawnCommandLine('cinnamon-screensaver-command --lock');//
+                        Util.spawn(['cinnamon-screensaver-command', '--lock']);//
                     }
                 } else {
                     this.screenSaverProxy.LockRemote('');
@@ -343,17 +342,17 @@ class Sidebar {
         if (reverseOrder) {
             this.items.reverse();
         }
-        
+
         if (this.separator1Position) {
             this.separator1 = new Separator(this.applet);
         }
         if (this.separator2Position) {
             this.separator2 = new Separator(this.applet);
         }
-        
+
         //----populate box with items[]
         for (let i = 0; i < this.items.length; i++) {
-            if (this.separator1Position && 
+            if (this.separator1Position &&
                 ((reverseOrder && i == this.items.length - this.separator1Position) ||
                     (!reverseOrder && i === this.separator1Position))){
                 this.innerBox.add(this.separator1.separator, {
@@ -363,7 +362,7 @@ class Sidebar {
                     y_align: St.Align.MIDDLE
                 });
             }
-            if (this.separator2Position && 
+            if (this.separator2Position &&
                 ((reverseOrder && i == this.items.length - this.separator2Position) ||
                     (!reverseOrder && i === this.separator2Position))){
                 this.innerBox.add(this.separator2.separator, {

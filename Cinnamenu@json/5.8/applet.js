@@ -74,7 +74,8 @@ class CinnamenuApplet extends TextIconApplet {
                                                                         St.IconType.SYMBOLIC, false);
         this._applet_context_menu.addMenuItem(searchFilesMenuItem);
         searchFilesMenuItem.connect('activate', () => {
-                        Util.spawnCommandLine(__meta.path + '/search.py ' + GLib.get_home_dir()); });
+            Util.spawn([__meta.path + '/search.py', GLib.get_home_dir()]);
+        });
         this.resizer = new PopupResizeHandler(
             this.menu.actor,
             () => this.orientation,
@@ -199,7 +200,7 @@ class CinnamenuApplet extends TextIconApplet {
         { key: 'show-sidebar',              value: 'showSidebar',           cb: refreshDisplay },
         { key: 'sidebar-placement',         value: 'sidebarPlacement',      cb: refreshDisplay },
         { key: 'sidebar-favorites',         value: 'sidebarFavorites',      cb: refreshDisplay },
-        
+
         { key: 'show-categories',           value: 'showCategories',        cb: refreshDisplay},
         { key: 'show-places-category',      value: 'showPlaces',            cb: () => this.display.categoriesView.update() },
         { key: 'show-recents-category',     value: 'showRecents',           cb: this._onEnableRecentsChange },
@@ -295,7 +296,7 @@ class CinnamenuApplet extends TextIconApplet {
         let size;
 
         if (this.settings.menuIconSizeCustom) {
-            size = Math.max(Math.min(this.settings.menuIconSize, this.panel.height), 1);
+            size = Math.max(Math.min(this.settings.menuIconSize, this._panelHeight), 1);
         } else {
             size = this.getPanelIconSize(icon_type);
         }
@@ -310,7 +311,7 @@ class CinnamenuApplet extends TextIconApplet {
     }
 //------------settings callbacks-------------
     launchEditor() {
-        Util.spawnCommandLine('cinnamon-menu-editor');
+        Util.spawn(['cinnamon-menu-editor']);
     }
 
     _onEnableRecentsChange() {
@@ -326,12 +327,14 @@ class CinnamenuApplet extends TextIconApplet {
             if (this.settings.menuIconCustom) {
                 if (this.settings.menuIcon === '') {
                     this.set_applet_icon_name('');
-                } else if (GLib.path_is_absolute(this.settings.menuIcon) &&
-                                    GLib.file_test(this.settings.menuIcon, GLib.FileTest.EXISTS)) {
-                    if (this.settings.menuIcon.includes('-symbolic')) {
-                        this.set_applet_icon_symbolic_path(this.settings.menuIcon);
-                    } else {
-                        this.set_applet_icon_path(this.settings.menuIcon);
+                } else if (GLib.path_is_absolute(this.settings.menuIcon)) {
+                    const file = Gio.File.new_for_path(this.settings.menuIcon);
+                    if (file.query_exists(null)) {
+                        if (this.settings.menuIcon.includes('-symbolic')) {
+                            this.set_applet_icon_symbolic_path(this.settings.menuIcon);
+                        } else {
+                            this.set_applet_icon_path(this.settings.menuIcon);
+                        }
                     }
                 } else if (this.iconTheme.has_icon(this.settings.menuIcon)) {
                     if (this.settings.menuIcon.includes('-symbolic')) {
@@ -342,11 +345,9 @@ class CinnamenuApplet extends TextIconApplet {
                 }
             } else {
                 this.set_applet_icon_path(__meta.path + '/icon.png');
-                /*let iconName = global.settings.get_string('app-menu-icon-name');*/
             }
         } catch (e) {
-            global.logWarning('Cinnamenu: Could not load icon file ' + this.settings.menuIcon +
-                ' for menu button');
+            global.logWarning('Cinnamenu: Could not load icon: ' + e.message);
         }
         if (this.settings.menuIconCustom && this.settings.menuIcon === '' ||
                             this.settings.menuIconSizeCustom && this.settings.menuIconSize === 0) {
@@ -502,6 +503,8 @@ class CinnamenuApplet extends TextIconApplet {
                                                     appletDefinition.location_label === 'center') {
             const monitor = Main.layoutManager.findMonitorForActor(this.menu.actor);
             this.menu.shiftToPosition(Math.floor(monitor.width / 2) + monitor.x);
+        } else {
+            this.menu.shiftToPosition(-1);
         }
 
         // By default, current active category button will have focus. If categories are
@@ -931,7 +934,7 @@ class CinnamenuApplet extends TextIconApplet {
         case 'recents':
             const maxItems = this.getNumberOfItemsToFitColumns(6);
             const maxRecentApps = this.getNumberOfItemsToFitColumns(4);
-            
+
             this.display.appsView.populate_init();
             const recentApps = this.listRecent_apps(maxRecentApps);
             if (recentApps.length > 0) {
@@ -1004,9 +1007,18 @@ class CinnamenuApplet extends TextIconApplet {
 
                 this.display.appsView.populate_finish();
             } else if (categoryId.startsWith('/')) {//folder view
-                const folderContents = this.listFolder(categoryId);
-                const headerText = folderContents.errorMsg? folderContents.errorMsg : categoryId;
-                this.display.appsView.populate(folderContents.results, headerText);
+                const currentFolderLoading = this.currentCategory;
+                this.display.appsView.populate([], _("Loading..."));
+
+                this.listFolderAsync(categoryId).then((folderContents) => {
+                    // If the user has navigated away from this folder since we started, abort.
+                    if (currentFolderLoading !== this.currentCategory || this.searchActive) {
+                        return;
+                    }
+
+                    const headerText = folderContents.errorMsg ? folderContents.errorMsg : categoryId;
+                    this.display.appsView.populate(folderContents.results, headerText);
+                });
             } else if (categoryId === 'all' && !this.settings.allAppsOldStyle) {
                 this.display.appsView.populate_init();
                 this.display.appsView.populate_add(this.apps.listApplications('allApps'));
@@ -1530,7 +1542,7 @@ class CinnamenuApplet extends TextIconApplet {
                                 lastUpdateTime = Date.now();
                                 updateInterval *= 2; // Progressively longer update intervals.
                             }
-        
+
                             // Continue search if not completed.
                             if (foldersToDo.length > 0) {
                                 foldersSearched++;
@@ -1591,7 +1603,7 @@ class CinnamenuApplet extends TextIconApplet {
     /* Below are all functions creating arrays of app objects excluding _doSearch() and
      * listApplications() which is in Apps class. Arrays of app objs are then passed
      * to AppsView.populate() which creates AppButtons with .app as a property.
-     * 
+     *
      * app obj properties used:
      *  .name
      *  .description
@@ -1739,7 +1751,7 @@ class CinnamenuApplet extends TextIconApplet {
             name: _('Trash'),
             description: _('Trash'),
             isPlace: true,
-            activate: () => Util.spawnCommandLine('xdg-open trash:'),
+            activate: () => Util.spawn(['xdg-open', 'trash:']),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'user-trash',
                 icon_type: St.IconType.FULLCOLOR,
@@ -1751,7 +1763,7 @@ class CinnamenuApplet extends TextIconApplet {
             name: _('Computer'),
             description: _('Computer'),
             isPlace: true,
-            activate: () => Util.spawnCommandLine('xdg-open computer:'),
+            activate: () => Util.spawn(['xdg-open', 'computer:']),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'computer',
                 icon_type: St.IconType.FULLCOLOR,
@@ -1817,76 +1829,102 @@ class CinnamenuApplet extends TextIconApplet {
         return res;
     }
 
-    listFolder(folder) {
-        const res = [];
-        const dir = Gio.file_new_for_path(folder);
-        let enumerator;
-        let errorMsg = null;
-        try {
-            enumerator = dir.enumerate_children(
+    listFolderAsync(folder) {
+        return new Promise((resolve) => {
+            const res = [];
+            const dir = Gio.file_new_for_path(folder);
+
+            dir.enumerate_children_async(
                 'standard::name,standard::type,standard::icon,standard::content-type,standard::is-hidden',
-                                                                            0, null);
-        } catch(e) { // Folder access permission denied probably.
-            errorMsg = e.message;
-        }
-        let next;
-        if (enumerator) {
-            next = enumerator.next_file(null);
-        }
-        while (next) {
-            const filename = next.get_name();
-            if (this.settings.showHiddenFiles || !next.get_is_hidden()) {
-                let file = Gio.file_new_for_path(folder + (folder === '/' ? '' : '/') + filename);
-                const isDirectory = next.get_file_type() === Gio.FileType.DIRECTORY;
-                res.push({
-                    name: next.get_name(),
-                    gicon: next.get_icon(),
-                    uri: file.get_uri(),
-                    mimeType: next.get_content_type(),
-                    isDirectory: isDirectory,
-                    description: '',
-                    isFolderviewFile: !isDirectory,
-                    deleteAfterUse: true
-                });
-                file = null;
-            }
-            next = enumerator.next_file(null);
-        }
-        if (enumerator) {
-            enumerator.close(null);
-        }
+                Gio.FileQueryInfoFlags.NONE,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (source, result) => {
+                    let enumerator;
+                    try {
+                        enumerator = source.enumerate_children_finish(result);
+                    } catch (e) {
+                        resolve({ results: [], errorMsg: e.message });
+                        return;
+                    }
 
-        res.sort((a, b) => {
-            if (!a.isDirectory && b.isDirectory) return 1;
-            else if (a.isDirectory && !b.isDirectory) return -1;
-            else if (a.isDirectory && b.isDirectory &&
-                        a.name.startsWith('.') && !b.name.startsWith('.')) return 1;
-            else if (a.isDirectory && b.isDirectory &&
-                        !a.name.startsWith('.') && b.name.startsWith('.')) return -1;
-            else {
-                const nameA = a.name.toUpperCase();
-                const nameB = b.name.toUpperCase();
-                return (nameA > nameB) ? 1 : ((nameA < nameB) ? -1 : 0 );
-            }
+                    const getAllFiles = (en) => {
+                        en.next_files_async(100, GLib.PRIORITY_DEFAULT, null, (source, result) => {
+                            // Quit early if category has changed.
+                            if (folder !== this.currentCategory || this.searchActive) {
+                                resolve({ results: [], errorMsg: null });
+                                return;
+                            }
+
+                            let fileInfos;
+                            try {
+                                fileInfos = source.next_files_finish(result);
+                            } catch (e) {
+                                resolve({ results: res, errorMsg: e.message });
+                                return;
+                            }
+
+                            if (fileInfos && fileInfos.length > 0) {
+                                fileInfos.forEach((next) => {
+                                    const filename = next.get_name();
+                                    if (this.settings.showHiddenFiles || !next.get_is_hidden()) {
+                                        const filePath = folder + (folder === '/' ? '' : '/') + filename;
+                                        const isDirectory = next.get_file_type() === Gio.FileType.DIRECTORY;
+                                        res.push({
+                                            name: filename,
+                                            gicon: next.get_icon(),
+                                            uri: Gio.file_new_for_path(filePath).get_uri(),
+                                            mimeType: next.get_content_type(),
+                                            isDirectory: isDirectory,
+                                            description: '',
+                                            isFolderviewFile: !isDirectory,
+                                            deleteAfterUse: true
+                                        });
+                                    }
+                                });
+                                getAllFiles(en); // Get next batch of 100
+                            } else {
+                                // Sort results
+                                res.sort((a, b) => {
+                                    if (!a.isDirectory && b.isDirectory) return 1;
+                                    else if (a.isDirectory && !b.isDirectory) return -1;
+                                    else if (a.isDirectory && b.isDirectory &&
+                                        a.name.startsWith('.') && !b.name.startsWith('.')) return 1;
+                                    else if (a.isDirectory && b.isDirectory &&
+                                        !a.name.startsWith('.') && b.name.startsWith('.')) return -1;
+                                    else {
+                                        const nameA = a.name.toUpperCase();
+                                        const nameB = b.name.toUpperCase();
+                                        return (nameA > nameB) ? 1 : ((nameA < nameB) ? -1 : 0);
+                                    }
+                                });
+                                // Add back button
+                                const parent = dir.get_parent();
+                                if (parent) {
+                                    res.unshift({
+                                        name: _('Back'),
+                                        uri: parent.get_uri(),
+                                        icon: new St.Icon({
+                                            icon_name: 'edit-undo-symbolic',
+                                            icon_type: St.IconType.SYMBOLIC,
+                                            icon_size: this.getAppIconSize()
+                                        }),
+                                        mimeType: 'inode/directory',
+                                        isBackButton: true,
+                                        description: '',
+                                        deleteAfterUse: true
+                                    });
+                                }
+
+                                en.close(null);
+                                resolve({ results: res, errorMsg: null });
+                            }
+                        });
+                    };
+                    getAllFiles(enumerator);
+                }
+            );
         });
-        const parent = dir.get_parent();
-        if (parent) { // Add back button.
-            res.unshift({
-                name: 'Back',
-                uri: parent.get_uri(),
-                icon: new St.Icon({
-                    icon_name: 'edit-undo-symbolic',
-                    icon_type: St.IconType.SYMBOLIC,
-                    icon_size: this.getAppIconSize()
-                }),
-                mimeType: 'inode/directory',
-                isBackButton: true,
-                description: '',
-                deleteAfterUse: true
-            });
-        }
-
-        return {results: res, errorMsg: errorMsg};
     }
 
     listEmojiByRange(rangeStart, rangeEnd) {

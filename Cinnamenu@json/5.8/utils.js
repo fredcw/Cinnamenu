@@ -7,7 +7,7 @@ const Main = imports.ui.main;
 const ByteArray = imports.byteArray;
 const Cinnamon = imports.gi.Cinnamon;
 const {addTween} = imports.ui.tweener;
-Gettext.bindtextdomain('Cinnamenu@json', GLib.get_home_dir() + '/.local/share/locale');
+Gettext.bindtextdomain('Cinnamenu@json', GLib.get_user_data_dir() + '/locale');
 
 function _(str) {
     let cinnamonTranslation = Gettext.gettext(str);
@@ -46,18 +46,9 @@ const getThumbnail_gicon = (uri, mimeType) => {
     if (!(isImage && fileSize < 50000)) {//Don't bother with thumbnail cache if file is a
                             //small image, quicker to just create icon from file itself and avoids
                             //possible out of date cached thumbnail.
-        const ba = ByteArray.fromString(uri, 'UTF-8');
-        const md5 = GLib.Checksum.new(GLib.ChecksumType.MD5);
-        md5.update(ba);
-        const thumbDir = GLib.get_user_cache_dir() + '/thumbnails/';
-        const thumbName = md5.get_string() + '.png';
-        const thumbPathNormal = thumbDir + 'normal/' + thumbName;
-        const thumbPathLarge = thumbDir + 'large/' + thumbName;
-        if (GLib.file_test(thumbPathNormal, GLib.FileTest.EXISTS)) {
-            return new Gio.FileIcon({ file: Gio.file_new_for_path(thumbPathNormal) });
-        }
-        if (GLib.file_test(thumbPathLarge, GLib.FileTest.EXISTS)) {
-            return new Gio.FileIcon({ file: Gio.file_new_for_path(thumbPathLarge) });
+        const thumbnailPath = file.query_info('thumbnail::path', Gio.FileQueryInfoFlags.NONE, null).get_attribute_byte_string('thumbnail::path');
+        if (thumbnailPath && GLib.file_test(thumbnailPath, GLib.FileTest.EXISTS)) {
+            return new Gio.FileIcon({ file: Gio.file_new_for_path(thumbnailPath) });
         }
     }
 
@@ -189,7 +180,7 @@ const searchStrPart = (q, str, noFuzzySearch, noSubStringSearch) => {
             score = Math.min(longest.length / q.length, 1.0) * bigrams_score;
         }
     }
-        
+
     return score;
 };
 
@@ -203,7 +194,7 @@ const searchStr = (q, str, noFuzzySearch = false, noSubStringSearch = false) => 
     const part1Score = searchStrPart(q.slice(0, separatorIndex), str, noFuzzySearch, noSubStringSearch);
     const part2Score = searchStrPart(q.slice(separatorIndex + 1), str, noFuzzySearch, noSubStringSearch);
     const avgScore = (part1Score + part2Score) / 2.0;
-    
+
     return avgScore;
 };
 
@@ -298,7 +289,6 @@ var scrollToButton = (button, enableAnimation) => {
     }
 }
 
-
 function _launchPamac(pkgName) {
     GLib.spawn_command_line_async(`pamac-manager --details=${pkgName}`);
 }
@@ -313,7 +303,7 @@ function launchPamacForApp(app) {
     } else {
         const filePath = app.desktop_file_path;
         if (!filePath) return;
-        
+
         const proc = Gio.Subprocess.new(
             ['pacman', '-Qqo', filePath],
             Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE

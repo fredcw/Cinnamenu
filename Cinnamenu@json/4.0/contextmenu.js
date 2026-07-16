@@ -6,9 +6,9 @@ const XApp = imports.gi.XApp;
 const Mainloop = imports.mainloop;
 const Main = imports.ui.main;
 const {PopupBaseMenuItem, PopupMenu, PopupSeparatorMenuItem} = imports.ui.popupMenu;
-const {getUserDesktopDir, changeModeGFile} = imports.misc.fileUtils;
+const {changeModeGFile} = imports.misc.fileUtils;
 const {SignalManager} = imports.misc.signalManager;
-const {spawnCommandLine} = imports.misc.util;
+const Util = imports.misc.util;
 
 const {_} = require('./utils');
 const {MODABLE, MODED} = require('./emoji');
@@ -73,7 +73,7 @@ class ContextMenu {
         this.menu.actor.hide();
         this.contextMenuBox = new St.BoxLayout({ style_class: '', vertical: true, reactive: true });
         this.contextMenuBox.add_actor(this.menu.actor);
-        
+
         this.contextMenuButtons = [];
         this.isOpen = false;
     }
@@ -152,7 +152,7 @@ class ContextMenu {
                 this.close();
             }
         ));
-        
+
         this._showMenu(e, buttonActor);
     }
 
@@ -199,7 +199,7 @@ class ContextMenu {
                             }));
             }
         }
-        
+
         this._showMenu(event);
     }
 
@@ -228,9 +228,9 @@ class ContextMenu {
         }
 
         let [cx, cy] = this.contextMenuBox.get_transformed_position();
-        
+
         this.menu.actor.set_anchor_point(Math.round(cx - mx), Math.round(cy - my));
-        
+
         //This context menu doesn't have an St.Side and so produces errors in .xsession-errors.
         //Enable animation here for the sole reason that it spams .xsession-errors less. Can't add an
         //St.Side because in some themes it looks like it should be attached to a panel but isn't.
@@ -248,16 +248,20 @@ class ContextMenu {
         //Run with NVIDIA GPU
         if (this.appThis.gpu_offload_supported) {
             addMenuItem( new ContextMenuItem(this.appThis, _('Run with NVIDIA GPU'), 'cpu',
-                                () => { try {
-                                            app.launch_offloaded(0, [], -1);
-                                        } catch (e) {
-                                            logError(e, 'Could not launch app with dedicated gpu: ');
-                                        }
-                                        this.appThis.menu.close(); } ));
+                () => {
+                    try {
+                        app.launch_offloaded(0, [], -1);
+                    } catch (e) {
+                        logError(e, 'Could not launch app with dedicated gpu: ');
+                    }
+                    this.appThis.menu.close(); } ));
         } else if (this.appThis.isBumblebeeInstalled) {
             addMenuItem( new ContextMenuItem(this.appThis, _('Run with NVIDIA GPU'), 'cpu',
-                                () => { spawnCommandLine('optirun gtk-launch ' + app.id);
-                                        this.appThis.menu.close(); } ));
+                () => {
+                    Util.spawnCommandLine('optirun gtk-launch ' + app.id);
+                    this.appThis.menu.close();
+                }
+            ));
         }
 
         //Add to panel
@@ -278,7 +282,7 @@ class ContextMenu {
                 this.close(); } ));
 
         //Add to desktop
-        const userDesktopPath = getUserDesktopDir();
+        const userDesktopPath = GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DESKTOP);
         if (userDesktopPath) {
             addMenuItem( new ContextMenuItem(this.appThis, _('Add to desktop'), 'computer',
                 () => { const file = Gio.file_new_for_path(app.get_app_info().get_filename());
@@ -303,19 +307,21 @@ class ContextMenu {
                                                 this.close(); } ));
         }
 
-        //uninstall Mint only
+        // uninstall (Mint only)
         if (this.appThis._canUninstallApps) {
             addMenuItem( new ContextMenuItem(this.appThis, _('Uninstall'), 'edit-delete',
-                                () => { spawnCommandLine(__meta.path + "/mint-remove-application.py '" +
-                                            app.get_app_info().get_filename() + "'");
-                                        this.appThis.menu.close(); } ));
+                () => {
+                    Util.spawn([__meta.path + "/mint-remove-application.py", app.get_app_info().get_filename()]);
+                    this.appThis.menu.close();
+                }
+            ));
         }
 
-        //show app info 
+        //show app info
         if (this.appThis._pamacManagerAvailable) {
             addMenuItem( new ContextMenuItem(this.appThis, _('App Info'), 'dialog-information',
                 () => {
-                    spawnCommandLine("/usr/bin/pamac-manager --details-id=" + app.id);
+                    Util.spawnCommandLine("/usr/bin/pamac-manager --details-id=" + app.id);
                     this.appThis.menu.close();
                 }
             ));
@@ -324,7 +330,7 @@ class ContextMenu {
         //Properties
         addMenuItem( new ContextMenuItem(this.appThis, _('Properties'), 'dialog-information',
             () => {
-                spawnCommandLine('cinnamon-desktop-editor -mlauncher -o ' + app.desktop_file_path);
+                Util.spawn(["cinnamon-desktop-editor", "-mlauncher", "-o", app.desktop_file_path]);
                 this.appThis.menu.close();
             }
         ));
@@ -371,7 +377,7 @@ class ContextMenu {
             });
             addMenuItem( new ContextMenuItem(this.appThis, _('Other application...'), null,
                 () => {
-                    spawnCommandLine('nemo-open-with ' + app.uri);
+                    Util.spawn(['nemo-open-with', app.uri]);
                     this.appThis.menu.close();
                 }
             ));
@@ -468,7 +474,7 @@ class ContextMenu {
         if (!this.isOpen) {
             return -1;
         }
-        
+
         let focusedButton = this.contextMenuButtons.findIndex(button => button.has_focus);
         if (focusedButton < 0) {
             focusedButton = 0;

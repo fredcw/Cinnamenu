@@ -1,5 +1,3 @@
-const Gtk = imports.gi.Gtk;
-const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Atk = imports.gi.Atk;
 const Clutter = imports.gi.Clutter;
@@ -133,7 +131,7 @@ class CategoryButton {
 
     _setButtonStyleGreyed() {
         this.actor.set_style_class_name('menu-category-button-greyed');
-        
+
         const icon_opacity = this.icon.get_theme_node().lookup_double('opacity', true);
         if (icon_opacity[0]) {
             const opacity = Math.min(Math.max(0, icon_opacity[1]), 1);
@@ -278,7 +276,7 @@ class CategoriesView {
         this.groupCategoriesWorkspacesScrollBox =
                                 new St.ScrollView({ style_class: 'vfade menu-categories-scrollbox' });
         this.groupCategoriesWorkspacesScrollBox.add_actor(this.groupCategoriesWorkspacesWrapper);
-        this.groupCategoriesWorkspacesScrollBox.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.NEVER);
+        this.groupCategoriesWorkspacesScrollBox.set_policy(St.PolicyType.NEVER, St.PolicyType.NEVER);
         this.groupCategoriesWorkspacesScrollBox.set_clip_to_allocation(true);
         this.groupCategoriesWorkspacesScrollBox.set_auto_scrolling(this.applet.settings.enableAutoScroll);
         this.groupCategoriesWorkspacesScrollBox.set_mouse_scrolling(true);
@@ -303,7 +301,7 @@ class CategoriesView {
         newButtons.push(button);
 
         // Add other app categories
-        this.applet.apps.getDirs().forEach(dir => { 
+        this.applet.apps.getDirs().forEach(dir => {
             let button = this.buttons.find(button => button.id === dir.dirId);
             if (!button) {
                 button = new CategoryButton(this.applet, dir.dirId, dir.get_name(), null, dir.get_icon());
@@ -312,7 +310,7 @@ class CategoriesView {
             button.setHighlight(this.applet.apps.dirHasNewApp(dir.dirId));
             newButtons.push(button);
         });
-        
+
         // Add special categories
         const enableFavFiles = XApp.Favorites.get_default().get_favorites(null).length > 0;
         [

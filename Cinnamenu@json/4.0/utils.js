@@ -8,7 +8,7 @@ const Main = imports.ui.main;
 const ByteArray = imports.byteArray;
 const Cinnamon = imports.gi.Cinnamon;
 const {addTween} = imports.ui.tweener;
-Gettext.bindtextdomain('Cinnamenu@json', GLib.get_home_dir() + '/.local/share/locale');
+Gettext.bindtextdomain('Cinnamenu@json', GLib.get_user_data_dir() + '/locale');
 
 function _(str) {
     let cinnamonTranslation = Gettext.gettext(str);
@@ -195,12 +195,12 @@ const searchStrPart = (q, str, noFuzzySearch, noSubStringSearch) => {
             score = Math.min(longest.length / q.length, 1.0) * bigrams_score;
         }
     }
-    
+
     //reduce score if q is short
     //if (q.length === 1) score *= 0.5;
     //if (q.length === 2) score *= 0.75;
     //return result of match
-    
+
     if (HIGHTLIGHT_MATCH && score > 0) {
         let markup = str.slice(0, foundPosition) + '<b>' +
                                     str.slice(foundPosition, foundPosition + foundLength) + '</b>' +
@@ -222,7 +222,7 @@ const searchStr = (q, str, noFuzzySearch = false, noSubStringSearch = false) => 
     const part2 = searchStrPart(q.slice(separatorIndex + 1), str, noFuzzySearch, noSubStringSearch);
     const avgScore = (part1.score + part2.score) / 2.0;
     const markup = (part1.score >= part2.score) ? part1.result : part2.result;
-    
+
     return {score: avgScore, result: markup};
 };
 

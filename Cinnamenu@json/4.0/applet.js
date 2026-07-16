@@ -74,14 +74,14 @@ class CinnamenuApplet extends TextIconApplet {
         this.menu.setCustomStyleClass('menu-background cinnamenu');//starkmenu-background');
         this.signals = new SignalManager(null);
         this.appSystem = Cinnamon.AppSystem.get_default();
-        this._canUninstallApps = GLib.file_test("/usr/bin/cinnamon-remove-application",
-                                                GLib.FileTest.EXISTS);
-        this._pamacManagerAvailable = GLib.file_test("/usr/bin/pamac-manager", GLib.FileTest.EXISTS);
+        this._canUninstallApps = GLib.find_program_in_path("cinnamon-remove-application");
+        this._pamacManagerAvailable = GLib.find_program_in_path("pamac-manager");
         const searchFilesMenuItem = new PopupIconMenuItem(_('Find files...'), 'system-search',
                                                                         St.IconType.SYMBOLIC, false);
         this._applet_context_menu.addMenuItem(searchFilesMenuItem);
         searchFilesMenuItem.connect('activate', () => {
-                        Util.spawnCommandLine(__meta.path + '/search.py ' + GLib.get_home_dir()); });
+            Util.spawn([__meta.path + '/search.py', GLib.get_home_dir()]);
+        });
         this.resizer = new PopupResizeHandler(
             this.menu.actor,
             () => this.orientation,
@@ -110,14 +110,20 @@ class CinnamenuApplet extends TextIconApplet {
         }
 
         this.signals.connect(Main.themeManager, 'theme-set', () => {
-                                                    this._updateIconAndLabel();
-                                                    setTimeout(() => refreshDisplay());
-                                                });
+            this._updateIconAndLabel();
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 0.0, () => {
+                refreshDisplay();
+                return GLib.SOURCE_REMOVE;
+            });
+        });
         this.iconTheme = Gtk.IconTheme.get_default();
         this.signals.connect(this.iconTheme, 'changed', () => this._updateIconAndLabel());
         this.signals.connect(this.appSystem, 'installed-changed', () => {
             this.apps.installedChanged();
-            refreshDisplay();
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 1000.0, () => {
+                refreshDisplay();
+                return GLib.SOURCE_REMOVE;
+            });
         });
         this.signals.connect(this.appFavorites, 'changed', () => {
             if (this.display) { // Check if display is initialised.
@@ -325,7 +331,7 @@ class CinnamenuApplet extends TextIconApplet {
     }
 //------------settings callbacks-------------
     launchEditor() {
-        Util.spawnCommandLine('cinnamon-menu-editor');
+        Util.spawn(['cinnamon-menu-editor']);
     }
 
     _onEnableRecentsChange() {
@@ -338,12 +344,14 @@ class CinnamenuApplet extends TextIconApplet {
             if (this.settings.menuIconCustom) {
                 if (this.settings.menuIcon === '') {
                     this.set_applet_icon_name('');
-                } else if (GLib.path_is_absolute(this.settings.menuIcon) &&
-                                    GLib.file_test(this.settings.menuIcon, GLib.FileTest.EXISTS)) {
-                    if (this.settings.menuIcon.includes('-symbolic')) {
-                        this.set_applet_icon_symbolic_path(this.settings.menuIcon);
-                    } else {
-                        this.set_applet_icon_path(this.settings.menuIcon);
+                } else if (GLib.path_is_absolute(this.settings.menuIcon)) {
+                    const file = Gio.File.new_for_path(this.settings.menuIcon);
+                    if (file.query_exists(null)) {
+                        if (this.settings.menuIcon.includes('-symbolic')) {
+                            this.set_applet_icon_symbolic_path(this.settings.menuIcon);
+                        } else {
+                            this.set_applet_icon_path(this.settings.menuIcon);
+                        }
                     }
                 } else if (this.iconTheme.has_icon(this.settings.menuIcon)) {
                     if (this.settings.menuIcon.includes('-symbolic')) {
@@ -354,11 +362,9 @@ class CinnamenuApplet extends TextIconApplet {
                 }
             } else {
                 this.set_applet_icon_path(__meta.path + '/icon.png');
-                /*let iconName = global.settings.get_string('app-menu-icon-name');*/
             }
         } catch (e) {
-            global.logWarning('Cinnamenu: Could not load icon file ' + this.settings.menuIcon +
-                ' for menu button');
+            global.logWarning('Cinnamenu: Could not load icon: ' + e.message);
         }
         if (this.settings.menuIconCustom && this.settings.menuIcon === '' ||
                             this.settings.menuIconSizeCustom && this.settings.menuIconSize === 0) {
@@ -1639,7 +1645,7 @@ class CinnamenuApplet extends TextIconApplet {
             name: _('Trash'),
             description: _('Trash'),
             isPlace: true,
-            activate: () => Util.spawnCommandLine('xdg-open trash:'),
+            activate: () => Util.spawn(['xdg-open', 'trash:']),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'user-trash',
                 icon_type: St.IconType.FULLCOLOR,
@@ -1651,7 +1657,7 @@ class CinnamenuApplet extends TextIconApplet {
             name: _('Computer'),
             description: _('Computer'),
             isPlace: true,
-            activate: () => Util.spawnCommandLine('xdg-open computer:'),
+            activate: () => Util.spawn(['xdg-open', 'computer:']),
             iconFactory: (size) => new St.Icon({
                 icon_name: 'computer',
                 icon_type: St.IconType.FULLCOLOR,
@@ -1761,31 +1767,34 @@ class CinnamenuApplet extends TextIconApplet {
             enumerator.close(null);
         }
 
-        res.sort((a, b) => {    
-                        if (!a.isDirectory && b.isDirectory) return 1;
-                        else if (a.isDirectory && !b.isDirectory) return -1;
-                        else if (a.isDirectory && b.isDirectory &&
-                                    a.name.startsWith('.') && !b.name.startsWith('.')) return 1;
-                        else if (a.isDirectory && b.isDirectory &&
-                                    !a.name.startsWith('.') && b.name.startsWith('.')) return -1;
-                        else {
-                            const nameA = a.name.toUpperCase();
-                            const nameB = b.name.toUpperCase();
-                            return (nameA > nameB) ? 1 : ( (nameA < nameB) ? -1 : 0 );
-                        }
-                    });
+        res.sort((a, b) => {
+            if (!a.isDirectory && b.isDirectory) return 1;
+            else if (a.isDirectory && !b.isDirectory) return -1;
+            else if (a.isDirectory && b.isDirectory &&
+                        a.name.startsWith('.') && !b.name.startsWith('.')) return 1;
+            else if (a.isDirectory && b.isDirectory &&
+                        !a.name.startsWith('.') && b.name.startsWith('.')) return -1;
+            else {
+                const nameA = a.name.toUpperCase();
+                const nameB = b.name.toUpperCase();
+                return (nameA > nameB) ? 1 : ((nameA < nameB) ? -1 : 0 );
+            }
+        });
         const parent = dir.get_parent();
-        if (parent) {// Add back button
-            res.unshift({   name: 'Back',
-                            uri: parent.get_uri(),
-                            icon: new St.Icon({ icon_name: 'edit-undo-symbolic',
-                                                icon_type: St.IconType.SYMBOLIC,
-                                                icon_size: this.getAppIconSize() }),
-                            mimeType: 'inode/directory',
-                            isBackButton: true,
-                            description: '',
-                            deleteAfterUse: true
-                        });
+        if (parent) { // Add back button.
+            res.unshift({
+                name: 'Back',
+                uri: parent.get_uri(),
+                icon: new St.Icon({
+                    icon_name: 'edit-undo-symbolic',
+                    icon_type: St.IconType.SYMBOLIC,
+                    icon_size: this.getAppIconSize()
+                }),
+                mimeType: 'inode/directory',
+                isBackButton: true,
+                description: '',
+                deleteAfterUse: true
+            });
         }
 
         return {results: res, errorMsg: errorMsg};

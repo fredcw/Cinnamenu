@@ -2,7 +2,7 @@
 
 Cinnamenu
 ========
-_Version: 5.6.0 (updated 25/2/26)_ (highlight file with Open containing folder)
+_Version: 5.6.1 (updated 16/7/26)_ (Performance improvements)
 
 Cinnamenu is a full featured alternative to the standard Cinnamon menu with grid layout and customisation options.
 
