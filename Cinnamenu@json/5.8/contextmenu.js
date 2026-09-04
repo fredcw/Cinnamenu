@@ -353,6 +353,26 @@ class ContextMenu {
                 this.applet.menu.close();
             }
         ));
+
+        // Desktop Actions
+        const appInfo = app.get_app_info();
+
+        for (const action of appInfo.list_actions()) {
+            let icon = Util.getDesktopActionIcon(action);
+            if (icon === null)
+                icon = 'application-x-executable';
+            const label = appInfo.get_action_name(action);
+
+            addMenuItem(new ContextMenuItem(this.applet, label, icon,
+                () => {
+                    appInfo.launch_action(
+                        action,
+                        global.create_app_launch_context()
+                    );
+                    this.applet.menu.close();
+                }
+            ));
+        }
     }
 
     _populateContextMenu_files(app) {
