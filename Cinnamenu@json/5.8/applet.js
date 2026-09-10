@@ -580,16 +580,6 @@ class CinnamenuApplet extends TextIconApplet {
         const focusedSidebarItemExists = focusedSidebarItemIndex > -1;
         const focusedCategoryExists = focusedCategoryIndex > -1;
 
-        if (!focusedContextMenuItemExists && !focusedAppItemExists &&
-            !focusedSidebarItemExists && !focusedCategoryExists) {
-            //todo: No focused item, ideally this shouldn't happen
-            if (appButtons[0]) {
-                appButtons[0].handleEnter();
-                focusedAppItemIndex = 0;
-                focusedAppItemExists = true;
-            }
-        }
-
         const leaveCurrentlyFocusedItem = () => {
             if (focusedContextMenuItemExists) {
                 contextMenuButtons[focusedContextMenuItemIndex].handleLeave();
@@ -655,14 +645,6 @@ class CinnamenuApplet extends TextIconApplet {
         const leftNavigation = () => {
             if (focusedContextMenuItemExists) {
                 contextMenuButtons[focusedContextMenuItemIndex].handleEnter(); // Effectively ignore.
-            } else if (focusedAppItemExists) {
-                if (this.settings.applicationsViewMode === ApplicationsViewMode.LIST) {
-                    tabLeft();
-                } else if (focusedAppItemIndex > 0) {
-                    appButtons[focusedAppItemIndex - 1].handleEnter();
-                } else {
-                    appButtons[appButtons.length - 1].handleEnter();
-                }
             } else if (focusedSidebarItemExists) {
                 if (this.settings.sidebarPlacement === SidebarPlacement.LEFT ||
                                         this.settings.sidebarPlacement === SidebarPlacement.RIGHT) {
@@ -672,20 +654,20 @@ class CinnamenuApplet extends TextIconApplet {
                 }
             } else if (focusedCategoryExists) {
                 tabLeft();
+            } else { // focusedAppItemExists or no focused item exists
+                if (this.settings.applicationsViewMode === ApplicationsViewMode.LIST) {
+                    tabLeft();
+                } else if (focusedAppItemIndex > 0) {
+                    appButtons[focusedAppItemIndex - 1].handleEnter();
+                } else {
+                    appButtons[appButtons.length - 1].handleEnter();
+                }
             }
         };
 
         const rightNavigation = () => {
             if (focusedContextMenuItemExists) {
                 contextMenuButtons[focusedContextMenuItemIndex].handleEnter(); // Effectively ignore keypress
-            } else if (focusedAppItemExists) {
-                if (this.settings.applicationsViewMode === ApplicationsViewMode.LIST) {
-                    tabRight();
-                } else if (appButtons[focusedAppItemIndex + 1]) {
-                    appButtons[focusedAppItemIndex + 1].handleEnter();
-                } else {
-                    appButtons[0].handleEnter();
-                }
             } else if (focusedSidebarItemExists) {
                 if (this.settings.sidebarPlacement === SidebarPlacement.LEFT ||
                     this.settings.sidebarPlacement === SidebarPlacement.RIGHT) {
@@ -695,6 +677,14 @@ class CinnamenuApplet extends TextIconApplet {
                 }
             } else if (focusedCategoryExists) {
                 tabRight();
+            } else { // focusedAppItemExists or no focused item exists
+                if (this.settings.applicationsViewMode === ApplicationsViewMode.LIST) {
+                    tabRight();
+                } else if (appButtons[focusedAppItemIndex + 1]) {
+                    appButtons[focusedAppItemIndex + 1].handleEnter();
+                } else {
+                    appButtons[0].handleEnter();
+                }
             }
         };
 
@@ -742,6 +732,8 @@ class CinnamenuApplet extends TextIconApplet {
                 } else {
                     categoryButtons[0].handleEnter();
                 }
+            } else { // No focused item exists
+                appButtons[0].handleEnter();
             }
         };
 
@@ -789,6 +781,8 @@ class CinnamenuApplet extends TextIconApplet {
                 } else {
                     categoryButtons[categoryButtons.length - 1].handleEnter();
                 }
+            } else { // No focused item exists
+                appButtons[0].handleEnter();
             }
         };
 
