@@ -54,7 +54,7 @@ if [[ -f "$LOCAL_METADATA" ]]; then
     esac
     echo "Updating Cinnamenu."
 else
-	echo "Installing Cinnamenu."
+	echo "Installing Cinnamenu. Don't forget to add Cinnamenu applet to your panel (System settings > Applets)"
 fi
 
 # Create temp directory
