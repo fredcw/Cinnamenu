@@ -2,6 +2,7 @@ const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Atk = imports.gi.Atk;
 const Clutter = imports.gi.Clutter;
+const Config = imports.misc.config;
 const Util = imports.misc.util;
 const St = imports.gi.St;
 const XApp = imports.gi.XApp;
@@ -286,17 +287,22 @@ class Sidebar {
             null, _('Lock screen'),
             _('Lock the screen'),
             () => {
-                const screensaver_settings = new Gio.Settings({
-                                            schema_id: 'org.cinnamon.desktop.screensaver' });
-                const screensaver_dialog = GLib.find_program_in_path("cinnamon-screensaver-command");
-                if (screensaver_dialog) {
-                    if (screensaver_settings.get_boolean('ask-for-away-message')) {
-                        Util.spawn(['cinnamon-screensaver-lock-dialog']);
-                    } else {
-                        Util.spawn(['cinnamon-screensaver-command', '--lock']);//
-                    }
+                const cinnamonVersion = Config.PACKAGE_VERSION;
+                if (Util.version_exceeds(cinnamonVersion, '6.7')) {
+                    Main.screensaverController.lockScreen(true);
                 } else {
-                    this.screenSaverProxy.LockRemote('');
+                    const screensaver_settings = new Gio.Settings({
+                                                schema_id: 'org.cinnamon.desktop.screensaver' });
+                    const screensaver_dialog = GLib.find_program_in_path("cinnamon-screensaver-command");
+                    if (screensaver_dialog) {
+                        if (screensaver_settings.get_boolean('ask-for-away-message')) {
+                            Util.spawn(['cinnamon-screensaver-lock-dialog']);
+                        } else {
+                            Util.spawn(['cinnamon-screensaver-command', '--lock']);//
+                        }
+                    } else {
+                        this.screenSaverProxy.LockRemote('');
+                    }
                 }
                 this.applet.menu.close();
             }

@@ -365,7 +365,7 @@ class AppButton {
                 this.applet.display.categoriesView.updateCategoriesShouldHighlight();
             }
             this.applet.recentApps.add(this.app.id);
-            Util.spawn([__meta.path + '/rar.sh', this.app.get_app_info().get_executable()]);
+            Util.spawn([this.applet.metadata.path + '/rar.sh', this.app.get_app_info().get_executable()]);
             this.applet.menu.close();
         }
     }

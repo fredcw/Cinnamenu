@@ -63,6 +63,7 @@ class CinnamenuApplet extends TextIconApplet {
         this.calculatorHistory = [];
         this.recentManagerDefault = Gtk.RecentManager.get_default();
         this.orientation = orientation;
+        this.metadata = metadata;
         this.menuManager = new PopupMenuManager(this);
         this.menu = new AppletPopupMenu(this, this.orientation);
         this.menuManager.addMenu(this.menu);
@@ -74,7 +75,7 @@ class CinnamenuApplet extends TextIconApplet {
                                                                         St.IconType.SYMBOLIC, false);
         this._applet_context_menu.addMenuItem(searchFilesMenuItem);
         searchFilesMenuItem.connect('activate', () => {
-            Util.spawn([__meta.path + '/search.py', GLib.get_home_dir()]);
+            Util.spawn([this.metadata.path + '/search.py', GLib.get_home_dir()]);
         });
         this.resizer = new PopupResizeHandler(
             this.menu.actor,
@@ -185,7 +186,7 @@ class CinnamenuApplet extends TextIconApplet {
         };
 
         this.settings = {};
-        this.appletSettings = new AppletSettings(this.settings, __meta.uuid, this.instance_id);
+        this.appletSettings = new AppletSettings(this.settings, this.metadata.uuid, this.instance_id);
         [
         { key: 'categories',                value: 'categories',            cb: null },
         { key: 'custom-menu-height',        value: 'customMenuHeight',      cb: null },
@@ -344,7 +345,7 @@ class CinnamenuApplet extends TextIconApplet {
                     }
                 }
             } else {
-                this.set_applet_icon_path(__meta.path + '/icon.png');
+                this.set_applet_icon_path(this.metadata.path + '/icon.png');
             }
         } catch (e) {
             global.logWarning('Cinnamenu: Could not load icon: ' + e.message);
@@ -1295,7 +1296,7 @@ class CinnamenuApplet extends TextIconApplet {
                             this.settings.webSearchCustomURL][this.settings.webSearchOption - 1];
 
             const gicon = new Gio.FileIcon({
-                file: Gio.file_new_for_path(__meta.path + '/../icons/' + iconName)
+                file: Gio.file_new_for_path(this.metadata.path + '/../icons/' + iconName)
             });
 
             otherResults.push({
@@ -1340,7 +1341,7 @@ class CinnamenuApplet extends TextIconApplet {
                 bpattern = pattern.substring(2);
             }
 
-            getWebBookmarksAsync().then(bookmarks => {
+            getWebBookmarksAsync(this.metadata.path).then(bookmarks => {
                 if (!this.searchActive || thisSearchId !== this.currentSearchId) {
                     return;
                 }

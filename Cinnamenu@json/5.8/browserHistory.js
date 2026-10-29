@@ -16,7 +16,7 @@ function searchBrowserProfile(applet, currentSearchId, path, appInfo, pattern) {
             return;
         }
 
-        Util.spawn_async([__meta.path + '/searchHistory.py', full_path, pattern], (results) => {
+        Util.spawn_async([applet.metadata.path + '/searchHistory.py', full_path, pattern], (results) => {
             if (currentSearchId != applet.currentSearchId) {
                 resolve([]);
                 return;

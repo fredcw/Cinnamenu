@@ -175,7 +175,7 @@ function readFirefoxProfiles(browser) {
     return [];
 }
 
-const readChromiumBookmarksFile = function(path, appInfo) {
+const readChromiumBookmarksFile = function(path, appInfo, thisAppletPath) {
 
     return new Promise(function(resolve, reject) {
         const bookmarksFile = Gio.File.new_for_path(GLib.build_filenamev(
@@ -246,7 +246,7 @@ const readChromiumBookmarksFile = function(path, appInfo) {
             });
             const domainsJSON = JSON.stringify(Array.from(domains));
 
-            Util.spawn_async([__meta.path + '/getFavicons.py', faviconsFile, domainsJSON], (results) => {
+            Util.spawn_async([thisAppletPath + '/getFavicons.py', faviconsFile, domainsJSON], (results) => {
                 results = JSON.parse(results);
                 foundBookmarks.forEach( bookmark => {
                     if (bookmark.domain in results) {
@@ -264,7 +264,7 @@ const readChromiumBookmarksFile = function(path, appInfo) {
 
 let bookmarks = null;
 
-const getWebBookmarksAsync = function() {
+const getWebBookmarksAsync = function(thisAppletPath) {
     return new Promise(function(resolve, reject) {
         if (bookmarks) {
             resolve(bookmarks);
@@ -276,7 +276,7 @@ const getWebBookmarksAsync = function() {
             const path = profilePath[0];
             const appInfo = profilePath[1];
 
-            promises.push(readChromiumBookmarksFile(path, appInfo));
+            promises.push(readChromiumBookmarksFile(path, appInfo, thisAppletPath));
         });
         
         Promise.all(promises).then((results) => {
