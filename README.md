@@ -2,7 +2,7 @@
 
 Cinnamenu
 ========
-_Version: 5.7 (updated 29/10/26)_ (Update for cinnamon 6.8)
+_Version: 5.7.1 (updated 30/10/26)_ (Load thumbnails asynchronously)
 
 Cinnamenu is a full featured alternative to the standard Cinnamon menu with grid layout and customisation options.
 
@@ -22,7 +22,7 @@ curl -sSLf https://github.com/fredcw/Cinnamenu/raw/main/install.sh | bash
    * Options on where to show session and favorite app buttons.
    * Change icon sizes.
  * Browser bookmarks and history search
- * Web search suggestions & Wikipedia search.
+ * Web search suggestions.
  * Built in calculator with calculator history. This is evaluated as a javascript expression so all javascript operators and Math functions are valid, including constants: E, PI and functions (trig) sin, asin, sinh, asinh, cos, tan, etc. and cbrt, exp, floor, log, log10, pow, random, round, sqrt, etc. All angles are in radians. (see [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators) for list of operators and [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for list of constants and functions)
 
 

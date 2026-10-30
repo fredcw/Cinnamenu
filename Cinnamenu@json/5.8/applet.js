@@ -822,7 +822,8 @@ class CinnamenuApplet extends TextIconApplet {
             }
             return Clutter.EVENT_PROPAGATE
         case (symbol === Clutter.KEY_KP_Enter || symbol === Clutter.KP_Enter ||
-                                                symbol === Clutter.KEY_Return) && shiftKey:
+                    symbol === Clutter.KEY_Return) && shiftKey &&
+                    GLib.getenv("XDG_SESSION_TYPE").toLowerCase() !== "wayland":
             if (focusedAppItemExists && appButtons[focusedAppItemIndex].app.isApplication) {
                 appButtons[focusedAppItemIndex].activateAsRoot();
                 this.menu.close();
