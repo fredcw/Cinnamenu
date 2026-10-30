@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
-"POT-Creation-Date: 2024-08-06 22:42-0400\n"
+"POT-Creation-Date: 2026-10-30 03:10+0000\n"
 "PO-Revision-Date: 2024-09-11 11:58+0200\n"
 "Last-Translator: qadzek\n"
 "Language-Team: \n"
@@ -17,298 +17,312 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#. 4.0/applet.js:62
 msgid "Initializing"
 msgstr "Bezig met opstarten"
 
+#. 4.0/applet.js:79 5.8/applet.js:100
 msgid "Find files..."
 msgstr "Bestanden zoeken..."
 
+#. 4.0/applet.js:294
 msgid "Please wait..."
 msgstr "Even geduld a.u.b..."
 
+#. 4.0/applet.js:889 5.8/applet.js:962 5.8/applet.js:1215
 msgid "Applications"
 msgstr "Toepassingen"
 
+#. 4.0/applet.js:893 5.8/applet.js:966
 msgid "Documents"
 msgstr "Documenten"
 
+#. 4.0/applet.js:897 5.8/applet.js:970
 msgid "Videos"
 msgstr "Video's"
 
+#. 4.0/applet.js:901 5.8/applet.js:974
 msgid "Images"
 msgstr "Afbeeldingen"
 
+#. 4.0/applet.js:905 5.8/applet.js:978
 msgid "Music"
 msgstr "Muziek"
 
+#. 4.0/applet.js:914 5.8/applet.js:987
 msgid "No recent Items"
 msgstr "Geen recente elementen"
 
+#. 4.0/applet.js:962 5.8/applet.js:1047
 msgid "Settings"
 msgstr "Instellingen"
 
-msgid "Files"
-msgstr "Bestanden"
-
-msgid "Other search results"
-msgstr "Andere zoekresultaten"
-
-msgid "Browser bookmarks"
-msgstr "Browserbladwijzers"
-
-msgid "Browser history"
-msgstr "Browsergeschiedenis"
-
-msgid "Emoji"
-msgstr "Emotiepictogram"
-
-msgid "Click to copy"
-msgstr "Klik om te kopiëren"
-
-msgid "Clear List"
-msgstr "Lijst wissen"
-
-msgid "Trash"
-msgstr "Prullenbak"
-
-msgid "Computer"
-msgstr "Computer"
-
-msgid "Error while opening file:"
-msgstr "Fout bij openen bestand:"
-
-msgid "Too many entries - showing first 1000 entries only"
-msgstr "Te veel elementen - toont alleen de eerste 1000 elementen"
-
-msgid "All applications"
-msgstr "Alle toepassingen"
-
-msgid "Favorites"
-msgstr "Favorieten"
-
-msgid "Places"
-msgstr "Locaties"
-
-msgid "Recent"
-msgstr "Recent"
-
-msgid "Favorite apps"
-msgstr "Favoriete toepassingen"
-
-msgid "light skin tone"
-msgstr "lichte huidskleur"
-
-msgid "medium-light skin tone"
-msgstr "lichtgetinte huidskleur"
-
-msgid "medium skin tone"
-msgstr "getinte huidskleur"
-
-msgid "medium-dark skin tone"
-msgstr "donkergetinte huidskleur"
-
-msgid "dark skin tone"
-msgstr "donkere huidskleur"
-
-msgid "Remove category"
-msgstr "Categorie verwijderen"
-
-msgid "Reset category order"
-msgstr "Categorievolgorde terugzetten op standaard"
-
-msgid "List settings apps separately"
-msgstr "Instellingen-apps apart weergeven"
-
-msgid "Single list style"
-msgstr "Enkelvoudige lijst stijl"
-
-msgid "Hide hidden files"
-msgstr "Verborgen bestanden verbergen"
-
-msgid "Show hidden files"
-msgstr "Toon verborgen bestanden"
-
-msgid "Run with NVIDIA GPU"
-msgstr "Draaien met NVIDIA-GPU"
-
-msgid "Add to panel"
-msgstr "Toevoegen aan werkbalk"
-
-msgid "Add to desktop"
-msgstr "Toevoegen aan bureaublad"
-
-msgid "Remove from favorites"
-msgstr "Verwijderen uit favorieten"
-
-msgid "Add to favorites"
-msgstr "Toevoegen aan favorieten"
-
-msgid "Uninstall"
-msgstr "Deïnstalleren"
-
-msgid "App Info"
-msgstr "App-informatie"
-
-msgid "This file is no longer available"
-msgstr "Dit bestand is niet langer beschikbaar"
-
-msgid "Open with"
-msgstr "Openen met"
-
-msgid "Other application..."
-msgstr "Andere toepassing..."
-
-msgid "Add folder as category"
-msgstr "Map toevoegen als categorie"
-
-msgid "Open containing folder"
-msgstr "Map die het bevat openen"
-
-msgid "Move to trash"
-msgstr "Verplaatsen naar prullenbak"
-
-msgid "Error while moving file to trash:"
-msgstr "Fout bij het verplaatsen van het bestand naar de prullenbak:"
-
-msgid "Smileys & Emotion"
-msgstr "Lachebekjes en emoties"
-
-msgid "People & Body"
-msgstr "Mensen en lichaam"
-
-msgid "Animals & Nature"
-msgstr "Dieren en natuur"
-
-msgid "Food & Drink"
-msgstr "Eten en drinken"
-
-msgid "Travel & Places"
-msgstr "Reizen en mooie plekken"
-
-msgid "Activities"
-msgstr "Activiteiten"
-
-msgid "Objects"
-msgstr "Dingen"
-
-msgid "Symbols"
-msgstr "Symbolen"
-
-msgid "Flags"
-msgstr "Vlaggen"
-
-msgid "Quit"
-msgstr "Afsluiten"
-
-msgid "Shutdown the computer"
-msgstr "De computer afsluiten"
-
-msgid "Logout"
-msgstr "Afmelden"
-
-msgid "Leave the session"
-msgstr "Sessie verlaten"
-
-msgid "Lock screen"
-msgstr "Scherm vergrendelen"
-
-msgid "Lock the screen"
-msgstr "Vergrendel het scherm"
-
-msgid "Type to search..."
-msgstr "Tik in om te zoeken..."
-
-msgid "No description available"
-msgstr "Geen beschrijving beschikbaar"
-
-msgid "Recent files"
-msgstr "Recente bestanden"
-
-msgid "Bookmarks"
-msgstr "Bladwijzers"
-
-msgid "gir1.2-gda-5.0 package required for Firefox and Midori bookmarks."
-msgstr ""
-"Voor bladwijzers van Firefox en Midori is het pakket gir1.2-gda-5.0 vereist."
-
-msgid "No recent files"
-msgstr "Geen recente bestanden"
-
-msgid "Account details"
-msgstr "Bijzonderheden van account"
-
-msgid "Grid View"
-msgstr "Rasterweergave"
-
-msgid "List View"
-msgstr "Lijstweergave"
-
-msgid "Switch to grid view"
-msgstr "Omschakelen naar rasterweergave"
-
-msgid "Switch to list view"
-msgstr "Omschakelen naar lijstweergave"
-
-msgid "Home"
-msgstr "Persoonlijke map"
-
-msgid "Browse network"
-msgstr "Netwerk verkennen"
-
+#. 4.0/applet.js:1100
 msgid "Applications and files"
 msgstr "Toepassingen en bestanden"
 
-msgid "Open"
-msgstr "Open"
+#. 4.0/applet.js:1103 5.8/applet.js:1221
+msgid "Other search results"
+msgstr "Andere zoekresultaten"
 
-msgid "Search"
-msgstr "Zoeken"
+#. 4.0/applet.js:1106 5.8/applet.js:1224
+msgid "Browser bookmarks"
+msgstr "Browserbladwijzers"
 
-msgid "Start in"
-msgstr "Begin in"
+#. 4.0/applet.js:1109 5.8/applet.js:1227
+msgid "Browser history"
+msgstr "Browsergeschiedenis"
 
-msgid "Select a folder"
-msgstr "Kies een map"
+#. 4.0/applet.js:1112 4.0/categoriesview.js:305 5.8/applet.js:1230
+#. 5.8/categoriesview.js:321
+msgid "Emoji"
+msgstr "Emotiepictogram"
 
-msgid "Follow symlinks"
-msgstr "Symlinks volgen"
+#. 4.0/applet.js:1166 4.0/applet.js:1305 4.0/applet.js:1808 5.8/applet.js:1277
+msgid "Click to copy"
+msgstr "Klik om te kopiëren"
 
-msgid "Search hidden"
-msgstr "Zoek verborgen"
+#. 4.0/applet.js:1608 5.8/applet.js:1735
+msgid "Clear List"
+msgstr "Lijst wissen"
 
-msgid "Use regular expressions"
-msgstr "Gebruik reguliere uitdrukkingen"
+#. 4.0/applet.js:1645 4.0/applet.js:1646 5.8/applet.js:1772 5.8/applet.js:1773
+msgid "Trash"
+msgstr "Prullenbak"
 
-msgid "Stop"
-msgstr "Houd op"
+#. 4.0/applet.js:1657 4.0/applet.js:1658 5.8/applet.js:1784 5.8/applet.js:1785
+msgid "Computer"
+msgstr "Computer"
 
-msgid "File"
-msgstr "Bestand"
+#. 4.0/appsview.js:303 4.0/sidebar.js:111 5.8/appsview.js:329
+#. 5.8/sidebar.js:133
+msgid "Error while opening file:"
+msgstr "Fout bij openen bestand:"
 
-msgid "Path"
-msgstr "Pad"
+#. 4.0/appsview.js:451 5.8/appsview.js:532
+msgid "Too many entries - showing first 1000 entries only"
+msgstr "Te veel elementen - toont alleen de eerste 1000 elementen"
 
-msgid "Searching..."
+#. 4.0->settings-schema.json->open-on-category->options
+#. 5.8->settings-schema.json->open-on-category->options
+#. 4.0/categoriesview.js:283 5.8/categoriesview.js:299
+msgid "All applications"
+msgstr "Alle toepassingen"
+
+#. 4.0/categoriesview.js:301 5.8/categoriesview.js:317
+msgid "Favorites"
+msgstr "Favorieten"
+
+#. 4.0->settings-schema.json->open-on-category->options
+#. 5.8->settings-schema.json->open-on-category->options
+#. 4.0/categoriesview.js:302 5.8/categoriesview.js:318
+msgid "Places"
+msgstr "Locaties"
+
+#. 4.0->settings-schema.json->open-on-category->options
+#. 5.8->settings-schema.json->open-on-category->options
+#. 4.0/categoriesview.js:303 5.8/categoriesview.js:319
+msgid "Recent"
+msgstr "Recent"
+
+#. 4.0->settings-schema.json->open-on-category->options
+#. 5.8->settings-schema.json->open-on-category->options
+#. 4.0/categoriesview.js:304 5.8/categoriesview.js:320
+msgid "Favorite apps"
+msgstr "Favoriete toepassingen"
+
+#. 4.0/contextmenu.js:111 5.8/contextmenu.js:154
+msgid "light skin tone"
+msgstr "lichte huidskleur"
+
+#. 4.0/contextmenu.js:112 5.8/contextmenu.js:155
+msgid "medium-light skin tone"
+msgstr "lichtgetinte huidskleur"
+
+#. 4.0/contextmenu.js:113 5.8/contextmenu.js:156
+msgid "medium skin tone"
+msgstr "getinte huidskleur"
+
+#. 4.0/contextmenu.js:114 5.8/contextmenu.js:157
+msgid "medium-dark skin tone"
+msgstr "donkergetinte huidskleur"
+
+#. 4.0/contextmenu.js:115 5.8/contextmenu.js:158
+msgid "dark skin tone"
+msgstr "donkere huidskleur"
+
+#. 4.0/contextmenu.js:134 5.8/contextmenu.js:177
+msgid "Remove category"
+msgstr "Categorie verwijderen"
+
+#. 4.0/contextmenu.js:148 5.8/contextmenu.js:191
+msgid "Reset category order"
+msgstr "Categorievolgorde terugzetten op standaard"
+
+#. 4.0/contextmenu.js:171 5.8/contextmenu.js:214
+msgid "List settings apps separately"
+msgstr "Instellingen-apps apart weergeven"
+
+#. 4.0/contextmenu.js:178 5.8/contextmenu.js:221
+msgid "Single list style"
+msgstr "Enkelvoudige lijst stijl"
+
+#. 4.0/contextmenu.js:187 5.8/contextmenu.js:230
+msgid "Hide hidden files"
+msgstr "Verborgen bestanden verbergen"
+
+#. 4.0->settings-schema.json->show-hidden-files->description
+#. 5.8->settings-schema.json->show-hidden-files->description
+#. 4.0/contextmenu.js:194 5.8/contextmenu.js:237
+msgid "Show hidden files"
+msgstr "Toon verborgen bestanden"
+
+#. 4.0/contextmenu.js:250 4.0/contextmenu.js:259 5.8/contextmenu.js:290
+msgid "Run with NVIDIA GPU"
+msgstr "Draaien met NVIDIA-GPU"
+
+#. 4.0/contextmenu.js:268 5.8/contextmenu.js:303
+msgid "Add to panel"
+msgstr "Toevoegen aan werkbalk"
+
+#. 4.0/contextmenu.js:287 5.8/contextmenu.js:324
+msgid "Add to desktop"
+msgstr "Toevoegen aan bureaublad"
+
+#. 4.0/contextmenu.js:301 4.0/contextmenu.js:399 5.8/contextmenu.js:341
+#. 5.8/contextmenu.js:490
+msgid "Remove from favorites"
+msgstr "Verwijderen uit favorieten"
+
+#. 4.0/contextmenu.js:305 4.0/contextmenu.js:404 5.8/contextmenu.js:348
+#. 5.8/contextmenu.js:497
+msgid "Add to favorites"
+msgstr "Toevoegen aan favorieten"
+
+#. 4.0/contextmenu.js:312 5.8/contextmenu.js:358
+msgid "Uninstall"
+msgstr "Deïnstalleren"
+
+#. 4.0/contextmenu.js:322 5.8/contextmenu.js:368
+msgid "App Info"
+msgstr "App-informatie"
+
+#. 4.0/contextmenu.js:331 5.8/contextmenu.js:377
+msgid "Properties"
+msgstr ""
+
+#. 4.0/contextmenu.js:349 5.8/contextmenu.js:450
+msgid "This file is no longer available"
+msgstr "Dit bestand is niet langer beschikbaar"
+
+#. 4.0/contextmenu.js:357 5.8/contextmenu.js:458
+msgid "Open with"
+msgstr "Openen met"
+
+#. 4.0/contextmenu.js:378 5.8/contextmenu.js:479
+msgid "Other application..."
+msgstr "Andere toepassing..."
+
+#. 4.0/contextmenu.js:420 5.8/contextmenu.js:510
+msgid "Add folder as category"
+msgstr "Map toevoegen als categorie"
+
+#. 4.0/contextmenu.js:437 5.8/contextmenu.js:527 4.0/search.py:48
+#. 5.8/search.py:48
+msgid "Open containing folder"
+msgstr "Map die het bevat openen"
+
+#. 4.0/contextmenu.js:453 4.0/contextmenu.js:466 5.8/contextmenu.js:547
+#. 5.8/contextmenu.js:560
+msgid "Move to trash"
+msgstr "Verplaatsen naar prullenbak"
+
+#. 4.0/contextmenu.js:459 5.8/contextmenu.js:553
+msgid "Error while moving file to trash:"
+msgstr "Fout bij het verplaatsen van het bestand naar de prullenbak:"
+
+#. 4.0/emoji.js:7739 5.8/emoji.js:8
+msgid "Smileys & Emotion"
+msgstr "Lachebekjes en emoties"
+
+#. 4.0/emoji.js:7740 5.8/emoji.js:689
+msgid "People & Body"
+msgstr "Mensen en lichaam"
+
+#. 4.0/emoji.js:7741 5.8/emoji.js:2253
+msgid "Animals & Nature"
+msgstr "Dieren en natuur"
+
+#. 4.0/emoji.js:7742 5.8/emoji.js:2873
+msgid "Food & Drink"
+msgstr "Eten en drinken"
+
+#. 4.0/emoji.js:7743 5.8/emoji.js:3421
+msgid "Travel & Places"
+msgstr "Reizen en mooie plekken"
+
+#. 4.0/emoji.js:7744 5.8/emoji.js:4297
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. 4.0/emoji.js:7745 5.8/emoji.js:4641
+msgid "Objects"
+msgstr "Dingen"
+
+#. 4.0/emoji.js:7746 5.8/emoji.js:5701
+msgid "Symbols"
+msgstr "Symbolen"
+
+#. 4.0/emoji.js:7747 5.8/emoji.js:6601
+msgid "Flags"
+msgstr "Vlaggen"
+
+#. 4.0/sidebar.js:251 5.8/sidebar.js:266
+msgid "Quit"
+msgstr "Afsluiten"
+
+#. 4.0/sidebar.js:252 5.8/sidebar.js:267
+msgid "Shutdown the computer"
+msgstr "De computer afsluiten"
+
+#. 4.0/sidebar.js:260 5.8/sidebar.js:277
+msgid "Logout"
+msgstr "Afmelden"
+
+#. 4.0/sidebar.js:261 5.8/sidebar.js:278
+msgid "Leave the session"
+msgstr "Sessie verlaten"
+
+#. 4.0/sidebar.js:269 5.8/sidebar.js:287
+msgid "Lock screen"
+msgstr "Scherm vergrendelen"
+
+#. 4.0/sidebar.js:270 5.8/sidebar.js:288
+msgid "Lock the screen"
+msgstr "Vergrendel het scherm"
+
+#. 5.8/applet.js:1032
+#, fuzzy
+msgid "Loading..."
 msgstr "Zoeken..."
 
-msgid "Search Stopped"
-msgstr "Zoeken gestopt"
+#. 5.8/applet.js:1218
+msgid "Files"
+msgstr "Bestanden"
 
-msgid "Searching: "
-msgstr "Zoeken: "
+#. 5.8/applet.js:1248 5.8/applet.js:1254
+msgid "Calculator: "
+msgstr ""
 
-msgid "Error: insufficient permissions to read folder "
-msgstr "Fout: onvoldoende rechten om map te lezen "
+#. 5.8/applet.js:1429 5.8/applet.js:1956
+msgid "Click to insert emoji"
+msgstr ""
 
-msgid "Search Completed"
-msgstr "Zoeken voltooid"
+#. 5.8/applet.js:1926
+msgid "Back"
+msgstr ""
 
-msgid "Skipping"
-msgstr "Overslaan"
-
-msgid " - directory already searched"
-msgstr " - map al doorzocht"
-
+#. 4.0/mint-remove-application.py:34
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
@@ -316,24 +330,102 @@ msgstr ""
 "Dit menu-element is niet gekoppeld aan een pakket. Wilt u het toch uit het "
 "menu verwijderen?"
 
+#. 4.0/mint-remove-application.py:75
 msgid "The following packages will be removed:"
 msgstr "De volgende pakketten worden verwijderd:"
 
+#. 4.0/mint-remove-application.py:82
 msgid "Packages to be removed"
 msgstr "Pakketten die moeten worden verwijderd"
 
+#. 4.0/mint-remove-application.py:143
 #, python-format
 msgid "Cannot remove package %s as it is required by other packages."
 msgstr ""
 "Kan pakket %s niet verwijderen omdat dit nodig is voor andere pakketten."
 
+#. 4.0/mint-remove-application.py:149
 #, python-format
 msgid "Package %s is a dependency of the following packages:"
 msgstr "Pakket %s is een afhankelijkheid van de volgende pakketten:"
 
+#. 4.0/search.py:43 5.8/search.py:43
+msgid "Open"
+msgstr "Open"
+
+#. 4.0->settings-schema.json->search->title
+#. 4.0->settings-schema.json->search-search->title
+#. 5.8->settings-schema.json->search->title
+#. 5.8->settings-schema.json->search-search->title
+#. 4.0/search.py:85 5.8/search.py:85
+msgid "Search"
+msgstr "Zoeken"
+
+#. 4.0/search.py:106 5.8/search.py:106
+msgid "Start in"
+msgstr "Begin in"
+
+#. 4.0/search.py:107 5.8/search.py:107
+msgid "Select a folder"
+msgstr "Kies een map"
+
+#. 4.0/search.py:113 5.8/search.py:113
+msgid "Follow symlinks"
+msgstr "Symlinks volgen"
+
+#. 4.0/search.py:117 5.8/search.py:117
+msgid "Search hidden"
+msgstr "Zoek verborgen"
+
+#. 4.0/search.py:121 5.8/search.py:121
+msgid "Use regular expressions"
+msgstr "Gebruik reguliere uitdrukkingen"
+
+#. 4.0/search.py:125 5.8/search.py:125
+msgid "Stop"
+msgstr "Houd op"
+
+#. 4.0/search.py:140 5.8/search.py:140
+msgid "File"
+msgstr "Bestand"
+
+#. 4.0/search.py:156 5.8/search.py:156
+msgid "Path"
+msgstr "Pad"
+
+#. 4.0/search.py:184 5.8/search.py:184
+msgid "Searching..."
+msgstr "Zoeken..."
+
+#. 4.0/search.py:198 4.0/search.py:199 5.8/search.py:198 5.8/search.py:199
+msgid "Search Stopped"
+msgstr "Zoeken gestopt"
+
+#. 4.0/search.py:215 5.8/search.py:215
+msgid "Searching: "
+msgstr "Zoeken: "
+
+#. 4.0/search.py:220 5.8/search.py:220
+msgid "Error: insufficient permissions to read folder "
+msgstr "Fout: onvoldoende rechten om map te lezen "
+
+#. 4.0/search.py:252 5.8/search.py:252
+msgid "Search Completed"
+msgstr "Zoeken voltooid"
+
+#. 4.0/search.py:259 5.8/search.py:259
+msgid "Skipping"
+msgstr "Overslaan"
+
+#. 4.0/search.py:259 5.8/search.py:259
+msgid " - directory already searched"
+msgstr " - map al doorzocht"
+
+#. metadata.json->name
 msgid "Cinnamenu"
 msgstr "Cinnamenu"
 
+#. metadata.json->description
 msgid ""
 "A flexible menu with grid or list layout options, file browser and emoji "
 "search."
@@ -341,193 +433,391 @@ msgstr ""
 "Een flexibel menu met opties voor raster- of lijstvormgeving, "
 "bestandbeheerder en zoeken naar emotiepictogrammen."
 
+#. 4.0->settings-schema.json->layout->title
+#. 4.0->settings-schema.json->menu-layout->title
+#. 5.8->settings-schema.json->layout->title
+#. 5.8->settings-schema.json->menu-layout->title
 msgid "Layout"
 msgstr "Vormgeving"
 
+#. 4.0->settings-schema.json->behaviour->title
+#. 5.8->settings-schema.json->behaviour->title
 msgid "Behavior"
 msgstr "Gedrag"
 
+#. 4.0->settings-schema.json->appearance->title
+#. 5.8->settings-schema.json->appearance->title
 msgid "Appearance"
 msgstr "Uiterlijk"
 
+#. 4.0->settings-schema.json->tips->title
+#. 4.0->settings-schema.json->tips-section->title
+#. 5.8->settings-schema.json->tips->title
+#. 5.8->settings-schema.json->tips-section->title
 msgid "Tips"
 msgstr "Tips"
 
+#. 4.0->settings-schema.json->menu-content->title
+#. 5.8->settings-schema.json->menu-content->title
 msgid "Content"
 msgstr "Inhoud"
 
+#. 4.0->settings-schema.json->panel-behave->title
+#. 4.0->settings-schema.json->panel-appear->title
+#. 5.8->settings-schema.json->panel-behave->title
+#. 5.8->settings-schema.json->panel-appear->title
 msgid "Panel"
 msgstr "Werkbalk"
 
+#. 4.0->settings-schema.json->menu-behave->title
+#. 4.0->settings-schema.json->menu-icons->title
+#. 5.8->settings-schema.json->menu-behave->title
+#. 5.8->settings-schema.json->menu-icons->title
 msgid "Menu"
 msgstr "Menu"
 
+#. 4.0->settings-schema.json->applications-view-mode->description
+#. 5.8->settings-schema.json->applications-view-mode->description
 msgid "Applications view mode"
 msgstr "Toepassingsweergavemodus"
 
+#. 4.0->settings-schema.json->applications-view-mode->options
+#. 5.8->settings-schema.json->applications-view-mode->options
 msgid "List"
 msgstr "Lijst"
 
+#. 4.0->settings-schema.json->applications-view-mode->options
+#. 5.8->settings-schema.json->applications-view-mode->options
 msgid "Grid"
 msgstr "Raster"
 
+#. 4.0->settings-schema.json->applications-view-mode->tooltip
+#. 5.8->settings-schema.json->applications-view-mode->tooltip
 msgid "View applications as list or grid"
 msgstr "Bekijk applicaties als lijst of raster"
 
+#. 4.0->settings-schema.json->show-sidebar->description
+#. 5.8->settings-schema.json->show-sidebar->description
 msgid "Show sidebar"
 msgstr "Zijbalk tonen"
 
+#. 4.0->settings-schema.json->show-sidebar->tooltip
+#. 5.8->settings-schema.json->show-sidebar->tooltip
 msgid "Show the sidebar in the menu"
 msgstr "De zijbalk weergeven in het menu"
 
+#. 4.0->settings-schema.json->sidebar-placement->description
+#. 5.8->settings-schema.json->sidebar-placement->description
 msgid "Sidebar location"
 msgstr "Locatie zijbalk"
 
+#. 4.0->settings-schema.json->sidebar-placement->options
+#. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Top"
 msgstr "Bovenaan"
 
+#. 4.0->settings-schema.json->sidebar-placement->options
+#. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Bottom"
 msgstr "Onderaan"
 
+#. 4.0->settings-schema.json->sidebar-placement->options
+#. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Left"
 msgstr "Links"
 
+#. 4.0->settings-schema.json->sidebar-placement->options
+#. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Right"
 msgstr "Rechts"
 
+#. 4.0->settings-schema.json->sidebar-placement->tooltip
+#. 5.8->settings-schema.json->sidebar-placement->tooltip
 msgid "Choose where to show the sidebar"
 msgstr "Kies waar u de zijbalk wilt weergeven"
 
+#. 4.0->settings-schema.json->sidebar-favorites->description
+#. 5.8->settings-schema.json->sidebar-favorites->description
 msgid "Show favorites on sidebar"
 msgstr "Favorieten weergeven in zijbalk"
 
+#. 4.0->settings-schema.json->sidebar-favorites->options
+#. 4.0->settings-schema.json->description-placement->options
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->sidebar-favorites->options
+#. 5.8->settings-schema.json->description-placement->options
+#. 5.8->settings-schema.json->web-search-option->options
 msgid "None"
 msgstr "Geen"
 
+#. 4.0->settings-schema.json->sidebar-favorites->options
+#. 5.8->settings-schema.json->sidebar-favorites->options
 msgid "Apps only"
 msgstr "Alleen toepassingen"
 
+#. 4.0->settings-schema.json->sidebar-favorites->options
+#. 5.8->settings-schema.json->sidebar-favorites->options
 msgid "Files only"
 msgstr "Alleen bestanden"
 
+#. 4.0->settings-schema.json->sidebar-favorites->options
+#. 5.8->settings-schema.json->sidebar-favorites->options
 msgid "Apps and files"
 msgstr "Toepassingen en bestanden"
 
+#. 4.0->settings-schema.json->sidebar-favorites->tooltip
+#. 5.8->settings-schema.json->sidebar-favorites->tooltip
 msgid "Show your favorite apps and file icons on the sidebar"
 msgstr "Toon uw favoriete toepassings- en bestandspictogrammen in de zijbalk"
 
+#. 4.0->settings-schema.json->description-placement->description
+#. 5.8->settings-schema.json->description-placement->description
 msgid "Application description placement"
 msgstr "Plaatsing van toepassingsbeschrijving"
 
+#. 4.0->settings-schema.json->description-placement->options
+#. 5.8->settings-schema.json->description-placement->options
 msgid "Tooltips"
 msgstr "Zweeftips"
 
+#. 4.0->settings-schema.json->description-placement->options
+#. 5.8->settings-schema.json->description-placement->options
 msgid "Under titles"
 msgstr "Onder titels"
 
+#. 4.0->settings-schema.json->description-placement->tooltip
+#. 5.8->settings-schema.json->description-placement->tooltip
 msgid "Choose where to show application descriptions"
 msgstr "Kies waar toepassingsbeschrijvingen moeten worden weergegeven"
 
+#. 4.0->settings-schema.json->show-categories->description
+#. 5.8->settings-schema.json->show-categories->description
 msgid "Show categories"
 msgstr "Categorieën tonen"
 
+#. 4.0->settings-schema.json->show-categories->tooltip
+#. 5.8->settings-schema.json->show-categories->tooltip
 msgid "Show list of application categories"
 msgstr "Lijst van applicatie-categorieën tonen"
 
+#. 4.0->settings-schema.json->show-places-category->description
+#. 5.8->settings-schema.json->show-places-category->description
 msgid "Show bookmarks and places"
 msgstr "Bladwijzers en locaties tonen"
 
+#. 4.0->settings-schema.json->show-places-category->tooltip
+#. 5.8->settings-schema.json->show-places-category->tooltip
 msgid "Show bookmarks and places category in the menu"
 msgstr "Toon categorie voor bladwijzers en plaatsen in het menu"
 
+#. 4.0->settings-schema.json->show-recents-category->description
+#. 5.8->settings-schema.json->show-recents-category->description
 msgid "Show recent items"
 msgstr "Toon recente elementen"
 
+#. 4.0->settings-schema.json->show-recents-category->tooltip
+#. 5.8->settings-schema.json->show-recents-category->tooltip
 msgid "Show recent items category in the menu"
 msgstr "Toon de categorie recente elementen in het menu"
 
+#. 4.0->settings-schema.json->show-favorite-apps-category->description
+#. 5.8->settings-schema.json->show-favorite-apps-category->description
 msgid "Show favorite apps category"
 msgstr "Toon de categorie favoriete toepassingen"
 
+#. 4.0->settings-schema.json->show-favorite-apps-category->tooltip
+#. 5.8->settings-schema.json->show-favorite-apps-category->tooltip
 msgid "Show your favorite apps category in the menu"
 msgstr "Toon uw favoriete toepassingencategorie in het menu"
 
+#. 4.0->settings-schema.json->show-home-folder-category->description
+#. 5.8->settings-schema.json->show-home-folder-category->description
 msgid "Show home folder"
 msgstr "Thuismap tonen"
 
+#. 4.0->settings-schema.json->show-home-folder-category->tooltip
+#. 5.8->settings-schema.json->show-home-folder-category->tooltip
 msgid "Show home folder category in the menu"
 msgstr "Toon thuismapcategorie in het menu"
 
+#. 4.0->settings-schema.json->show-emoji-category->description
+#. 5.8->settings-schema.json->show-emoji-category->description
 msgid "Show emoji category"
 msgstr "Toon emotiepictogramcategorie"
 
+#. 4.0->settings-schema.json->show-emoji-category->tooltip
+#. 5.8->settings-schema.json->show-emoji-category->tooltip
 msgid "Show emoji category in the menu"
 msgstr "Toon emotiepictogramcategorie in het menu"
 
+#. 4.0->settings-schema.json->menu-editor-button->description
+#. 5.8->settings-schema.json->menu-editor-button->description
 msgid "Open the menu editor"
 msgstr "Open de menubewerker"
 
+#. 4.0->settings-schema.json->overlay-key->description
+#. 5.8->settings-schema.json->overlay-key->description
 msgid "Keyboard shortcut to open and close the menu"
 msgstr "Sneltoets voor openen en sluiten van het menu"
 
+#. 4.0->settings-schema.json->activate-on-hover->description
+#. 5.8->settings-schema.json->activate-on-hover->description
 msgid "Open menu on hover"
 msgstr "Menu openen bij zweven"
 
+#. 4.0->settings-schema.json->activate-on-hover->tooltip
+#. 5.8->settings-schema.json->activate-on-hover->tooltip
 msgid "Open the menu when I move my mouse over the panel icon"
 msgstr "Open het menu wanneer ik mijn muispijl er overheen beweeg"
 
+#. 4.0->settings-schema.json->hover-delay->units
+#. 5.8->settings-schema.json->hover-delay->units
 msgid "milliseconds"
 msgstr "milliseconden"
 
+#. 4.0->settings-schema.json->hover-delay->description
+#. 5.8->settings-schema.json->hover-delay->description
 msgid "Menu hover delay"
 msgstr "Zweefvertraging voor menu"
 
+#. 4.0->settings-schema.json->enable-animation->description
+#. 5.8->settings-schema.json->enable-animation->description
 msgid "Use menu animations"
 msgstr "Menu-animaties gebruiken"
 
+#. 4.0->settings-schema.json->enable-animation->tooltip
+#. 5.8->settings-schema.json->enable-animation->tooltip
 msgid "Animate the menu on open and close"
 msgstr "Menu-animaties inschakelen voor openen en sluiten"
 
+#. 4.0->settings-schema.json->category-click->description
+#. 5.8->settings-schema.json->category-click->description
 msgid "Activate categories on click"
 msgstr "Categorieën activeren bij klikken"
 
+#. 4.0->settings-schema.json->category-click->tooltip
+#. 5.8->settings-schema.json->category-click->tooltip
 msgid "Activate categories on click instead of on hover"
 msgstr "Categorieën activeren bij klikken in plaats van bij zweven"
 
+#. 4.0->settings-schema.json->open-on-category->description
+#. 5.8->settings-schema.json->open-on-category->description
 msgid "Open menu on category:"
 msgstr "Open menu op categorie:"
 
+#. 4.0->settings-schema.json->open-on-category->tooltip
+#. 5.8->settings-schema.json->open-on-category->tooltip
 msgid "Always open the menu with this category selected"
 msgstr "Open altijd het menu met deze categorie geselecteerd"
 
+#. 4.0->settings-schema.json->open-on-category->options
+#. 5.8->settings-schema.json->open-on-category->options
 msgid "Last used category"
 msgstr "Laatst gebruikte categorie"
 
+#. 4.0->settings-schema.json->enable-autoscroll->description
+#. 5.8->settings-schema.json->enable-autoscroll->description
 msgid "Enable autoscrolling"
 msgstr "Schakel automatisch schuiven in"
 
+#. 4.0->settings-schema.json->enable-autoscroll->tooltip
+#. 5.8->settings-schema.json->enable-autoscroll->tooltip
 msgid "Autoscroll the application list on mouse hover"
 msgstr ""
 "Automatisch schuiven door de toepassingenlijst bij erboven zweven met de muis"
 
+#. 4.0->settings-schema.json->show-hidden-files->tooltip
+#. 5.8->settings-schema.json->show-hidden-files->tooltip
 msgid "Show hidden files in folder view"
 msgstr "Verborgen bestanden weergeven in mapweergave"
 
+#. 4.0->settings-schema.json->enable-emoji-search->description
+#. 5.8->settings-schema.json->enable-emoji-search->description
 msgid "Emoji search"
 msgstr "Emotiepictogrammen doorzoeken"
 
+#. 4.0->settings-schema.json->enable-emoji-search->tooltip
+#. 5.8->settings-schema.json->enable-emoji-search->tooltip
 msgid "Show emojis in search results"
 msgstr "Emotiepictogrammen weergeven in zoekresultaten"
 
+#. 4.0->settings-schema.json->web-search-option->description
+#. 5.8->settings-schema.json->web-search-option->description
 msgid "Web search option"
 msgstr "Optie voor zoeken op internet"
 
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Google"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Bing"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Baidu"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Yahoo"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Yandex"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "DuckDuckGo"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Ask"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Ecosia"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "AOL"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Startpage"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Brave"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Qwant"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->tooltip
+#. 5.8->settings-schema.json->web-search-option->tooltip
 msgid "Show an internet search option in search results"
 msgstr "Toon een webzoekoptie in zoekresultaten"
 
+#. 4.0->settings-schema.json->web-suggestions->description
+#. 5.8->settings-schema.json->web-suggestions->description
 msgid "Web search suggestions"
 msgstr "Webzoeksuggesties"
 
+#. 4.0->settings-schema.json->web-suggestions->tooltip
+#. 5.8->settings-schema.json->web-suggestions->tooltip
 msgid ""
 "With web search option, also show search suggestions. (Note: Search "
 "suggestions are provided by DuckDuckGo)"
@@ -535,15 +825,23 @@ msgstr ""
 "Met webzoekoptie, toont ook zoeksuggesties (let op: dit gebruikt de zoek-API "
 "van DuckDuckGo)."
 
+#. 4.0->settings-schema.json->enable-home-folder-search->description
+#. 5.8->settings-schema.json->enable-home-folder-search->description
 msgid "Search home folder"
 msgstr "Zoeken in thuismap"
 
+#. 4.0->settings-schema.json->enable-home-folder-search->tooltip
+#. 5.8->settings-schema.json->enable-home-folder-search->tooltip
 msgid "When searching, also search my home folder for files"
 msgstr "Zoek bij het zoeken ook in mijn thuismap naar bestanden"
 
+#. 4.0->settings-schema.json->enable-web-history-search->description
+#. 5.8->settings-schema.json->enable-web-history-search->description
 msgid "Web history search"
 msgstr "Zoeken in webgeschiedenis"
 
+#. 4.0->settings-schema.json->enable-web-history-search->tooltip
+#. 5.8->settings-schema.json->enable-web-history-search->tooltip
 msgid ""
 "When searching, also search my browser's history (Google Chrome, Chromium, "
 "Opera, Vivaldi, Brave)\n"
@@ -553,15 +851,19 @@ msgstr ""
 "Chromium, Opera, Vivaldi, Brave)\n"
 "Opmerking: Firefox-geschiedenis wordt momenteel niet ondersteund."
 
+#. 4.0->settings-schema.json->enable-web-bookmarks-search->description
+#. 5.8->settings-schema.json->enable-web-bookmarks-search->description
 msgid "Web bookmarks search"
 msgstr "Zoeken naar webbladwijzers"
 
+#. 4.0->settings-schema.json->enable-web-bookmarks-search->tooltip
+#. 5.8->settings-schema.json->enable-web-bookmarks-search->tooltip
 msgid ""
 "When searching, also search my browser's web bookmarks (Google Chrome, "
 "Firefox, Chromium, Opera, Vivaldi, Brave, LibreWolf)\n"
-"Note: To search Firefox/LibreWolf bookmarks you will need to install package gir1.2-"
-"gda-5.0 (Debian based distributions inc. Ubuntu & Linux Mint) or package "
-"libgda6 (Arch based distributions) and restart your computer."
+"Note: To search Firefox/LibreWolf bookmarks you will need to install package "
+"gir1.2-gda-5.0 (Debian based distributions inc. Ubuntu & Linux Mint) or "
+"package libgda6 (Arch based distributions) and restart your computer."
 msgstr ""
 "Zoek bij het zoeken ook in de webbladwijzers van mijn browser (Google "
 "Chrome, Firefox, Chromium, Opera, Vivaldi, Brave, LibreWolf)\n"
@@ -570,15 +872,8 @@ msgstr ""
 "Mint) of het paskket libgda6 (Arch-gebaseerde distributies) en uw computer "
 "herstarten."
 
-msgid "Wikipedia search"
-msgstr "Wikipedia doorzoeken"
-
-msgid "Show some Wikipedia results"
-msgstr "Enkele Wikipedia-resultaten weergeven"
-
-msgid "Wikipedia language"
-msgstr "Wikipedia-taal"
-
+#. 4.0->settings-schema.json->search-help->description
+#. 5.8->settings-schema.json->search-help->description
 msgid ""
 "\n"
 "Note: Some search options can still be used even if you have not enabled "
@@ -595,54 +890,98 @@ msgstr ""
 "'f' voor het zoeken naar bestanden, 'h' voor webgeschiedenis en 'b' voor het "
 "zoeken naar webbladwijzers.\n"
 
+#. 4.0->settings-schema.json->menu-icon-custom->description
+#. 5.8->settings-schema.json->menu-icon-custom->description
 msgid "Use a custom icon"
 msgstr "Een aangepast pictogram gebruiken"
 
+#. 4.0->settings-schema.json->menu-icon-custom->tooltip
+#. 5.8->settings-schema.json->menu-icon-custom->tooltip
 msgid "Use a custom icon in the panel"
 msgstr "Een aangepast pictogram gebruiken in de werkbalk"
 
+#. 4.0->settings-schema.json->menu-icon->description
+#. 4.0->settings-schema.json->menu-icon->tooltip
+#. 5.8->settings-schema.json->menu-icon->description
+#. 5.8->settings-schema.json->menu-icon->tooltip
 msgid "Panel icon"
 msgstr "Werkbalkpictogram"
 
+#. 4.0->settings-schema.json->menu-icon-size-custom->description
+#. 5.8->settings-schema.json->menu-icon-size-custom->description
 msgid "Use a custom icon size"
 msgstr "Gebruik een aangepaste pictogramgrootte"
 
+#. 4.0->settings-schema.json->menu-icon-size-custom->tooltip
+#. 5.8->settings-schema.json->menu-icon-size-custom->tooltip
 msgid "Use a custom size for the panel icon"
 msgstr "Gebruik een aangepaste grootte voor het werkbalkpictogram"
 
+#. 4.0->settings-schema.json->menu-icon-size->description
+#. 5.8->settings-schema.json->menu-icon-size->description
 msgid "Panel icon size (pixels)"
 msgstr "Grootte werkbalkpictogram (beeldpunten)"
 
+#. 4.0->settings-schema.json->menu-icon-size->tooltip
+#. 5.8->settings-schema.json->menu-icon-size->tooltip
 msgid "Choose a custom size for the panel icon"
 msgstr "Kies een aangepaste grootte voor het werkbalkpictogram"
 
+#. 4.0->settings-schema.json->menu-label->description
+#. 5.8->settings-schema.json->menu-label->description
 msgid "Panel text"
 msgstr "Werkbalktekst"
 
+#. 4.0->settings-schema.json->menu-label->tooltip
+#. 5.8->settings-schema.json->menu-label->tooltip
 msgid "Text to show beside the panel icon"
 msgstr "Tekst die naast het werkbalkpictogram moet worden weergegeven"
 
+#. 4.0->settings-schema.json->category-icon-size->description
+#. 4.0->settings-schema.json->category-icon-size->tooltip
+#. 5.8->settings-schema.json->category-icon-size->description
+#. 5.8->settings-schema.json->category-icon-size->tooltip
 msgid "Category icon size (pixels)"
 msgstr "Grootte categoriepictogram (beeldpunten)"
 
+#. 4.0->settings-schema.json->apps-list-icon-size->description
+#. 4.0->settings-schema.json->apps-list-icon-size->tooltip
+#. 5.8->settings-schema.json->apps-list-icon-size->description
+#. 5.8->settings-schema.json->apps-list-icon-size->tooltip
 msgid "Applications list icon size (pixels)"
 msgstr "Pictogramgrootte van de lijst met toepassingen (beeldpunten)"
 
+#. 4.0->settings-schema.json->apps-grid-icon-size->description
+#. 4.0->settings-schema.json->apps-grid-icon-size->tooltip
+#. 5.8->settings-schema.json->apps-grid-icon-size->description
+#. 5.8->settings-schema.json->apps-grid-icon-size->tooltip
 msgid "Applications grid icon size (pixels)"
 msgstr "Pictogramgrootte van het toepassingenraster (beeldpunten)"
 
+#. 4.0->settings-schema.json->sidebar-icon-size->description
+#. 4.0->settings-schema.json->sidebar-icon-size->tooltip
+#. 5.8->settings-schema.json->sidebar-icon-size->description
+#. 5.8->settings-schema.json->sidebar-icon-size->tooltip
 msgid "Sidebar icon size (pixels)"
 msgstr "Grootte van zijbalkpictogram (beeldpunten)"
 
+#. 4.0->settings-schema.json->use-box-style->description
+#. 5.8->settings-schema.json->use-box-style->description
 msgid "Use sidebar box style"
 msgstr "Zijbalkstijl gebruiken"
 
+#. 4.0->settings-schema.json->use-box-style->tooltip
+#. 5.8->settings-schema.json->use-box-style->tooltip
 msgid "Use a sidebar box style"
 msgstr "Een zijbalkstijl gebruiken"
 
+#. 4.0->settings-schema.json->use-tile-style->description
+#. 5.8->settings-schema.json->use-tile-style->description
 msgid "Use tile style"
 msgstr "Tegelstijl gebruiken"
 
+#. 4.0->settings-schema.json->use-tile-style->tooltip
+#. 5.8->settings-schema.json->use-tile-style->tooltip
 msgid ""
 "Use a tile style for the application buttons (Note: may not work on some "
 "themes)"
@@ -650,6 +989,8 @@ msgstr ""
 "Gebruik een tegelstijl voor de toepassingsknoppen (Opmerking: werkt mogelijk "
 "niet bij sommige thema's)"
 
+#. 4.0->settings-schema.json->info1->description
+#. 5.8->settings-schema.json->info1->description
 msgid ""
 "\n"
 "• Drag on the menu edge to change the menu size."
@@ -657,6 +998,8 @@ msgstr ""
 "\n"
 "• Sleep op de menurand om de menugrootte te wijzigen."
 
+#. 4.0->settings-schema.json->info2->description
+#. 5.8->settings-schema.json->info3->description
 msgid ""
 "\n"
 "• Drag and drop menu categories to change their order."
@@ -664,6 +1007,8 @@ msgstr ""
 "\n"
 "• Menucategorieën slepen en neerzetten om hun volgorde te wijzigen."
 
+#. 4.0->settings-schema.json->info3->description
+#. 5.8->settings-schema.json->info4->description
 msgid ""
 "\n"
 "• Folders can be set up and removed as menu categories by right-clicking on "
@@ -673,11 +1018,12 @@ msgstr ""
 "• Mappen kunnen worden ingesteld en verwijderd als menucategorieën door er "
 "met de rechtermuisknop op te klikken."
 
+#. 4.0->settings-schema.json->info4->description
+#. 5.8->settings-schema.json->info5->description
+#, fuzzy
 msgid ""
 "\n"
-"• Additional key options:\n"
-"ctrl-p — Open launcher properties dialogue of currently highlighted "
-"application.\n"
+"• Additional key option:\n"
 "ctrl-d — Open .desktop file of currently highlighted app in default text "
 "editor.\n"
 msgstr ""
@@ -688,63 +1034,23 @@ msgstr ""
 "ctrl-d — Open .desktop bestand van de momenteel gemarkeerde app in de "
 "standaardtekstverwerker.\n"
 
-msgid "Search Providers"
-msgstr "Zoekdienstaanbieders"
-
-msgid "No search provider extensions found"
-msgstr "Geen extensies aangetroffen voor zoekdiensten"
-
-msgid "Recent files settings"
-msgstr "Instellingen voor recente bestanden"
-
-msgid "Enable autoscrolling in application list"
-msgstr "Automatisch schuiven in toepassingenlijst inschakelen"
-
-msgid "Show web bookmarks"
-msgstr "Webbladwijzers tonen"
-
-msgid ""
-"Show your browser's web bookmarks in the menu.\n"
-"Note: Install package gir1.2-gda-5.0 to read firefox bookmarks."
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Custom"
 msgstr ""
-"Toon de webbladwijzers van uw browser in het menu.\n"
-"Opmerking: Installeer pakket gir1.2-gda-5.0 om Firefox-bladwijzers te lezen."
 
-msgid "Enable searching of open windows"
-msgstr "Opzoeken van open vensters inschakelen"
+#. 5.8->settings-schema.json->web-search-custom-url->description
+msgid "URL for custom search"
+msgstr ""
 
-msgid "Enable search providers"
-msgstr "Zoekdiensten inschakelen"
+#. 5.8->settings-schema.json->web-search-custom-url->tooltip
+msgid "Enter the URL that is prepended to the search query."
+msgstr ""
 
-msgid "Include search provider results in searches"
-msgstr "Zoekresultaten van zoekdiensten opnemen in zoekopdrachten"
-
-msgid "Example Search Providers"
-msgstr "Voorbeeld van zoekdiensten"
-
-msgid "columns"
-msgstr "rijen"
-
-msgid "Number of columns in apps grid"
-msgstr "Aantal rijen in toepassingenraster"
-
-msgid "Show application icons"
-msgstr "Toepassingspictogrammen tonen"
-
-msgid "Show category icons"
-msgstr "Categoriepictogrammen tonen"
-
-msgid "Show application descriptions under titles"
-msgstr "Beschrijvingen van toepassingen tonen onder titels"
-
-msgid "Show tooltips"
-msgstr "Zweeftips tonen"
-
-msgid "Tooltip delay"
-msgstr "Vertraging voor zweeftip"
-
-msgid "Use a custom menu height"
-msgstr "Een aangepaste menuhoogte gebruiken"
-
-msgid "Custom menu height (pixels)"
-msgstr "Aangepaste menuhoogte (beeldpunten)"
+#. 5.8->settings-schema.json->info2->description
+#, fuzzy
+msgid ""
+"\n"
+"• Drag and drop apps, files, and folders onto the sidebar."
+msgstr ""
+"\n"
+"• Menucategorieën slepen en neerzetten om hun volgorde te wijzigen."

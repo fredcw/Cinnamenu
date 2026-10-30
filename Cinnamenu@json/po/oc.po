@@ -1,4 +1,4 @@
-# Occitan translation file.
+# occitan translation file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Quentin PAGÈS, 2025.
@@ -7,314 +7,324 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-24 10:49+0000\n"
-"PO-Revision-Date: 2026-04-24 19:15+0200\n"
+"Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
+"issues\n"
+"POT-Creation-Date: 2026-10-30 03:10+0000\n"
+"PO-Revision-Date: 2025-09-25 18:10+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.7\n"
 
-#: 4.0/applet.js:63
+#. 4.0/applet.js:62
 msgid "Initializing"
 msgstr "Inicializacion"
 
-#: 4.0/applet.js:81 5.8/applet.js:75
+#. 4.0/applet.js:79 5.8/applet.js:100
 msgid "Find files..."
 msgstr "Recercar de fichièrs..."
 
-#: 4.0/applet.js:290
+#. 4.0/applet.js:294
 msgid "Please wait..."
 msgstr "Esperatz..."
 
-#: 4.0/applet.js:885 5.8/applet.js:917 5.8/applet.js:1161
+#. 4.0/applet.js:889 5.8/applet.js:962 5.8/applet.js:1215
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: 4.0/applet.js:889 5.8/applet.js:921
+#. 4.0/applet.js:893 5.8/applet.js:966
 msgid "Documents"
 msgstr "Documents"
 
-#: 4.0/applet.js:893 5.8/applet.js:925
+#. 4.0/applet.js:897 5.8/applet.js:970
 msgid "Videos"
 msgstr "Vidèos"
 
-#: 4.0/applet.js:897 5.8/applet.js:929
+#. 4.0/applet.js:901 5.8/applet.js:974
 msgid "Images"
 msgstr "Imatges"
 
-#: 4.0/applet.js:901 5.8/applet.js:933
+#. 4.0/applet.js:905 5.8/applet.js:978
 msgid "Music"
 msgstr "Musica"
 
-#: 4.0/applet.js:910 5.8/applet.js:942
+#. 4.0/applet.js:914 5.8/applet.js:987
 msgid "No recent Items"
 msgstr "Cap d’element recent"
 
-#: 4.0/applet.js:957 5.8/applet.js:993
+#. 4.0/applet.js:962 5.8/applet.js:1047
 msgid "Settings"
 msgstr "Paramètres"
 
-#: 4.0/applet.js:1095
+#. 4.0/applet.js:1100
 msgid "Applications and files"
 msgstr "Aplicacions e fichièrs"
 
-#: 4.0/applet.js:1098 5.8/applet.js:1167
+#. 4.0/applet.js:1103 5.8/applet.js:1221
 msgid "Other search results"
 msgstr "Autres resultats de recèrca"
 
-#: 4.0/applet.js:1101 5.8/applet.js:1170
+#. 4.0/applet.js:1106 5.8/applet.js:1224
 msgid "Browser bookmarks"
 msgstr "Percórrer los favorits"
 
-#: 4.0/applet.js:1104 5.8/applet.js:1173
+#. 4.0/applet.js:1109 5.8/applet.js:1227
 msgid "Browser history"
 msgstr "Percórrer l’istoric"
 
-#: 4.0/applet.js:1107 4.0/categoriesview.js:305 5.8/applet.js:1176
-#: 5.8/categoriesview.js:323
+#. 4.0/applet.js:1112 4.0/categoriesview.js:305 5.8/applet.js:1230
+#. 5.8/categoriesview.js:321
 msgid "Emoji"
 msgstr "Emoji"
 
-#: 4.0/applet.js:1161 4.0/applet.js:1299 4.0/applet.js:1786 5.8/applet.js:1223
+#. 4.0/applet.js:1166 4.0/applet.js:1305 4.0/applet.js:1808 5.8/applet.js:1277
 msgid "Click to copy"
 msgstr "Clicar per copiar"
 
-#: 4.0/applet.js:1600 5.8/applet.js:1677
+#. 4.0/applet.js:1608 5.8/applet.js:1735
 msgid "Clear List"
 msgstr "Escafar la lista"
 
-#: 4.0/applet.js:1634 4.0/applet.js:1635 5.8/applet.js:1714 5.8/applet.js:1715
+#. 4.0/applet.js:1645 4.0/applet.js:1646 5.8/applet.js:1772 5.8/applet.js:1773
 msgid "Trash"
 msgstr "Escobilhièr"
 
-#: 4.0/applet.js:1644 4.0/applet.js:1645 5.8/applet.js:1726 5.8/applet.js:1727
+#. 4.0/applet.js:1657 4.0/applet.js:1658 5.8/applet.js:1784 5.8/applet.js:1785
 msgid "Computer"
 msgstr "Ordenador"
 
-#: 4.0/appsview.js:298 4.0/sidebar.js:111 5.8/appsview.js:330
-#: 5.8/sidebar.js:132
+#. 4.0/appsview.js:303 4.0/sidebar.js:111 5.8/appsview.js:329
+#. 5.8/sidebar.js:133
 msgid "Error while opening file:"
 msgstr "Error a la dobertura del fichièr :"
 
-#: 4.0/appsview.js:443 5.8/appsview.js:533
+#. 4.0/appsview.js:451 5.8/appsview.js:532
 msgid "Too many entries - showing first 1000 entries only"
 msgstr "Tròpas d’entrada – afichatge de las primièras 1000 entradas solament"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
-#: 4.0/categoriesview.js:283 5.8/categoriesview.js:301
+#. 4.0/categoriesview.js:283 5.8/categoriesview.js:299
 msgid "All applications"
 msgstr "Totas las aplicacions"
 
-#: 4.0/categoriesview.js:301 5.8/categoriesview.js:319
+#. 4.0/categoriesview.js:301 5.8/categoriesview.js:317
 msgid "Favorites"
 msgstr "Favorits"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
-#: 4.0/categoriesview.js:302 5.8/categoriesview.js:320
+#. 4.0/categoriesview.js:302 5.8/categoriesview.js:318
 msgid "Places"
 msgstr "Emplaçaments"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
-#: 4.0/categoriesview.js:303 5.8/categoriesview.js:321
+#. 4.0/categoriesview.js:303 5.8/categoriesview.js:319
 msgid "Recent"
 msgstr "Recents"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
-#: 4.0/categoriesview.js:304 5.8/categoriesview.js:322
+#. 4.0/categoriesview.js:304 5.8/categoriesview.js:320
 msgid "Favorite apps"
 msgstr "Aplicacions favoritas"
 
-#: 4.0/contextmenu.js:111 5.8/contextmenu.js:126
+#. 4.0/contextmenu.js:111 5.8/contextmenu.js:154
 msgid "light skin tone"
 msgstr "color de pèl clara"
 
-#: 4.0/contextmenu.js:112 5.8/contextmenu.js:127
+#. 4.0/contextmenu.js:112 5.8/contextmenu.js:155
 msgid "medium-light skin tone"
 msgstr "color de pèl mejana clara"
 
-#: 4.0/contextmenu.js:113 5.8/contextmenu.js:128
+#. 4.0/contextmenu.js:113 5.8/contextmenu.js:156
 msgid "medium skin tone"
 msgstr "color de pèl mejana"
 
-#: 4.0/contextmenu.js:114 5.8/contextmenu.js:129
+#. 4.0/contextmenu.js:114 5.8/contextmenu.js:157
 msgid "medium-dark skin tone"
 msgstr "color de pèl mejana escura"
 
-#: 4.0/contextmenu.js:115 5.8/contextmenu.js:130
+#. 4.0/contextmenu.js:115 5.8/contextmenu.js:158
 msgid "dark skin tone"
 msgstr "color de pèl escura"
 
-#: 4.0/contextmenu.js:134 5.8/contextmenu.js:149
+#. 4.0/contextmenu.js:134 5.8/contextmenu.js:177
 msgid "Remove category"
 msgstr "Tirar la categoria"
 
-#: 4.0/contextmenu.js:148 5.8/contextmenu.js:163
+#. 4.0/contextmenu.js:148 5.8/contextmenu.js:191
 msgid "Reset category order"
 msgstr "Reïnicializa l'òrdre de las categorias"
 
-#: 4.0/contextmenu.js:171 5.8/contextmenu.js:186
+#. 4.0/contextmenu.js:171 5.8/contextmenu.js:214
 msgid "List settings apps separately"
 msgstr "Listrar los paramètres d’aplicacion separadament"
 
-#: 4.0/contextmenu.js:178 5.8/contextmenu.js:193
+#. 4.0/contextmenu.js:178 5.8/contextmenu.js:221
 msgid "Single list style"
 msgstr "Estil lista simpla"
 
-#: 4.0/contextmenu.js:187 5.8/contextmenu.js:202
+#. 4.0/contextmenu.js:187 5.8/contextmenu.js:230
 msgid "Hide hidden files"
 msgstr "Amagar los fichièrs amagats"
 
 #. 4.0->settings-schema.json->show-hidden-files->description
 #. 5.8->settings-schema.json->show-hidden-files->description
-#: 4.0/contextmenu.js:194 5.8/contextmenu.js:209
+#. 4.0/contextmenu.js:194 5.8/contextmenu.js:237
 msgid "Show hidden files"
 msgstr "Afichar los fichièrs amagats"
 
-#: 4.0/contextmenu.js:250 4.0/contextmenu.js:258 5.8/contextmenu.js:262
+#. 4.0/contextmenu.js:250 4.0/contextmenu.js:259 5.8/contextmenu.js:290
 msgid "Run with NVIDIA GPU"
 msgstr "Executar amb NVIDIA GPU"
 
-#: 4.0/contextmenu.js:264 5.8/contextmenu.js:275
+#. 4.0/contextmenu.js:268 5.8/contextmenu.js:303
 msgid "Add to panel"
 msgstr "Apondre al tablèu de bòrd"
 
-#: 4.0/contextmenu.js:283 5.8/contextmenu.js:296
+#. 4.0/contextmenu.js:287 5.8/contextmenu.js:324
 msgid "Add to desktop"
 msgstr "Apondre al burèu"
 
-#: 4.0/contextmenu.js:297 4.0/contextmenu.js:393 5.8/contextmenu.js:313
-#: 5.8/contextmenu.js:408
+#. 4.0/contextmenu.js:301 4.0/contextmenu.js:399 5.8/contextmenu.js:341
+#. 5.8/contextmenu.js:490
 msgid "Remove from favorites"
 msgstr "Suprimir dels favorits"
 
-#: 4.0/contextmenu.js:301 4.0/contextmenu.js:398 5.8/contextmenu.js:320
-#: 5.8/contextmenu.js:415
+#. 4.0/contextmenu.js:305 4.0/contextmenu.js:404 5.8/contextmenu.js:348
+#. 5.8/contextmenu.js:497
 msgid "Add to favorites"
 msgstr "Apondre als favorits"
 
-#: 4.0/contextmenu.js:308 5.8/contextmenu.js:330
+#. 4.0/contextmenu.js:312 5.8/contextmenu.js:358
 msgid "Uninstall"
 msgstr "Desinstallar"
 
-#: 4.0/contextmenu.js:316 5.8/contextmenu.js:341
+#. 4.0/contextmenu.js:322 5.8/contextmenu.js:368
 msgid "App Info"
 msgstr "Info aplicacion"
 
-#: 4.0/contextmenu.js:325 5.8/contextmenu.js:350
+#. 4.0/contextmenu.js:331 5.8/contextmenu.js:377
 msgid "Properties"
 msgstr "Proprietats"
 
-#: 4.0/contextmenu.js:343 5.8/contextmenu.js:368
+#. 4.0/contextmenu.js:349 5.8/contextmenu.js:450
 msgid "This file is no longer available"
 msgstr "Aqueste fichièr es pas mai disponible"
 
-#: 4.0/contextmenu.js:351 5.8/contextmenu.js:376
+#. 4.0/contextmenu.js:357 5.8/contextmenu.js:458
 msgid "Open with"
 msgstr "Dobrir amb"
 
-#: 4.0/contextmenu.js:372 5.8/contextmenu.js:397
+#. 4.0/contextmenu.js:378 5.8/contextmenu.js:479
 msgid "Other application..."
 msgstr "Autra aplicacion…"
 
-#: 4.0/contextmenu.js:414 5.8/contextmenu.js:428
+#. 4.0/contextmenu.js:420 5.8/contextmenu.js:510
 msgid "Add folder as category"
 msgstr "Apondre un dorsièr coma categoria"
 
-#: 4.0/contextmenu.js:431 5.8/contextmenu.js:445 4.0/search.py:48
-#: 5.8/search.py:48
+#. 4.0/contextmenu.js:437 5.8/contextmenu.js:527 4.0/search.py:48
+#. 5.8/search.py:48
 msgid "Open containing folder"
 msgstr "Dobrir lo dorsièr contenent"
 
-#: 4.0/contextmenu.js:447 4.0/contextmenu.js:460 5.8/contextmenu.js:461
-#: 5.8/contextmenu.js:474
+#. 4.0/contextmenu.js:453 4.0/contextmenu.js:466 5.8/contextmenu.js:547
+#. 5.8/contextmenu.js:560
 msgid "Move to trash"
 msgstr "Metre dins l'escobilhièr"
 
-#: 4.0/contextmenu.js:453 5.8/contextmenu.js:467
+#. 4.0/contextmenu.js:459 5.8/contextmenu.js:553
 msgid "Error while moving file to trash:"
 msgstr "Error en desplaçant de fichièrs a l’escobilhièr :"
 
-#: 4.0/emoji.js:7739 5.8/emoji.js:8
+#. 4.0/emoji.js:7739 5.8/emoji.js:8
 msgid "Smileys & Emotion"
 msgstr "Emoticònas e emocions"
 
-#: 4.0/emoji.js:7740 5.8/emoji.js:689
+#. 4.0/emoji.js:7740 5.8/emoji.js:689
 msgid "People & Body"
 msgstr "Gent e còs"
 
-#: 4.0/emoji.js:7741 5.8/emoji.js:2253
+#. 4.0/emoji.js:7741 5.8/emoji.js:2253
 msgid "Animals & Nature"
 msgstr "Animals e natura"
 
-#: 4.0/emoji.js:7742 5.8/emoji.js:2873
+#. 4.0/emoji.js:7742 5.8/emoji.js:2873
 msgid "Food & Drink"
 msgstr "Beure e manjar"
 
-#: 4.0/emoji.js:7743 5.8/emoji.js:3421
+#. 4.0/emoji.js:7743 5.8/emoji.js:3421
 msgid "Travel & Places"
 msgstr "Viatges e luòcs"
 
-#: 4.0/emoji.js:7744 5.8/emoji.js:4297
+#. 4.0/emoji.js:7744 5.8/emoji.js:4297
 msgid "Activities"
 msgstr "Activitats"
 
-#: 4.0/emoji.js:7745 5.8/emoji.js:4641
+#. 4.0/emoji.js:7745 5.8/emoji.js:4641
 msgid "Objects"
 msgstr "Objèctes"
 
-#: 4.0/emoji.js:7746 5.8/emoji.js:5701
+#. 4.0/emoji.js:7746 5.8/emoji.js:5701
 msgid "Symbols"
 msgstr "Simbòls"
 
-#: 4.0/emoji.js:7747 5.8/emoji.js:6601
+#. 4.0/emoji.js:7747 5.8/emoji.js:6601
 msgid "Flags"
 msgstr "Drapèls"
 
-#: 4.0/sidebar.js:251 5.8/sidebar.js:265
+#. 4.0/sidebar.js:251 5.8/sidebar.js:266
 msgid "Quit"
 msgstr "Quitar"
 
-#: 4.0/sidebar.js:252 5.8/sidebar.js:266
+#. 4.0/sidebar.js:252 5.8/sidebar.js:267
 msgid "Shutdown the computer"
 msgstr "Atudar l’ordenador"
 
-#: 4.0/sidebar.js:260 5.8/sidebar.js:275
+#. 4.0/sidebar.js:260 5.8/sidebar.js:277
 msgid "Logout"
 msgstr "Se desconnectar"
 
-#: 4.0/sidebar.js:261 5.8/sidebar.js:276
+#. 4.0/sidebar.js:261 5.8/sidebar.js:278
 msgid "Leave the session"
 msgstr "Tampar la session"
 
-#: 4.0/sidebar.js:269 5.8/sidebar.js:285
+#. 4.0/sidebar.js:269 5.8/sidebar.js:287
 msgid "Lock screen"
 msgstr "Verrolhar l'ecran"
 
-#: 4.0/sidebar.js:270 5.8/sidebar.js:286
+#. 4.0/sidebar.js:270 5.8/sidebar.js:288
 msgid "Lock the screen"
 msgstr "Verrolhar l'ecran"
 
-#: 5.8/applet.js:1164
+#. 5.8/applet.js:1032
+#, fuzzy
+msgid "Loading..."
+msgstr "Recèrca..."
+
+#. 5.8/applet.js:1218
 msgid "Files"
 msgstr "Fichièrs"
 
-#: 5.8/applet.js:1194 5.8/applet.js:1200
+#. 5.8/applet.js:1248 5.8/applet.js:1254
 msgid "Calculator: "
 msgstr "Calculadoira : "
 
-#: 5.8/applet.js:1375 5.8/applet.js:1872
+#. 5.8/applet.js:1429 5.8/applet.js:1956
 msgid "Click to insert emoji"
-msgstr "Clicar per inserir un emoji"
+msgstr ""
 
-#: 4.0/mint-remove-application.py:34
+#. 5.8/applet.js:1926
+msgid "Back"
+msgstr ""
+
+#. 4.0/mint-remove-application.py:34
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
@@ -322,26 +332,26 @@ msgstr ""
 "Aqueste menú es pas associat a cap de paquet. Lo volètz tirar del menú "
 "malgrat tot ?"
 
-#: 4.0/mint-remove-application.py:75
+#. 4.0/mint-remove-application.py:75
 msgid "The following packages will be removed:"
 msgstr "Los paquets seguents seràn tirats :"
 
-#: 4.0/mint-remove-application.py:82
+#. 4.0/mint-remove-application.py:82
 msgid "Packages to be removed"
 msgstr "Paquets de suprimir"
 
-#: 4.0/mint-remove-application.py:143
+#. 4.0/mint-remove-application.py:143
 #, python-format
 msgid "Cannot remove package %s as it is required by other packages."
 msgstr ""
 "Impossible de tirar lo paquet %s estant qu'es requerit per d’autres paquets."
 
-#: 4.0/mint-remove-application.py:149
+#. 4.0/mint-remove-application.py:149
 #, python-format
 msgid "Package %s is a dependency of the following packages:"
 msgstr "Lo paquet %s es una dependéncias dels paquets seguents :"
 
-#: 4.0/search.py:43 5.8/search.py:43
+#. 4.0/search.py:43 5.8/search.py:43
 msgid "Open"
 msgstr "Dobrir"
 
@@ -349,67 +359,67 @@ msgstr "Dobrir"
 #. 4.0->settings-schema.json->search-search->title
 #. 5.8->settings-schema.json->search->title
 #. 5.8->settings-schema.json->search-search->title
-#: 4.0/search.py:85 5.8/search.py:85
+#. 4.0/search.py:85 5.8/search.py:85
 msgid "Search"
 msgstr "Recercar"
 
-#: 4.0/search.py:106 5.8/search.py:106
+#. 4.0/search.py:106 5.8/search.py:106
 msgid "Start in"
 msgstr "Començar per"
 
-#: 4.0/search.py:107 5.8/search.py:107
+#. 4.0/search.py:107 5.8/search.py:107
 msgid "Select a folder"
 msgstr "Seleccionar un dorsièr"
 
-#: 4.0/search.py:113 5.8/search.py:113
+#. 4.0/search.py:113 5.8/search.py:113
 msgid "Follow symlinks"
 msgstr "Seguir los ligams simbolics"
 
-#: 4.0/search.py:117 5.8/search.py:117
+#. 4.0/search.py:117 5.8/search.py:117
 msgid "Search hidden"
 msgstr "Recercar dins los repertòris amagats"
 
-#: 4.0/search.py:121 5.8/search.py:121
+#. 4.0/search.py:121 5.8/search.py:121
 msgid "Use regular expressions"
 msgstr "Utilizar d'expressions racionalas"
 
-#: 4.0/search.py:125 5.8/search.py:125
+#. 4.0/search.py:125 5.8/search.py:125
 msgid "Stop"
 msgstr "Arrestar"
 
-#: 4.0/search.py:140 5.8/search.py:140
+#. 4.0/search.py:140 5.8/search.py:140
 msgid "File"
 msgstr "Fichièr"
 
-#: 4.0/search.py:156 5.8/search.py:156
+#. 4.0/search.py:156 5.8/search.py:156
 msgid "Path"
 msgstr "Emplaçament"
 
-#: 4.0/search.py:184 5.8/search.py:184
+#. 4.0/search.py:184 5.8/search.py:184
 msgid "Searching..."
 msgstr "Recèrca..."
 
-#: 4.0/search.py:198 4.0/search.py:199 5.8/search.py:198 5.8/search.py:199
+#. 4.0/search.py:198 4.0/search.py:199 5.8/search.py:198 5.8/search.py:199
 msgid "Search Stopped"
 msgstr "Recèrca arrestada"
 
-#: 4.0/search.py:215 5.8/search.py:215
+#. 4.0/search.py:215 5.8/search.py:215
 msgid "Searching: "
 msgstr "Recèrca : "
 
-#: 4.0/search.py:220 5.8/search.py:220
+#. 4.0/search.py:220 5.8/search.py:220
 msgid "Error: insufficient permissions to read folder "
 msgstr "Error : autorizacion insufisenta per legir lo dorsièr "
 
-#: 4.0/search.py:252 5.8/search.py:252
+#. 4.0/search.py:252 5.8/search.py:252
 msgid "Search Completed"
 msgstr "Recèrca acabada"
 
-#: 4.0/search.py:259 5.8/search.py:259
+#. 4.0/search.py:259 5.8/search.py:259
 msgid "Skipping"
 msgstr "Ignorant"
 
-#: 4.0/search.py:259 5.8/search.py:259
+#. 4.0/search.py:259 5.8/search.py:259
 msgid " - directory already searched"
 msgstr " - repertòri ja furgat"
 
@@ -739,6 +749,66 @@ msgstr "Afichar las emojis dins los resultats de recèrca"
 msgid "Web search option"
 msgstr "Opcion de recèrca Web"
 
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Google"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Bing"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Baidu"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Yahoo"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Yandex"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "DuckDuckGo"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Ask"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Ecosia"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "AOL"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Startpage"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Brave"
+msgstr ""
+
+#. 4.0->settings-schema.json->web-search-option->options
+#. 5.8->settings-schema.json->web-search-option->options
+msgid "Qwant"
+msgstr ""
+
 #. 4.0->settings-schema.json->web-search-option->tooltip
 #. 5.8->settings-schema.json->web-search-option->tooltip
 msgid "Show an internet search option in search results"
@@ -805,19 +875,6 @@ msgstr ""
 "installar lo paquet gir1.2-gda-5.0 (distribucions basadas sus Debian, incl. "
 "Ubuntu e Linux Mint) o lo paquet libgda6 (distribucions basadas sus Arch) e "
 "tornar aviar vòstre ordenador."
-
-#. 4.0->settings-schema.json->enable-wikipedia-search->description
-msgid "Wikipedia search"
-msgstr "Recèrca Wikipèdia"
-
-#. 4.0->settings-schema.json->enable-wikipedia-search->tooltip
-msgid "Show some Wikipedia results"
-msgstr "Afichar qualques resultats de Wikipèdia"
-
-#. 4.0->settings-schema.json->wikipedia-language->description
-#. 4.0->settings-schema.json->wikipedia-language->tooltip
-msgid "Wikipedia language"
-msgstr "Lenga per Wikipèdia"
 
 #. 4.0->settings-schema.json->search-help->description
 #. 5.8->settings-schema.json->search-help->description
@@ -979,15 +1036,15 @@ msgstr ""
 
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Custom"
-msgstr "Personalizar"
+msgstr ""
 
 #. 5.8->settings-schema.json->web-search-custom-url->description
 msgid "URL for custom search"
-msgstr "URL per recèrca personalizada"
+msgstr ""
 
 #. 5.8->settings-schema.json->web-search-custom-url->tooltip
 msgid "Enter the URL that is prepended to the search query."
-msgstr "Picar l'URL plaçada davant los tèrmes de recèrca."
+msgstr ""
 
 #. 5.8->settings-schema.json->info2->description
 msgid ""
@@ -997,104 +1054,3 @@ msgstr ""
 "\n"
 "• Lisatz e depausatz d'aplicacions, de fichièrs e de dorsièrs sus la barra "
 "laterala."
-
-#~ msgid "Type to search..."
-#~ msgstr "Picar per cercar..."
-
-#~ msgid "No description available"
-#~ msgstr "Cap de descripcion pas disponibla"
-
-#~ msgid "Recent files"
-#~ msgstr "Fichièrs recents"
-
-#~ msgid "Bookmarks"
-#~ msgstr "Favorits"
-
-#~ msgid "gir1.2-gda-5.0 package required for Firefox and Midori bookmarks."
-#~ msgstr "paquet gir1.2-gda-5.0 requerit pels marcapaginas Firefox e Midori."
-
-#~ msgid "No recent files"
-#~ msgstr "Cap de fichièrs recents"
-
-#~ msgid "Account details"
-#~ msgstr "Detalhs del compte"
-
-#~ msgid "Grid View"
-#~ msgstr "Vista en grasilha"
-
-#~ msgid "List View"
-#~ msgstr "Vista en lista"
-
-#~ msgid "Switch to grid view"
-#~ msgstr "Passar a la vista en grasilha"
-
-#~ msgid "Switch to list view"
-#~ msgstr "Passar a la vista en lista"
-
-#~ msgid "Home"
-#~ msgstr "Repertòri personal"
-
-#~ msgid "Browse network"
-#~ msgstr "Percórrer la ret"
-
-#~ msgid "Search Providers"
-#~ msgstr "Provesidors de recèrca"
-
-#~ msgid "No search provider extensions found"
-#~ msgstr "Cap d'extension de provesidor de recèrca pas trobada"
-
-#~ msgid "Recent files settings"
-#~ msgstr "Paramètres dels fichièrs recents"
-
-#~ msgid "Enable autoscrolling in application list"
-#~ msgstr "Activar lo defilament auto dins la lista d’aplicacions"
-
-#~ msgid "Show web bookmarks"
-#~ msgstr "Afichar los marcapaginas web"
-
-#~ msgid ""
-#~ "Show your browser's web bookmarks in the menu.\n"
-#~ "Note: Install package gir1.2-gda-5.0 to read firefox bookmarks."
-#~ msgstr ""
-#~ "Afichar los marcapaginas web de vòstre navegador dins lo menú.\n"
-#~ "Nòta : installatz lo paquet gir1.2-gda-5.0 per legir los marcapaginas de "
-#~ "firefox."
-
-#~ msgid "Enable searching of open windows"
-#~ msgstr "Activar la recèrca de fenèstras dobèrtas"
-
-#~ msgid "Enable search providers"
-#~ msgstr "Activar los provesidors de recèrca"
-
-#~ msgid "Include search provider results in searches"
-#~ msgstr "Inclure los resultats de provesidors de recèrca dins las recèrcas"
-
-#~ msgid "Example Search Providers"
-#~ msgstr "Exemple de provesidors de recèrca"
-
-#~ msgid "columns"
-#~ msgstr "colomnas"
-
-#~ msgid "Number of columns in apps grid"
-#~ msgstr "Nombre de colomnas dins la grasilha d’aplicacions"
-
-#~ msgid "Show application icons"
-#~ msgstr "Afichar las icònas d’aplicacions"
-
-#~ msgid "Show category icons"
-#~ msgstr "Afichar las icònas de categorias"
-
-#~ msgid "Show application descriptions under titles"
-#~ msgstr "Afichar la descripcion de las aplicacions jol títol"
-
-#~ msgid "Show tooltips"
-#~ msgstr "Mostrar infobullas"
-
-#~ msgid "Tooltip delay"
-#~ msgstr "Relambi infobulla"
-
-#~ msgid "Use a custom menu height"
-#~ msgstr "Utilizar una nautor de menú personalizada"
-
-#~ msgid "Custom menu height (pixels)"
-#~ msgstr "Nautor del menú personalizat (pixèls)"
