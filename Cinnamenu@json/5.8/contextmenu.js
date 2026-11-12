@@ -258,6 +258,27 @@ class ContextMenu {
             this.contextMenuButtons.push(item);
         };
 
+        // Run
+        addMenuItem(new ContextMenuItem(this.applet, _('Run'), 'system-run-symbolic',
+            () => {
+                app.open_new_window(-1);
+                this.applet.menu.close();
+            }
+        ));
+        // /*
+        // Run as Root
+        addMenuItem(new ContextMenuItem(this.applet, _('Run as Root'), 'dialog-password-symbolic',
+            () => {
+                if (app.newAppShouldHighlight) {
+                    app.newAppShouldHighlight = false;
+                    this.applet.display.categoriesView.updateCategoriesShouldHighlight();
+                }
+                this.applet.recentApps.add(app.id);
+                Util.spawn([this.applet.metadata.path + '/rar.sh', app.get_app_info().get_executable()]);
+                this.applet.menu.close();
+            }
+        ));
+        // */
         //Run with NVIDIA GPU
         if (Main.gpu_offload_supported) {
             addMenuItem( new ContextMenuItem(this.applet, _('Run with NVIDIA GPU'), 'cpu',
@@ -270,6 +291,64 @@ class ContextMenu {
                     this.applet.menu.close();
                 }
             ));
+        }
+
+        this.menu.addMenuItem(new PopupSeparatorMenuItem());
+
+        // Desktop Actions
+        const appInfo = app.get_app_info();
+        const actions = appInfo.list_actions();
+
+        if (actions.length > 0) {
+            let keyFile = null;
+            const filename = appInfo.get_filename();
+
+            if (filename) {
+                try {
+                    keyFile = new GLib.KeyFile();
+                    keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
+                } catch (e) {
+                    global.logError(`Cinnamenu: Error loading desktop file ${filename}: ${e}`);
+                    keyFile = null;
+                }
+            }
+
+            for (const action of actions) {
+                let icon = null;
+
+                // Gio.DesktopAppInfo exposes the action name and launcher, but not
+                // the Icon= key from the corresponding [Desktop Action ...] group.
+                // Read it directly from the application's .desktop file.
+                if (keyFile) {
+                    try {
+                        const group = `Desktop Action ${action}`;
+                        icon = keyFile.get_string(group, 'Icon');
+                    } catch (e) {
+                        // Icon= is optional. Fall through to secondary fallbacks.
+                    }
+                }
+
+                // First fallback: Cinnamon's known desktop-action icon mapping.
+                if (!icon)
+                    icon = Util.getDesktopActionIcon(action);
+
+                // Final fallback for custom actions with no icon information.
+                if (!icon)
+                    icon = 'application-x-executable';
+
+                const label = appInfo.get_action_name(action);
+
+                addMenuItem(new ContextMenuItem(this.applet, label, icon,
+                    () => {
+                        appInfo.launch_action(
+                            action,
+                            global.create_app_launch_context()
+                        );
+                        this.applet.menu.close();
+                    }
+                ));
+            }
+            this.menu.addMenuItem(new PopupSeparatorMenuItem());
         }
 
         //Add to panel
@@ -346,6 +425,16 @@ class ContextMenu {
             ));
         }
 
+        // Edit file (Ctrl+D)
+        if (app.desktop_file_path) {
+            addMenuItem(new ContextMenuItem(this.applet, _('Edit file'), 'text-editor-symbolic',
+                () => {
+                    Util.spawn(['xdg-open', app.desktop_file_path]);
+                    this.applet.menu.close();
+                }
+            ));
+        }
+
         // Properties
         addMenuItem( new ContextMenuItem(this.applet, _('Properties'), 'document-properties-symbolic',
             () => {
@@ -353,61 +442,6 @@ class ContextMenu {
                 this.applet.menu.close();
             }
         ));
-
-        // Desktop Actions
-        const appInfo = app.get_app_info();
-        const actions = appInfo.list_actions();
-
-        if (actions.length > 0) {
-            let keyFile = null;
-            const filename = appInfo.get_filename();
-
-            if (filename) {
-                try {
-                    keyFile = new GLib.KeyFile();
-                    keyFile.load_from_file(filename, GLib.KeyFileFlags.NONE);
-                } catch (e) {
-                    global.logError(`Cinnamenu: Error loading desktop file ${filename}: ${e}`);
-                    keyFile = null;
-                }
-            }
-
-            for (const action of actions) {
-                let icon = null;
-
-                // Gio.DesktopAppInfo exposes the action name and launcher, but not
-                // the Icon= key from the corresponding [Desktop Action ...] group.
-                // Read it directly from the application's .desktop file.
-                if (keyFile) {
-                    try {
-                        const group = `Desktop Action ${action}`;
-                        icon = keyFile.get_string(group, 'Icon');
-                    } catch (e) {
-                        // Icon= is optional. Fall through to secondary fallbacks.
-                    }
-                }
-
-                // First fallback: Cinnamon's known desktop-action icon mapping.
-                if (!icon)
-                    icon = Util.getDesktopActionIcon(action);
-
-                // Final fallback for custom actions with no icon information.
-                if (!icon)
-                    icon = 'application-x-executable';
-
-                const label = appInfo.get_action_name(action);
-
-                addMenuItem(new ContextMenuItem(this.applet, label, icon,
-                    () => {
-                        appInfo.launch_action(
-                            action,
-                            global.create_app_launch_context()
-                        );
-                        this.applet.menu.close();
-                    }
-                ));
-            }
-        }
     }
 
     _populateContextMenu_files(app) {

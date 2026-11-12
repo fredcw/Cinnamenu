@@ -816,7 +816,7 @@ class CinnamenuApplet extends TextIconApplet {
                 categoryButtons[focusedCategoryIndex].selectCategory();
             }
             return Clutter.EVENT_STOP;
-        case symbol === Clutter.unicode_to_keysym("d".charCodeAt(0)) && ctrlKey:
+        case keyCode === 40 && ctrlKey:
             if (focusedAppItemExists && appButtons[focusedAppItemIndex].app.isApplication) {
                 const desktop_file_path = appButtons[focusedAppItemIndex].app.desktop_file_path;
                 Util.spawn(['xdg-open', desktop_file_path]);
@@ -825,8 +825,7 @@ class CinnamenuApplet extends TextIconApplet {
             }
             return Clutter.EVENT_PROPAGATE
         case (symbol === Clutter.KEY_KP_Enter || symbol === Clutter.KP_Enter ||
-                    symbol === Clutter.KEY_Return) && shiftKey &&
-                    GLib.getenv("XDG_SESSION_TYPE").toLowerCase() !== "wayland":
+                    symbol === Clutter.KEY_Return) && shiftKey:
             if (focusedAppItemExists && appButtons[focusedAppItemIndex].app.isApplication) {
                 appButtons[focusedAppItemIndex].activateAsRoot();
                 this.menu.close();
