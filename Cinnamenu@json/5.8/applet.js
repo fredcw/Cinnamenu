@@ -928,8 +928,8 @@ class CinnamenuApplet extends TextIconApplet {
             this.display.appsView.populate(this.listPlaces());
             break;
         case 'recents':
-            const maxItems = this.getNumberOfItemsToFitColumns(6);
-            const maxRecentApps = this.getNumberOfItemsToFitColumns(4);
+            const maxItems = this.getNumberOfItemsToFitColumns(9);
+            const maxRecentApps = this.getNumberOfItemsToFitColumns(6);
 
             this.display.appsView.populate_init();
             const recentApps = this.listRecent_apps(maxRecentApps);
@@ -1158,7 +1158,7 @@ class CinnamenuApplet extends TextIconApplet {
             }
 
             // Limit applicationResults to 6
-            applicationResults.length = Math.min(applicationResults.length, this.getNumberOfItemsToFitColumns(6));
+            applicationResults.length = Math.min(applicationResults.length, this.getNumberOfItemsToFitColumns(9));
             // Limit fileResults to 10
             fileResults.length = Math.min(fileResults.length, this.getNumberOfItemsToFitColumns(10));
 
