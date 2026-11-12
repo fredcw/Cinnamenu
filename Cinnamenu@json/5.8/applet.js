@@ -205,6 +205,9 @@ class CinnamenuApplet extends TextIconApplet {
         { key: 'show-categories',           value: 'showCategories',        cb: refreshDisplay},
         { key: 'show-places-category',      value: 'showPlaces',            cb: () => this.display.categoriesView.update() },
         { key: 'show-recents-category',     value: 'showRecents',           cb: this._onEnableRecentsChange },
+        { key: 'max-recent-apps',           value: 'maxRecentApps',         cb: null },
+        { key: 'max-recent-items',          value: 'maxRecentItems',        cb: null },
+
         { key: 'show-favorite-apps-category', value: 'showFavAppsCategory', cb: () => this.display.categoriesView.update() },
         { key: 'show-home-folder-category', value: 'showHomeFolder',        cb: this._onShowHomeFolderChange},
         { key: 'show-emoji-category',       value: 'showEmojiCategory',     cb: () => this.display.categoriesView.update() },
@@ -928,8 +931,8 @@ class CinnamenuApplet extends TextIconApplet {
             this.display.appsView.populate(this.listPlaces());
             break;
         case 'recents':
-            const maxItems = this.getNumberOfItemsToFitColumns(9);
-            const maxRecentApps = this.getNumberOfItemsToFitColumns(6);
+            const maxItems = this.getNumberOfItemsToFitColumns(this.settings.maxRecentItems ?? 6);
+            const maxRecentApps = this.getNumberOfItemsToFitColumns(this.settings.maxRecentApps ?? 4);
 
             this.display.appsView.populate_init();
             const recentApps = this.listRecent_apps(maxRecentApps);

@@ -64,6 +64,8 @@
                 "show-categories",
                 "show-places-category",
                 "show-recents-category",
+                "max-recent-apps",
+                "max-recent-items",
                 "show-favorite-apps-category",
                 "show-home-folder-category",
                 "show-emoji-category",
@@ -242,6 +244,28 @@
         "default":true,
         "description":"Show recent items",
         "tooltip":"Show recent items category in the menu"
+    },
+    "max-recent-apps": {
+        "type": "spinbutton",
+        "default": 4,
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "units": "",
+        "description": "Number of recent applications",
+        "tooltip": "Minimum of recent applications to show (fill the row)",
+        "dependency": "show-recents-category"
+    },
+    "max-recent-items": {
+        "type": "spinbutton",
+        "default": 6,
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "units": "",
+        "description": "Number of recent items",
+        "tooltip": "Minimum of recent files/items to show (fill the row)",
+        "dependency": "show-recents-category"
     },
     "show-favorite-apps-category":{
         "dependency":"show-categories",
