@@ -178,11 +178,15 @@ function readFirefoxProfiles(browser) {
 const readChromiumBookmarksFile = function(path, appInfo, thisAppletPath) {
 
     return new Promise(function(resolve, reject) {
-        const bookmarksFile = Gio.File.new_for_path(GLib.build_filenamev(
+        let bookmarksFile = Gio.File.new_for_path(GLib.build_filenamev(
                                         [GLib.get_user_config_dir(), ...path, 'Bookmarks']));
+        if (!bookmarksFile.query_exists(null)) {
+            bookmarksFile = Gio.File.new_for_path(GLib.build_filenamev(
+                                        [GLib.get_user_config_dir(), ...path, 'AccountBookmarks']));
         if (!bookmarksFile.query_exists(null)) {
             resolve([]);
             return;
+        }
         }
 
         readJSONAsync(bookmarksFile).then(function(jsonResult) {

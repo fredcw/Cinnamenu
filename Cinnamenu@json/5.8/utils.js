@@ -235,6 +235,12 @@ const getChromiumProfileDirs = function() {
                                         [GLib.get_user_config_dir(), ...path, subfolder, 'Bookmarks']));
             if (bookmarksFile.query_exists(null)) {
                 chromiumProfileDirs.push([path.concat(subfolder), appInfo]);
+            } else {
+                const bookmarksFile2 = Gio.File.new_for_path(GLib.build_filenamev(
+                                        [GLib.get_user_config_dir(), ...path, subfolder, 'AccountBookmarks']));
+                if (bookmarksFile2.query_exists(null)) {
+                    chromiumProfileDirs.push([path.concat(subfolder), appInfo]);
+                }
             }
         };
 

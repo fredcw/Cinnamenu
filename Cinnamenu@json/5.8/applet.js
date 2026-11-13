@@ -329,13 +329,10 @@ class CinnamenuApplet extends TextIconApplet {
                 if (this.settings.menuIcon === '') {
                     this.set_applet_icon_name('');
                 } else if (GLib.path_is_absolute(this.settings.menuIcon)) {
-                    const file = Gio.File.new_for_path(this.settings.menuIcon);
-                    if (file.query_exists(null)) {
                         if (this.settings.menuIcon.includes('-symbolic')) {
                             this.set_applet_icon_symbolic_path(this.settings.menuIcon);
                         } else {
                             this.set_applet_icon_path(this.settings.menuIcon);
-                        }
                     }
                 } else if (this.iconTheme.has_icon(this.settings.menuIcon)) {
                     if (this.settings.menuIcon.includes('-symbolic')) {
