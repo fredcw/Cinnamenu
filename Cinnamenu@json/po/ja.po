@@ -1,18 +1,20 @@
+# CINNAMENU
+# This file is put in the public domain.
+# jaszhix, 2017
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Cinnamenu\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
 "POT-Creation-Date: 2026-10-30 03:10+0000\n"
-"PO-Revision-Date: 2022-05-31 05:50+0100\n"
-"Last-Translator: Google translate; BALLOON a.k.a. Fu-sen. <fu-"
-"sen@shigakeiichi.com>\n"
+"PO-Revision-Date: 2026-11-11 05:50+0100\n"
+"Last-Translator: Gemini\n"
 "Language-Team: \n"
-"Language: ja_JP\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
 
 #. 4.0/applet.js:62
 msgid "Initializing"
@@ -52,7 +54,7 @@ msgstr "最近のアイテムはありません"
 
 #. 4.0/applet.js:962 5.8/applet.js:1047
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #. 4.0/applet.js:1100
 msgid "Applications and files"
@@ -81,11 +83,11 @@ msgstr "クリックしてコピー"
 
 #. 4.0/applet.js:1608 5.8/applet.js:1735
 msgid "Clear List"
-msgstr "明確なリスト"
+msgstr "リストをクリア"
 
 #. 4.0/applet.js:1645 4.0/applet.js:1646 5.8/applet.js:1772 5.8/applet.js:1773
 msgid "Trash"
-msgstr "ごみ"
+msgstr "ゴミ箱"
 
 #. 4.0/applet.js:1657 4.0/applet.js:1658 5.8/applet.js:1784 5.8/applet.js:1785
 msgid "Computer"
@@ -94,11 +96,11 @@ msgstr "コンピューター"
 #. 4.0/appsview.js:303 4.0/sidebar.js:111 5.8/appsview.js:329
 #. 5.8/sidebar.js:133
 msgid "Error while opening file:"
-msgstr "ファイルを開く際のエラー："
+msgstr "ファイルを開く際にエラーが発生しました:"
 
 #. 4.0/appsview.js:451 5.8/appsview.js:532
 msgid "Too many entries - showing first 1000 entries only"
-msgstr "エントリが多すぎます-最初の1000エントリのみを表示します"
+msgstr "エントリが多すぎます - 最初のエントリ 1000 件のみを表示しています"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
@@ -120,61 +122,59 @@ msgstr "場所"
 #. 5.8->settings-schema.json->open-on-category->options
 #. 4.0/categoriesview.js:303 5.8/categoriesview.js:319
 msgid "Recent"
-msgstr "最近"
+msgstr "履歴"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
 #. 4.0/categoriesview.js:304 5.8/categoriesview.js:320
 msgid "Favorite apps"
-msgstr "お気に入りのアプリ"
+msgstr "お気に入りアプリ"
 
 #. 4.0/contextmenu.js:111 5.8/contextmenu.js:154
 msgid "light skin tone"
-msgstr "明るい肌のトーン"
+msgstr "明るい肌色"
 
 #. 4.0/contextmenu.js:112 5.8/contextmenu.js:155
 msgid "medium-light skin tone"
-msgstr "ミディアムライトスキントーン"
+msgstr "やや明るい肌色"
 
 #. 4.0/contextmenu.js:113 5.8/contextmenu.js:156
 msgid "medium skin tone"
-msgstr "ミディアムスキントーン"
+msgstr "標準的な肌色"
 
 #. 4.0/contextmenu.js:114 5.8/contextmenu.js:157
 msgid "medium-dark skin tone"
-msgstr "ミディアムダークスキントーン"
+msgstr "やや暗い肌色"
 
 #. 4.0/contextmenu.js:115 5.8/contextmenu.js:158
 msgid "dark skin tone"
-msgstr "肌の色が濃い"
+msgstr "暗い肌色"
 
 #. 4.0/contextmenu.js:134 5.8/contextmenu.js:177
-#, fuzzy
 msgid "Remove category"
-msgstr "カテゴリの順序をリセット"
+msgstr "カテゴリを削除"
 
 #. 4.0/contextmenu.js:148 5.8/contextmenu.js:191
 msgid "Reset category order"
-msgstr "カテゴリの順序をリセット"
+msgstr "カテゴリの並び順をリセット"
 
 #. 4.0/contextmenu.js:171 5.8/contextmenu.js:214
 msgid "List settings apps separately"
-msgstr ""
+msgstr "設定アプリを個別に一覧表示する"
 
 #. 4.0/contextmenu.js:178 5.8/contextmenu.js:221
 msgid "Single list style"
-msgstr ""
+msgstr "シングルリスト形式"
 
 #. 4.0/contextmenu.js:187 5.8/contextmenu.js:230
-#, fuzzy
 msgid "Hide hidden files"
-msgstr "非表示のファイルを表示する"
+msgstr "隠しファイルを隠す"
 
 #. 4.0->settings-schema.json->show-hidden-files->description
 #. 5.8->settings-schema.json->show-hidden-files->description
 #. 4.0/contextmenu.js:194 5.8/contextmenu.js:237
 msgid "Show hidden files"
-msgstr "非表示のファイルを表示する"
+msgstr "隠しファイルを表示する"
 
 #. 4.0/contextmenu.js:250 4.0/contextmenu.js:259 5.8/contextmenu.js:290
 msgid "Run with NVIDIA GPU"
@@ -204,28 +204,27 @@ msgstr "アンインストール"
 
 #. 4.0/contextmenu.js:322 5.8/contextmenu.js:368
 msgid "App Info"
-msgstr ""
+msgstr "アプリ情報"
 
 #. 4.0/contextmenu.js:331 5.8/contextmenu.js:377
 msgid "Properties"
-msgstr ""
+msgstr "プロパティ"
 
 #. 4.0/contextmenu.js:349 5.8/contextmenu.js:450
 msgid "This file is no longer available"
-msgstr "このファイルは使用できなくなりました"
+msgstr "このファイルは利用できなくなりました"
 
 #. 4.0/contextmenu.js:357 5.8/contextmenu.js:458
 msgid "Open with"
-msgstr "で開く"
+msgstr "プログラムで開く"
 
 #. 4.0/contextmenu.js:378 5.8/contextmenu.js:479
 msgid "Other application..."
 msgstr "その他のアプリケーション..."
 
 #. 4.0/contextmenu.js:420 5.8/contextmenu.js:510
-#, fuzzy
 msgid "Add folder as category"
-msgstr "お気に入りのアプリのカテゴリを表示する"
+msgstr "フォルダをカテゴリとして追加"
 
 #. 4.0/contextmenu.js:437 5.8/contextmenu.js:527 4.0/search.py:48
 #. 5.8/search.py:48
@@ -235,55 +234,55 @@ msgstr "含まれているフォルダを開く"
 #. 4.0/contextmenu.js:453 4.0/contextmenu.js:466 5.8/contextmenu.js:547
 #. 5.8/contextmenu.js:560
 msgid "Move to trash"
-msgstr "ゴミ箱へ移動"
+msgstr "ゴミ箱に移動"
 
 #. 4.0/contextmenu.js:459 5.8/contextmenu.js:553
 msgid "Error while moving file to trash:"
-msgstr "ファイルをゴミ箱に移動中にエラーが発生しました："
+msgstr "ファイルをゴミ箱に移動中にエラーが発生しました:"
 
 #. 4.0/emoji.js:7739 5.8/emoji.js:8
 msgid "Smileys & Emotion"
-msgstr ""
+msgstr "スマイリーと感情"
 
 #. 4.0/emoji.js:7740 5.8/emoji.js:689
 msgid "People & Body"
-msgstr ""
+msgstr "人と身体"
 
 #. 4.0/emoji.js:7741 5.8/emoji.js:2253
 msgid "Animals & Nature"
-msgstr ""
+msgstr "動物と自然"
 
 #. 4.0/emoji.js:7742 5.8/emoji.js:2873
 msgid "Food & Drink"
-msgstr ""
+msgstr "食べ物と飲み物"
 
 #. 4.0/emoji.js:7743 5.8/emoji.js:3421
 msgid "Travel & Places"
-msgstr ""
+msgstr "旅行と場所"
 
 #. 4.0/emoji.js:7744 5.8/emoji.js:4297
 msgid "Activities"
-msgstr ""
+msgstr "アクティビティ"
 
 #. 4.0/emoji.js:7745 5.8/emoji.js:4641
 msgid "Objects"
-msgstr ""
+msgstr "オブジェクト"
 
 #. 4.0/emoji.js:7746 5.8/emoji.js:5701
 msgid "Symbols"
-msgstr ""
+msgstr "記号"
 
 #. 4.0/emoji.js:7747 5.8/emoji.js:6601
 msgid "Flags"
-msgstr ""
+msgstr "旗"
 
 #. 4.0/sidebar.js:251 5.8/sidebar.js:266
 msgid "Quit"
-msgstr "終了する"
+msgstr "終了"
 
 #. 4.0/sidebar.js:252 5.8/sidebar.js:267
 msgid "Shutdown the computer"
-msgstr "コンピューターを終了させて​​下さい"
+msgstr "コンピュータをシャットダウンする"
 
 #. 4.0/sidebar.js:260 5.8/sidebar.js:277
 msgid "Logout"
@@ -295,62 +294,61 @@ msgstr "セッションを終了する"
 
 #. 4.0/sidebar.js:269 5.8/sidebar.js:287
 msgid "Lock screen"
-msgstr "画面ロック"
+msgstr "画面をロック"
 
 #. 4.0/sidebar.js:270 5.8/sidebar.js:288
 msgid "Lock the screen"
 msgstr "画面をロックする"
 
 #. 5.8/applet.js:1032
-#, fuzzy
 msgid "Loading..."
-msgstr "検索中..."
+msgstr "読み込み中..."
 
 #. 5.8/applet.js:1218
 msgid "Files"
-msgstr ""
+msgstr "ファイル"
 
 #. 5.8/applet.js:1248 5.8/applet.js:1254
 msgid "Calculator: "
-msgstr ""
+msgstr "電卓: "
 
 #. 5.8/applet.js:1429 5.8/applet.js:1956
 msgid "Click to insert emoji"
-msgstr ""
+msgstr "クリックして絵文字を挿入"
 
 #. 5.8/applet.js:1926
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #. 4.0/mint-remove-application.py:34
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
 msgstr ""
-"このメニュー項目は、どのパッケージにも関連付けられていません。とにかくメ"
-"ニューから削除しますか？"
+"このメニュー項目はどのパッケージにも関連付けられていません。メニューから削除"
+"しますか?"
 
 #. 4.0/mint-remove-application.py:75
 msgid "The following packages will be removed:"
-msgstr "次のパッケージが削除されます。"
+msgstr "次のパッケージが削除されます:"
 
 #. 4.0/mint-remove-application.py:82
 msgid "Packages to be removed"
-msgstr "削除するパッケージ"
+msgstr "削除されるパッケージ"
 
 #. 4.0/mint-remove-application.py:143
 #, python-format
 msgid "Cannot remove package %s as it is required by other packages."
-msgstr "他のパッケージで必要なため、パッケージ %s を削除できません。"
+msgstr "他のパッケージから要求されているため、パッケージ %s を削除できません。"
 
 #. 4.0/mint-remove-application.py:149
 #, python-format
 msgid "Package %s is a dependency of the following packages:"
-msgstr "パッケージ %s は、次のパッケージの依存関係です。"
+msgstr "パッケージ %s は次のパッケージの依存関係です:"
 
 #. 4.0/search.py:43 5.8/search.py:43
 msgid "Open"
-msgstr "開ける"
+msgstr "開く"
 
 #. 4.0->settings-schema.json->search->title
 #. 4.0->settings-schema.json->search-search->title
@@ -358,31 +356,31 @@ msgstr "開ける"
 #. 5.8->settings-schema.json->search-search->title
 #. 4.0/search.py:85 5.8/search.py:85
 msgid "Search"
-msgstr "探す"
+msgstr "検索"
 
 #. 4.0/search.py:106 5.8/search.py:106
 msgid "Start in"
-msgstr "で開始"
+msgstr "開始フォルダ"
 
 #. 4.0/search.py:107 5.8/search.py:107
 msgid "Select a folder"
-msgstr "フォルダを選択します"
+msgstr "フォルダを選択"
 
 #. 4.0/search.py:113 5.8/search.py:113
 msgid "Follow symlinks"
-msgstr "シンボリックリンクをたどる"
+msgstr "シンボリックリンクを追跡"
 
 #. 4.0/search.py:117 5.8/search.py:117
 msgid "Search hidden"
-msgstr "非表示の検索"
+msgstr "隠しファイルを検索"
 
 #. 4.0/search.py:121 5.8/search.py:121
 msgid "Use regular expressions"
-msgstr "正規表現を使用する"
+msgstr "正規表現を使用"
 
 #. 4.0/search.py:125 5.8/search.py:125
 msgid "Stop"
-msgstr "止まる"
+msgstr "停止"
 
 #. 4.0/search.py:140 5.8/search.py:140
 msgid "File"
@@ -390,7 +388,7 @@ msgstr "ファイル"
 
 #. 4.0/search.py:156 5.8/search.py:156
 msgid "Path"
-msgstr "道"
+msgstr "パス"
 
 #. 4.0/search.py:184 5.8/search.py:184
 msgid "Searching..."
@@ -398,15 +396,15 @@ msgstr "検索中..."
 
 #. 4.0/search.py:198 4.0/search.py:199 5.8/search.py:198 5.8/search.py:199
 msgid "Search Stopped"
-msgstr "検索が停止しました"
+msgstr "検索が停止されました"
 
 #. 4.0/search.py:215 5.8/search.py:215
 msgid "Searching: "
-msgstr "検索： "
+msgstr "検索中: "
 
 #. 4.0/search.py:220 5.8/search.py:220
 msgid "Error: insufficient permissions to read folder "
-msgstr "エラー：フォルダを読み取るための十分な権限がありません "
+msgstr "エラー: フォルダを読み込む権限が不足しています "
 
 #. 4.0/search.py:252 5.8/search.py:252
 msgid "Search Completed"
@@ -414,11 +412,11 @@ msgstr "検索が完了しました"
 
 #. 4.0/search.py:259 5.8/search.py:259
 msgid "Skipping"
-msgstr "スキップ"
+msgstr "スキップ中"
 
 #. 4.0/search.py:259 5.8/search.py:259
 msgid " - directory already searched"
-msgstr " -ディレクトリはすでに検索されています"
+msgstr " - ディレクトリは既に検索済みです"
 
 #. metadata.json->name
 msgid "Cinnamenu"
@@ -429,8 +427,8 @@ msgid ""
 "A flexible menu with grid or list layout options, file browser and emoji "
 "search."
 msgstr ""
-"グリッドまたはリストのレイアウトオプション、ファイルブラウザ、絵文字検索を備"
-"えた柔軟なメニュー。"
+"グリッドまたはリストのレイアウトオプション、ファイルブラウザ、絵文字検索機能を"
+"備えた柔軟なメニュー。"
 
 #. 4.0->settings-schema.json->layout->title
 #. 4.0->settings-schema.json->menu-layout->title
@@ -442,7 +440,7 @@ msgstr "レイアウト"
 #. 4.0->settings-schema.json->behaviour->title
 #. 5.8->settings-schema.json->behaviour->title
 msgid "Behavior"
-msgstr "行動"
+msgstr "動作"
 
 #. 4.0->settings-schema.json->appearance->title
 #. 5.8->settings-schema.json->appearance->title
@@ -454,7 +452,7 @@ msgstr "外観"
 #. 5.8->settings-schema.json->tips->title
 #. 5.8->settings-schema.json->tips-section->title
 msgid "Tips"
-msgstr ""
+msgstr "ヒント"
 
 #. 4.0->settings-schema.json->menu-content->title
 #. 5.8->settings-schema.json->menu-content->title
@@ -478,7 +476,7 @@ msgstr "メニュー"
 #. 4.0->settings-schema.json->applications-view-mode->description
 #. 5.8->settings-schema.json->applications-view-mode->description
 msgid "Applications view mode"
-msgstr "アプリケーション表示モード"
+msgstr "アプリケーションの表示モード"
 
 #. 4.0->settings-schema.json->applications-view-mode->options
 #. 5.8->settings-schema.json->applications-view-mode->options
@@ -493,19 +491,17 @@ msgstr "グリッド"
 #. 4.0->settings-schema.json->applications-view-mode->tooltip
 #. 5.8->settings-schema.json->applications-view-mode->tooltip
 msgid "View applications as list or grid"
-msgstr "アプリケーションをリストまたはグリッドとして表示"
+msgstr "アプリケーションをリストまたはグリッド形式で表示します"
 
 #. 4.0->settings-schema.json->show-sidebar->description
 #. 5.8->settings-schema.json->show-sidebar->description
-#, fuzzy
 msgid "Show sidebar"
-msgstr "サイドバーにお気に入りを表示"
+msgstr "サイドバーを表示"
 
 #. 4.0->settings-schema.json->show-sidebar->tooltip
 #. 5.8->settings-schema.json->show-sidebar->tooltip
-#, fuzzy
 msgid "Show the sidebar in the menu"
-msgstr "メニューにホームフォルダのカテゴリを表示する"
+msgstr "メニューにサイドバーを表示します"
 
 #. 4.0->settings-schema.json->sidebar-placement->description
 #. 5.8->settings-schema.json->sidebar-placement->description
@@ -535,7 +531,7 @@ msgstr "右"
 #. 4.0->settings-schema.json->sidebar-placement->tooltip
 #. 5.8->settings-schema.json->sidebar-placement->tooltip
 msgid "Choose where to show the sidebar"
-msgstr "サイドバーを表示する場所を選択します"
+msgstr "サイドバーを表示する位置を選択します"
 
 #. 4.0->settings-schema.json->sidebar-favorites->description
 #. 5.8->settings-schema.json->sidebar-favorites->description
@@ -554,18 +550,17 @@ msgstr "なし"
 #. 4.0->settings-schema.json->sidebar-favorites->options
 #. 5.8->settings-schema.json->sidebar-favorites->options
 msgid "Apps only"
-msgstr ""
+msgstr "アプリのみ"
 
 #. 4.0->settings-schema.json->sidebar-favorites->options
 #. 5.8->settings-schema.json->sidebar-favorites->options
 msgid "Files only"
-msgstr ""
+msgstr "ファイルのみ"
 
 #. 4.0->settings-schema.json->sidebar-favorites->options
 #. 5.8->settings-schema.json->sidebar-favorites->options
-#, fuzzy
 msgid "Apps and files"
-msgstr "アプリケーションとファイル"
+msgstr "アプリとファイル"
 
 #. 4.0->settings-schema.json->sidebar-favorites->tooltip
 #. 5.8->settings-schema.json->sidebar-favorites->tooltip
@@ -575,7 +570,7 @@ msgstr "お気に入りのアプリとファイルのアイコンをサイドバ
 #. 4.0->settings-schema.json->description-placement->description
 #. 5.8->settings-schema.json->description-placement->description
 msgid "Application description placement"
-msgstr "アプリケーション記述の配置"
+msgstr "アプリケーション説明の配置"
 
 #. 4.0->settings-schema.json->description-placement->options
 #. 5.8->settings-schema.json->description-placement->options
@@ -590,91 +585,87 @@ msgstr "タイトルの下"
 #. 4.0->settings-schema.json->description-placement->tooltip
 #. 5.8->settings-schema.json->description-placement->tooltip
 msgid "Choose where to show application descriptions"
-msgstr "アプリケーションの説明を表示する場所を選択してください"
+msgstr "アプリケーションの説明を表示する場所を選択します"
 
 #. 4.0->settings-schema.json->show-categories->description
 #. 5.8->settings-schema.json->show-categories->description
-#, fuzzy
 msgid "Show categories"
-msgstr "カテゴリアイコンを表示する"
+msgstr "カテゴリを表示"
 
 #. 4.0->settings-schema.json->show-categories->tooltip
 #. 5.8->settings-schema.json->show-categories->tooltip
-#, fuzzy
 msgid "Show list of application categories"
-msgstr "アプリケーションアイコンを表示する"
+msgstr "アプリケーションのカテゴリ一覧を表示します"
 
 #. 4.0->settings-schema.json->show-places-category->description
 #. 5.8->settings-schema.json->show-places-category->description
 msgid "Show bookmarks and places"
-msgstr "ブックマークと場所を表示する"
+msgstr "ブックマークと場所を表示"
 
 #. 4.0->settings-schema.json->show-places-category->tooltip
 #. 5.8->settings-schema.json->show-places-category->tooltip
 msgid "Show bookmarks and places category in the menu"
-msgstr "メニューにブックマークと場所のカテゴリを表示する"
+msgstr "メニューにブックマークと場所のカテゴリを表示します"
 
 #. 4.0->settings-schema.json->show-recents-category->description
 #. 5.8->settings-schema.json->show-recents-category->description
 msgid "Show recent items"
-msgstr "最近のアイテムを表示する"
+msgstr "最近使ったアイテムを表示"
 
 #. 4.0->settings-schema.json->show-recents-category->tooltip
 #. 5.8->settings-schema.json->show-recents-category->tooltip
 msgid "Show recent items category in the menu"
-msgstr "メニューに最近のアイテムカテゴリを表示する"
+msgstr "メニューに最近使ったアイテムのカテゴリを表示します"
 
 #. 4.0->settings-schema.json->show-favorite-apps-category->description
 #. 5.8->settings-schema.json->show-favorite-apps-category->description
 msgid "Show favorite apps category"
-msgstr "お気に入りのアプリのカテゴリを表示する"
+msgstr "お気に入りアプリカテゴリを表示"
 
 #. 4.0->settings-schema.json->show-favorite-apps-category->tooltip
 #. 5.8->settings-schema.json->show-favorite-apps-category->tooltip
 msgid "Show your favorite apps category in the menu"
-msgstr "メニューにお気に入りのアプリのカテゴリを表示する"
+msgstr "メニューにお気に入りのアプリカテゴリを表示します"
 
 #. 4.0->settings-schema.json->show-home-folder-category->description
 #. 5.8->settings-schema.json->show-home-folder-category->description
 msgid "Show home folder"
-msgstr "ホームフォルダを表示する"
+msgstr "ホームフォルダを表示"
 
 #. 4.0->settings-schema.json->show-home-folder-category->tooltip
 #. 5.8->settings-schema.json->show-home-folder-category->tooltip
 msgid "Show home folder category in the menu"
-msgstr "メニューにホームフォルダのカテゴリを表示する"
+msgstr "メニューにホームフォルダカテゴリを表示します"
 
 #. 4.0->settings-schema.json->show-emoji-category->description
 #. 5.8->settings-schema.json->show-emoji-category->description
-#, fuzzy
 msgid "Show emoji category"
-msgstr "お気に入りのアプリのカテゴリを表示する"
+msgstr "絵文字カテゴリを表示"
 
 #. 4.0->settings-schema.json->show-emoji-category->tooltip
 #. 5.8->settings-schema.json->show-emoji-category->tooltip
-#, fuzzy
 msgid "Show emoji category in the menu"
-msgstr "メニューにホームフォルダのカテゴリを表示する"
+msgstr "メニューに絵文字カテゴリを表示します"
 
 #. 4.0->settings-schema.json->menu-editor-button->description
 #. 5.8->settings-schema.json->menu-editor-button->description
 msgid "Open the menu editor"
-msgstr "メニューエディタを開きます"
+msgstr "メニューエディタを開く"
 
 #. 4.0->settings-schema.json->overlay-key->description
 #. 5.8->settings-schema.json->overlay-key->description
 msgid "Keyboard shortcut to open and close the menu"
-msgstr "メニューを開いたり閉じたりするためのキーボードショートカット"
+msgstr "メニューを開閉するキーボードショートカット"
 
 #. 4.0->settings-schema.json->activate-on-hover->description
 #. 5.8->settings-schema.json->activate-on-hover->description
 msgid "Open menu on hover"
-msgstr "ホバーでメニューを開く"
+msgstr "ホバー時にメニューを開く"
 
 #. 4.0->settings-schema.json->activate-on-hover->tooltip
 #. 5.8->settings-schema.json->activate-on-hover->tooltip
 msgid "Open the menu when I move my mouse over the panel icon"
-msgstr "パネルアイコンの上にマウスを移動するとメニューが開きます"
+msgstr "マウスをパネルアイコンの上に移動したときにメニューを開きます"
 
 #. 4.0->settings-schema.json->hover-delay->units
 #. 5.8->settings-schema.json->hover-delay->units
@@ -684,42 +675,42 @@ msgstr "ミリ秒"
 #. 4.0->settings-schema.json->hover-delay->description
 #. 5.8->settings-schema.json->hover-delay->description
 msgid "Menu hover delay"
-msgstr "メニューホバー遅延"
+msgstr "メニューホバーの遅延時間"
 
 #. 4.0->settings-schema.json->enable-animation->description
 #. 5.8->settings-schema.json->enable-animation->description
 msgid "Use menu animations"
-msgstr "メニューアニメーションを使用する"
+msgstr "メニューのアニメーションを使用する"
 
 #. 4.0->settings-schema.json->enable-animation->tooltip
 #. 5.8->settings-schema.json->enable-animation->tooltip
 msgid "Animate the menu on open and close"
-msgstr "開いた状態と閉じた状態でメニューをアニメーション化する"
+msgstr "メニューの開閉時にアニメーションを再生します"
 
 #. 4.0->settings-schema.json->category-click->description
 #. 5.8->settings-schema.json->category-click->description
 msgid "Activate categories on click"
-msgstr "クリック時にカテゴリをアクティブ化"
+msgstr "クリックでカテゴリを有効にする"
 
 #. 4.0->settings-schema.json->category-click->tooltip
 #. 5.8->settings-schema.json->category-click->tooltip
 msgid "Activate categories on click instead of on hover"
-msgstr "ホバーではなくクリックでカテゴリをアクティブ化する"
+msgstr "ホバーではなくクリックでカテゴリを切り替えます"
 
 #. 4.0->settings-schema.json->open-on-category->description
 #. 5.8->settings-schema.json->open-on-category->description
 msgid "Open menu on category:"
-msgstr "カテゴリのメニューを開く："
+msgstr "指定したカテゴリでメニューを開く:"
 
 #. 4.0->settings-schema.json->open-on-category->tooltip
 #. 5.8->settings-schema.json->open-on-category->tooltip
 msgid "Always open the menu with this category selected"
-msgstr "常にこのカテゴリを選択してメニューを開いてください"
+msgstr "常にこのカテゴリが選択された状態でメニューを開きます"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
 msgid "Last used category"
-msgstr "最後に使用したカテゴリ"
+msgstr "直近で使用したカテゴリ"
 
 #. 4.0->settings-schema.json->enable-autoscroll->description
 #. 5.8->settings-schema.json->enable-autoscroll->description
@@ -729,12 +720,12 @@ msgstr "自動スクロールを有効にする"
 #. 4.0->settings-schema.json->enable-autoscroll->tooltip
 #. 5.8->settings-schema.json->enable-autoscroll->tooltip
 msgid "Autoscroll the application list on mouse hover"
-msgstr "マウスホバーでアプリケーションリストを自動スクロールします"
+msgstr "マウスホバー時にアプリケーションリストを自動スクロールします"
 
 #. 4.0->settings-schema.json->show-hidden-files->tooltip
 #. 5.8->settings-schema.json->show-hidden-files->tooltip
 msgid "Show hidden files in folder view"
-msgstr "フォルダビューで非表示のファイルを表示する"
+msgstr "フォルダ表示で隠しファイルを表示する"
 
 #. 4.0->settings-schema.json->enable-emoji-search->description
 #. 5.8->settings-schema.json->enable-emoji-search->description
@@ -749,78 +740,77 @@ msgstr "検索結果に絵文字を表示する"
 #. 4.0->settings-schema.json->web-search-option->description
 #. 5.8->settings-schema.json->web-search-option->description
 msgid "Web search option"
-msgstr "Web検索オプション"
+msgstr "ウェブ検索オプション"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Bing"
-msgstr ""
+msgstr "Bing"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Baidu"
-msgstr ""
+msgstr "Baidu"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Yandex"
-msgstr ""
+msgstr "Yandex"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "DuckDuckGo"
-msgstr ""
+msgstr "DuckDuckGo"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Ask"
-msgstr ""
+msgstr "Ask"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Ecosia"
-msgstr ""
+msgstr "Ecosia"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "AOL"
-msgstr ""
+msgstr "AOL"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Startpage"
-msgstr ""
+msgstr "Startpage"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Brave"
-msgstr ""
+msgstr "Brave"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Qwant"
-msgstr ""
+msgstr "Qwant"
 
 #. 4.0->settings-schema.json->web-search-option->tooltip
 #. 5.8->settings-schema.json->web-search-option->tooltip
 msgid "Show an internet search option in search results"
-msgstr "検索結果にインターネット検索オプションを表示する"
+msgstr "検索結果にインターネット検索オプションを表示します"
 
 #. 4.0->settings-schema.json->web-suggestions->description
 #. 5.8->settings-schema.json->web-suggestions->description
-#, fuzzy
 msgid "Web search suggestions"
-msgstr "Web検索オプション"
+msgstr "ウェブ検索のサジェスト"
 
 #. 4.0->settings-schema.json->web-suggestions->tooltip
 #. 5.8->settings-schema.json->web-suggestions->tooltip
@@ -828,6 +818,8 @@ msgid ""
 "With web search option, also show search suggestions. (Note: Search "
 "suggestions are provided by DuckDuckGo)"
 msgstr ""
+"ウェブ検索オプションと一緒に検索サジェストも表示します。(注意: 検索サジェスト"
+"は DuckDuckGo によって提供されます)"
 
 #. 4.0->settings-schema.json->enable-home-folder-search->description
 #. 5.8->settings-schema.json->enable-home-folder-search->description
@@ -837,12 +829,12 @@ msgstr "ホームフォルダを検索"
 #. 4.0->settings-schema.json->enable-home-folder-search->tooltip
 #. 5.8->settings-schema.json->enable-home-folder-search->tooltip
 msgid "When searching, also search my home folder for files"
-msgstr "検索するときは、ホームフォルダでファイルも検索してください"
+msgstr "検索時にホームフォルダ内のファイルも検索対象にします"
 
 #. 4.0->settings-schema.json->enable-web-history-search->description
 #. 5.8->settings-schema.json->enable-web-history-search->description
 msgid "Web history search"
-msgstr "Web履歴検索"
+msgstr "ウェブ履歴の検索"
 
 #. 4.0->settings-schema.json->enable-web-history-search->tooltip
 #. 5.8->settings-schema.json->enable-web-history-search->tooltip
@@ -851,14 +843,13 @@ msgid ""
 "Opera, Vivaldi, Brave)\n"
 "Note: Firefox/LibreWolf history is not currently supported."
 msgstr ""
-"検索するときは、ブラウザの履歴（Google Chrome、Chromium、Opera、Vivaldi、"
-"Brave）も検索してください。\n"
-"注：Firefoxの履歴は現在サポートされていません。"
+"検索時にブラウザの履歴 (Google Chrome、Chromium、Opera、Vivaldi、Brave) も検索対象にします\n"
+"注意: Firefox / LibreWolf の履歴は現在サポートされていません。"
 
 #. 4.0->settings-schema.json->enable-web-bookmarks-search->description
 #. 5.8->settings-schema.json->enable-web-bookmarks-search->description
 msgid "Web bookmarks search"
-msgstr "Webブックマーク検索"
+msgstr "ウェブブックマークの検索"
 
 #. 4.0->settings-schema.json->enable-web-bookmarks-search->tooltip
 #. 5.8->settings-schema.json->enable-web-bookmarks-search->tooltip
@@ -869,12 +860,8 @@ msgid ""
 "gir1.2-gda-5.0 (Debian based distributions inc. Ubuntu & Linux Mint) or "
 "package libgda6 (Arch based distributions) and restart your computer."
 msgstr ""
-"検索するときは、ブラウザのWebブックマーク（Google Chrome、Firefox、Chromium、"
-"Opera、Vivaldi、Brave）も検索します\n"
-"注：Firefoxブックマークを検索するには、パッケージgir1.2-gda-5.0（Debianベース"
-"のディストリビューションを含むUbuntu）をインストールする必要があります。 ＆"
-"Linux Mint）またはlibgda6（Archベースのディストリビューション）をパッケージ化"
-"して、コンピューターを再起動します。"
+"検索時にブラウザのウェブブックマーク (Google Chrome、Firefox、Chromium、Opera、Vivaldi、Brave、LibreWolf) も検索対象にします\n"
+"注意: Firefox / LibreWolf のブックマークを検索するには、パッケージ gir1.2-gda-5.0 (UbuntuやLinux MintなどのDebian系ディストリビューション) またはパッケージ libgda6 (Arch系ディストリビューション) をインストールしてコンピュータを再起動する必要があります。"
 
 #. 4.0->settings-schema.json->search-help->description
 #. 5.8->settings-schema.json->search-help->description
@@ -887,11 +874,8 @@ msgid ""
 "for web bookmarks search.\n"
 msgstr ""
 "\n"
-"注：ここで検索語の前に付けることで有効にしていない場合でも、一部の検索オプ"
-"ションを使用できます。\n"
-"例：絵文字を検索するには、「eheart」と入力してハートの絵文字を検索します。同"
-"様に、ファイル検索にはプレフィックス「f」、Web履歴には「h」、Webブックマーク"
-"検索には「b」を使用します。\n"
+"注意: ここで有効にしていない検索オプションでも、検索語句の前にプレフィックスを付けることで利用できる場合があります。\n"
+"例: 絵文字を検索するには 'e heart' と入力してハートの絵文字を探します。同様に、ファイル検索には 'f '、ウェブ履歴には 'h '、ウェブブックマーク検索には 'b ' のプレフィックスを使用します。\n"
 
 #. 4.0->settings-schema.json->menu-icon-custom->description
 #. 5.8->settings-schema.json->menu-icon-custom->description
@@ -901,7 +885,7 @@ msgstr "カスタムアイコンを使用する"
 #. 4.0->settings-schema.json->menu-icon-custom->tooltip
 #. 5.8->settings-schema.json->menu-icon-custom->tooltip
 msgid "Use a custom icon in the panel"
-msgstr "パネルでカスタムアイコンを使用する"
+msgstr "パネルにカスタムアイコンを使用します"
 
 #. 4.0->settings-schema.json->menu-icon->description
 #. 4.0->settings-schema.json->menu-icon->tooltip
@@ -918,12 +902,12 @@ msgstr "カスタムアイコンサイズを使用する"
 #. 4.0->settings-schema.json->menu-icon-size-custom->tooltip
 #. 5.8->settings-schema.json->menu-icon-size-custom->tooltip
 msgid "Use a custom size for the panel icon"
-msgstr "パネルアイコンにカスタムサイズを使用する"
+msgstr "パネルアイコンにカスタムサイズを使用します"
 
 #. 4.0->settings-schema.json->menu-icon-size->description
 #. 5.8->settings-schema.json->menu-icon-size->description
 msgid "Panel icon size (pixels)"
-msgstr "パネルアイコンのサイズ（ピクセル）"
+msgstr "パネルアイコンのサイズ (ピクセル)"
 
 #. 4.0->settings-schema.json->menu-icon-size->tooltip
 #. 5.8->settings-schema.json->menu-icon-size->tooltip
@@ -945,38 +929,38 @@ msgstr "パネルアイコンの横に表示するテキスト"
 #. 5.8->settings-schema.json->category-icon-size->description
 #. 5.8->settings-schema.json->category-icon-size->tooltip
 msgid "Category icon size (pixels)"
-msgstr "カテゴリアイコンのサイズ（ピクセル）"
+msgstr "カテゴリアイコンのサイズ (ピクセル)"
 
 #. 4.0->settings-schema.json->apps-list-icon-size->description
 #. 4.0->settings-schema.json->apps-list-icon-size->tooltip
 #. 5.8->settings-schema.json->apps-list-icon-size->description
 #. 5.8->settings-schema.json->apps-list-icon-size->tooltip
 msgid "Applications list icon size (pixels)"
-msgstr "アプリケーションリストのアイコンサイズ（ピクセル）"
+msgstr "アプリケーションリストアイコンのサイズ (ピクセル)"
 
 #. 4.0->settings-schema.json->apps-grid-icon-size->description
 #. 4.0->settings-schema.json->apps-grid-icon-size->tooltip
 #. 5.8->settings-schema.json->apps-grid-icon-size->description
 #. 5.8->settings-schema.json->apps-grid-icon-size->tooltip
 msgid "Applications grid icon size (pixels)"
-msgstr "アプリケーショングリッドアイコンサイズ（ピクセル）"
+msgstr "アプリケーショングリッドアイコンのサイズ (ピクセル)"
 
 #. 4.0->settings-schema.json->sidebar-icon-size->description
 #. 4.0->settings-schema.json->sidebar-icon-size->tooltip
 #. 5.8->settings-schema.json->sidebar-icon-size->description
 #. 5.8->settings-schema.json->sidebar-icon-size->tooltip
 msgid "Sidebar icon size (pixels)"
-msgstr "サイドバーアイコンのサイズ（ピクセル）"
+msgstr "サイドバーアイコンのサイズ (ピクセル)"
 
 #. 4.0->settings-schema.json->use-box-style->description
 #. 5.8->settings-schema.json->use-box-style->description
 msgid "Use sidebar box style"
-msgstr "サイドバーボックススタイルを使用"
+msgstr "サイドバーのボックススタイルを使用する"
 
 #. 4.0->settings-schema.json->use-box-style->tooltip
 #. 5.8->settings-schema.json->use-box-style->tooltip
 msgid "Use a sidebar box style"
-msgstr "サイドバーボックススタイルを使用する"
+msgstr "サイドバーのボックススタイルを使用します"
 
 #. 4.0->settings-schema.json->use-tile-style->description
 #. 5.8->settings-schema.json->use-tile-style->description
@@ -989,28 +973,26 @@ msgid ""
 "Use a tile style for the application buttons (Note: may not work on some "
 "themes)"
 msgstr ""
-"アプリケーションボタンにタイルスタイルを使用します（注：一部のテーマでは機能"
-"しない場合があります）"
+"アプリケーションボタンにタイルスタイルを使用します (注意: 一部のテーマでは動作"
+"しない場合があります)"
 
 #. 4.0->settings-schema.json->info1->description
 #. 5.8->settings-schema.json->info1->description
-#, fuzzy
 msgid ""
 "\n"
 "• Drag on the menu edge to change the menu size."
 msgstr ""
 "\n"
-"情報/ヒント：メニューの端をドラッグしてメニューサイズを変更します。\n"
+"• メニューの端をドラッグしてサイズを変更できます。"
 
 #. 4.0->settings-schema.json->info2->description
 #. 5.8->settings-schema.json->info3->description
-#, fuzzy
 msgid ""
 "\n"
 "• Drag and drop menu categories to change their order."
 msgstr ""
 "\n"
-"情報/ヒント：メニューの端をドラッグしてメニューサイズを変更します。\n"
+"• メニューカテゴリをドラッグ＆ドロップして並び順を変更できます。"
 
 #. 4.0->settings-schema.json->info3->description
 #. 5.8->settings-schema.json->info4->description
@@ -1019,6 +1001,8 @@ msgid ""
 "• Folders can be set up and removed as menu categories by right-clicking on "
 "them."
 msgstr ""
+"\n"
+"• フォルダを右クリックして、メニューカテゴリとして設定および削除できます。"
 
 #. 4.0->settings-schema.json->info4->description
 #. 5.8->settings-schema.json->info5->description
@@ -1028,24 +1012,26 @@ msgid ""
 "ctrl-d — Open .desktop file of currently highlighted app in default text "
 "editor.\n"
 msgstr ""
+"\n"
+"• その他のキー操作:\n"
+"ctrl-d — 現在選択されているアプリの .desktop ファイルをデフォルトのテキストエディタで開きます。\n"
 
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Custom"
-msgstr ""
+msgstr "カスタム"
 
 #. 5.8->settings-schema.json->web-search-custom-url->description
 msgid "URL for custom search"
-msgstr ""
+msgstr "カスタム検索の URL"
 
 #. 5.8->settings-schema.json->web-search-custom-url->tooltip
 msgid "Enter the URL that is prepended to the search query."
-msgstr ""
+msgstr "検索クエリの先頭に追加される URL を入力してください。"
 
 #. 5.8->settings-schema.json->info2->description
-#, fuzzy
 msgid ""
 "\n"
 "• Drag and drop apps, files, and folders onto the sidebar."
 msgstr ""
 "\n"
-"情報/ヒント：メニューの端をドラッグしてメニューサイズを変更します。\n"
+"• アプリ、ファイル、フォルダをサイドバーにドラッグ＆ドロップできます。"

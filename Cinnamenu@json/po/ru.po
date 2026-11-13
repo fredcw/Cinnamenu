@@ -1,16 +1,15 @@
 # CINNAMENU
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is put in the public domain.
 # jaszhix, 2017
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Cinnamenu@json 5.7\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
 "POT-Creation-Date: 2026-10-30 03:10+0000\n"
-"PO-Revision-Date: 2025-05-14 10:48+0100\n"
-"Last-Translator: yankimax <yankidevel@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 10:48+0100\n"
+"Last-Translator: Gemini>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -26,11 +25,11 @@ msgstr "Инициализация"
 
 #. 4.0/applet.js:79 5.8/applet.js:100
 msgid "Find files..."
-msgstr "Поиск файлов..."
+msgstr "Найти файлы..."
 
 #. 4.0/applet.js:294
 msgid "Please wait..."
-msgstr "Подождите, пожалуйста..."
+msgstr "Пожалуйста, подождите..."
 
 #. 4.0/applet.js:889 5.8/applet.js:962 5.8/applet.js:1215
 msgid "Applications"
@@ -46,7 +45,7 @@ msgstr "Видео"
 
 #. 4.0/applet.js:901 5.8/applet.js:974
 msgid "Images"
-msgstr "Картинки"
+msgstr "Изображения"
 
 #. 4.0/applet.js:905 5.8/applet.js:978
 msgid "Music"
@@ -54,11 +53,11 @@ msgstr "Музыка"
 
 #. 4.0/applet.js:914 5.8/applet.js:987
 msgid "No recent Items"
-msgstr "Нет последних сообщений"
+msgstr "Нет недавних элементов"
 
 #. 4.0/applet.js:962 5.8/applet.js:1047
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Параметры"
 
 #. 4.0/applet.js:1100
 msgid "Applications and files"
@@ -79,11 +78,11 @@ msgstr "История браузера"
 #. 4.0/applet.js:1112 4.0/categoriesview.js:305 5.8/applet.js:1230
 #. 5.8/categoriesview.js:321
 msgid "Emoji"
-msgstr "Смайлики"
+msgstr "Эмодзи"
 
 #. 4.0/applet.js:1166 4.0/applet.js:1305 4.0/applet.js:1808 5.8/applet.js:1277
 msgid "Click to copy"
-msgstr "Кликните, чтобы скопировать"
+msgstr "Нажмите, чтобы скопировать"
 
 #. 4.0/applet.js:1608 5.8/applet.js:1735
 msgid "Clear List"
@@ -104,7 +103,7 @@ msgstr "Ошибка при открытии файла:"
 
 #. 4.0/appsview.js:451 5.8/appsview.js:532
 msgid "Too many entries - showing first 1000 entries only"
-msgstr "Слишком много записей - показаны только первые 1000 записей"
+msgstr "Слишком много записей — показаны только первые 1000"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
@@ -126,7 +125,7 @@ msgstr "Места"
 #. 5.8->settings-schema.json->open-on-category->options
 #. 4.0/categoriesview.js:303 5.8/categoriesview.js:319
 msgid "Recent"
-msgstr "Последние"
+msgstr "Недавние"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
@@ -136,23 +135,23 @@ msgstr "Избранные приложения"
 
 #. 4.0/contextmenu.js:111 5.8/contextmenu.js:154
 msgid "light skin tone"
-msgstr "светлый тон скина"
+msgstr "светлый тон кожи"
 
 #. 4.0/contextmenu.js:112 5.8/contextmenu.js:155
 msgid "medium-light skin tone"
-msgstr "средне-светлый тон скина"
+msgstr "умеренно светлый тон кожи"
 
 #. 4.0/contextmenu.js:113 5.8/contextmenu.js:156
 msgid "medium skin tone"
-msgstr "средний тон скина"
+msgstr "средний тон кожи"
 
 #. 4.0/contextmenu.js:114 5.8/contextmenu.js:157
 msgid "medium-dark skin tone"
-msgstr "средне-темный тон скина"
+msgstr "умеренно темный тон кожи"
 
 #. 4.0/contextmenu.js:115 5.8/contextmenu.js:158
 msgid "dark skin tone"
-msgstr "темный тон скина"
+msgstr "темный тон кожи"
 
 #. 4.0/contextmenu.js:134 5.8/contextmenu.js:177
 msgid "Remove category"
@@ -160,11 +159,11 @@ msgstr "Удалить категорию"
 
 #. 4.0/contextmenu.js:148 5.8/contextmenu.js:191
 msgid "Reset category order"
-msgstr "Восстановить порядок категорий"
+msgstr "Сбросить порядок категорий"
 
 #. 4.0/contextmenu.js:171 5.8/contextmenu.js:214
 msgid "List settings apps separately"
-msgstr "Расположить настройки приложений отдельно"
+msgstr "Выводить приложения настроек отдельно"
 
 #. 4.0/contextmenu.js:178 5.8/contextmenu.js:221
 msgid "Single list style"
@@ -195,12 +194,12 @@ msgstr "Добавить на рабочий стол"
 #. 4.0/contextmenu.js:301 4.0/contextmenu.js:399 5.8/contextmenu.js:341
 #. 5.8/contextmenu.js:490
 msgid "Remove from favorites"
-msgstr "Убрать из \"Избранных\""
+msgstr "Удалить из избранного"
 
 #. 4.0/contextmenu.js:305 4.0/contextmenu.js:404 5.8/contextmenu.js:348
 #. 5.8/contextmenu.js:497
 msgid "Add to favorites"
-msgstr "Добавить в \"Избранные\""
+msgstr "Добавить в избранное"
 
 #. 4.0/contextmenu.js:312 5.8/contextmenu.js:358
 msgid "Uninstall"
@@ -208,11 +207,11 @@ msgstr "Удалить"
 
 #. 4.0/contextmenu.js:322 5.8/contextmenu.js:368
 msgid "App Info"
-msgstr "Информация"
+msgstr "Информация о приложении"
 
 #. 4.0/contextmenu.js:331 5.8/contextmenu.js:377
 msgid "Properties"
-msgstr "свойства"
+msgstr "Свойства"
 
 #. 4.0/contextmenu.js:349 5.8/contextmenu.js:450
 msgid "This file is no longer available"
@@ -224,7 +223,7 @@ msgstr "Открыть с помощью"
 
 #. 4.0/contextmenu.js:378 5.8/contextmenu.js:479
 msgid "Other application..."
-msgstr "Другие приложения..."
+msgstr "Другое приложение..."
 
 #. 4.0/contextmenu.js:420 5.8/contextmenu.js:510
 msgid "Add folder as category"
@@ -233,7 +232,7 @@ msgstr "Добавить папку как категорию"
 #. 4.0/contextmenu.js:437 5.8/contextmenu.js:527 4.0/search.py:48
 #. 5.8/search.py:48
 msgid "Open containing folder"
-msgstr "Открыть каталог содержащий"
+msgstr "Открыть родительскую папку"
 
 #. 4.0/contextmenu.js:453 4.0/contextmenu.js:466 5.8/contextmenu.js:547
 #. 5.8/contextmenu.js:560
@@ -246,27 +245,27 @@ msgstr "Ошибка при перемещении файла в корзину:
 
 #. 4.0/emoji.js:7739 5.8/emoji.js:8
 msgid "Smileys & Emotion"
-msgstr "Смайлы & Эмоции"
+msgstr "Смайлики и эмоции"
 
 #. 4.0/emoji.js:7740 5.8/emoji.js:689
 msgid "People & Body"
-msgstr "Люди & Тело"
+msgstr "Люди и тело"
 
 #. 4.0/emoji.js:7741 5.8/emoji.js:2253
 msgid "Animals & Nature"
-msgstr "Животные & Природа"
+msgstr "Животные и природа"
 
 #. 4.0/emoji.js:7742 5.8/emoji.js:2873
 msgid "Food & Drink"
-msgstr "Еда & Напитки"
+msgstr "Еда и напитки"
 
 #. 4.0/emoji.js:7743 5.8/emoji.js:3421
 msgid "Travel & Places"
-msgstr "Путешествия & Места"
+msgstr "Путешествия и места"
 
 #. 4.0/emoji.js:7744 5.8/emoji.js:4297
 msgid "Activities"
-msgstr "Активности"
+msgstr "Действия"
 
 #. 4.0/emoji.js:7745 5.8/emoji.js:4641
 msgid "Objects"
@@ -290,24 +289,23 @@ msgstr "Выключить компьютер"
 
 #. 4.0/sidebar.js:260 5.8/sidebar.js:277
 msgid "Logout"
-msgstr "Выйти"
+msgstr "Завершить сеанс"
 
 #. 4.0/sidebar.js:261 5.8/sidebar.js:278
 msgid "Leave the session"
-msgstr "Покинуть сессию"
+msgstr "Покинуть сеанс"
 
 #. 4.0/sidebar.js:269 5.8/sidebar.js:287
 msgid "Lock screen"
-msgstr "Блокировка экрана"
+msgstr "Заблокировать экран"
 
 #. 4.0/sidebar.js:270 5.8/sidebar.js:288
 msgid "Lock the screen"
 msgstr "Заблокировать экран"
 
 #. 5.8/applet.js:1032
-#, fuzzy
 msgid "Loading..."
-msgstr "Поиск..."
+msgstr "Загрузка..."
 
 #. 5.8/applet.js:1218
 msgid "Files"
@@ -319,18 +317,18 @@ msgstr "Калькулятор:"
 
 #. 5.8/applet.js:1429 5.8/applet.js:1956
 msgid "Click to insert emoji"
-msgstr ""
+msgstr "Нажмите, чтобы вставить эмодзи"
 
 #. 5.8/applet.js:1926
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #. 4.0/mint-remove-application.py:34
 msgid ""
 "This menu item is not associated to any package. Do you want to remove it "
 "from the menu anyway?"
 msgstr ""
-"Этот пункт меню не связан ни с каким пакетом. Вы все равно хотите удалить "
+"Этот элемент меню не связан ни с каким пакетом. Вы все равно хотите удалить "
 "его из меню?"
 
 #. 4.0/mint-remove-application.py:75
@@ -339,12 +337,12 @@ msgstr "Будут удалены следующие пакеты:"
 
 #. 4.0/mint-remove-application.py:82
 msgid "Packages to be removed"
-msgstr "Пакеты, подлежащие удалению"
+msgstr "Пакеты для удаления"
 
 #. 4.0/mint-remove-application.py:143
 #, python-format
 msgid "Cannot remove package %s as it is required by other packages."
-msgstr "Невозможно удалить пакет %s, так как он необходим другим пакетам."
+msgstr "Невозможно удалить пакет %s, так как он требуется другим пакетам."
 
 #. 4.0/mint-remove-application.py:149
 #, python-format
@@ -365,19 +363,19 @@ msgstr "Поиск"
 
 #. 4.0/search.py:106 5.8/search.py:106
 msgid "Start in"
-msgstr "Начать"
+msgstr "Начать в"
 
 #. 4.0/search.py:107 5.8/search.py:107
 msgid "Select a folder"
-msgstr "Выбрать каталог"
+msgstr "Выберите папку"
 
 #. 4.0/search.py:113 5.8/search.py:113
 msgid "Follow symlinks"
-msgstr "Переход по симлинкам"
+msgstr "Переходить по симлинкам"
 
 #. 4.0/search.py:117 5.8/search.py:117
 msgid "Search hidden"
-msgstr "Искать скрытые"
+msgstr "Искать в скрытых"
 
 #. 4.0/search.py:121 5.8/search.py:121
 msgid "Use regular expressions"
@@ -385,7 +383,7 @@ msgstr "Использовать регулярные выражения"
 
 #. 4.0/search.py:125 5.8/search.py:125
 msgid "Stop"
-msgstr "Стоп"
+msgstr "Остановить"
 
 #. 4.0/search.py:140 5.8/search.py:140
 msgid "File"
@@ -401,7 +399,7 @@ msgstr "Поиск..."
 
 #. 4.0/search.py:198 4.0/search.py:199 5.8/search.py:198 5.8/search.py:199
 msgid "Search Stopped"
-msgstr "Поиск прекращен"
+msgstr "Поиск остановлен"
 
 #. 4.0/search.py:215 5.8/search.py:215
 msgid "Searching: "
@@ -409,7 +407,7 @@ msgstr "Поиск: "
 
 #. 4.0/search.py:220 5.8/search.py:220
 msgid "Error: insufficient permissions to read folder "
-msgstr "Ошибка: нет прав на чтение каталога "
+msgstr "Ошибка: недостаточно прав для чтения папки "
 
 #. 4.0/search.py:252 5.8/search.py:252
 msgid "Search Completed"
@@ -417,11 +415,11 @@ msgstr "Поиск завершен"
 
 #. 4.0/search.py:259 5.8/search.py:259
 msgid "Skipping"
-msgstr "Пропустить"
+msgstr "Пропуск"
 
 #. 4.0/search.py:259 5.8/search.py:259
 msgid " - directory already searched"
-msgstr " - каталог уже был найден"
+msgstr " — каталог уже проверен"
 
 #. metadata.json->name
 msgid "Cinnamenu"
@@ -432,15 +430,15 @@ msgid ""
 "A flexible menu with grid or list layout options, file browser and emoji "
 "search."
 msgstr ""
-"Гибкое меню с вариантами компоновки в виде сетки или списка, браузером "
-"файлов и поиском по смайликам."
+"Гибкое меню с возможностью отображения в виде сетки или списка, файловым "
+"браузером и поиском эмодзи."
 
 #. 4.0->settings-schema.json->layout->title
 #. 4.0->settings-schema.json->menu-layout->title
 #. 5.8->settings-schema.json->layout->title
 #. 5.8->settings-schema.json->menu-layout->title
 msgid "Layout"
-msgstr "Внешний вид"
+msgstr "Компоновка"
 
 #. 4.0->settings-schema.json->behaviour->title
 #. 5.8->settings-schema.json->behaviour->title
@@ -457,12 +455,12 @@ msgstr "Внешний вид"
 #. 5.8->settings-schema.json->tips->title
 #. 5.8->settings-schema.json->tips-section->title
 msgid "Tips"
-msgstr "Подсказки"
+msgstr "Советы"
 
 #. 4.0->settings-schema.json->menu-content->title
 #. 5.8->settings-schema.json->menu-content->title
 msgid "Content"
-msgstr "Содержание"
+msgstr "Содержимое"
 
 #. 4.0->settings-schema.json->panel-behave->title
 #. 4.0->settings-schema.json->panel-appear->title
@@ -481,7 +479,7 @@ msgstr "Меню"
 #. 4.0->settings-schema.json->applications-view-mode->description
 #. 5.8->settings-schema.json->applications-view-mode->description
 msgid "Applications view mode"
-msgstr "Вид просмотра приложений"
+msgstr "Режим отображения приложений"
 
 #. 4.0->settings-schema.json->applications-view-mode->options
 #. 5.8->settings-schema.json->applications-view-mode->options
@@ -496,17 +494,17 @@ msgstr "Сетка"
 #. 4.0->settings-schema.json->applications-view-mode->tooltip
 #. 5.8->settings-schema.json->applications-view-mode->tooltip
 msgid "View applications as list or grid"
-msgstr "Просмотр приложений в виде списка или сетки"
+msgstr "Отображать приложения списком или сеткой"
 
 #. 4.0->settings-schema.json->show-sidebar->description
 #. 5.8->settings-schema.json->show-sidebar->description
 msgid "Show sidebar"
-msgstr "Показать боковую панель"
+msgstr "Показывать боковую панель"
 
 #. 4.0->settings-schema.json->show-sidebar->tooltip
 #. 5.8->settings-schema.json->show-sidebar->tooltip
 msgid "Show the sidebar in the menu"
-msgstr "Показать боковую панель в меню"
+msgstr "Показывать боковую панель в меню"
 
 #. 4.0->settings-schema.json->sidebar-placement->description
 #. 5.8->settings-schema.json->sidebar-placement->description
@@ -516,12 +514,12 @@ msgstr "Расположение боковой панели"
 #. 4.0->settings-schema.json->sidebar-placement->options
 #. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Top"
-msgstr "Вверху"
+msgstr "Сверху"
 
 #. 4.0->settings-schema.json->sidebar-placement->options
 #. 5.8->settings-schema.json->sidebar-placement->options
 msgid "Bottom"
-msgstr "Внизу"
+msgstr "Снизу"
 
 #. 4.0->settings-schema.json->sidebar-placement->options
 #. 5.8->settings-schema.json->sidebar-placement->options
@@ -536,7 +534,7 @@ msgstr "Справа"
 #. 4.0->settings-schema.json->sidebar-placement->tooltip
 #. 5.8->settings-schema.json->sidebar-placement->tooltip
 msgid "Choose where to show the sidebar"
-msgstr "Выбор места отображения боковой панели"
+msgstr "Выберите место отображения боковой панели"
 
 #. 4.0->settings-schema.json->sidebar-favorites->description
 #. 5.8->settings-schema.json->sidebar-favorites->description
@@ -575,12 +573,12 @@ msgstr "Показывать значки избранных приложени�
 #. 4.0->settings-schema.json->description-placement->description
 #. 5.8->settings-schema.json->description-placement->description
 msgid "Application description placement"
-msgstr "Размещение описания приложений"
+msgstr "Расположение описания приложений"
 
 #. 4.0->settings-schema.json->description-placement->options
 #. 5.8->settings-schema.json->description-placement->options
 msgid "Tooltips"
-msgstr "Всплывающие подсказки"
+msgstr "Во всплывающих подсказках"
 
 #. 4.0->settings-schema.json->description-placement->options
 #. 5.8->settings-schema.json->description-placement->options
@@ -590,12 +588,12 @@ msgstr "Под названиями"
 #. 4.0->settings-schema.json->description-placement->tooltip
 #. 5.8->settings-schema.json->description-placement->tooltip
 msgid "Choose where to show application descriptions"
-msgstr "Выбор места отображения описаний приложений"
+msgstr "Выберите, где показывать описания приложений"
 
 #. 4.0->settings-schema.json->show-categories->description
 #. 5.8->settings-schema.json->show-categories->description
 msgid "Show categories"
-msgstr "Показывать панель категорий"
+msgstr "Показывать категории"
 
 #. 4.0->settings-schema.json->show-categories->tooltip
 #. 5.8->settings-schema.json->show-categories->tooltip
@@ -610,17 +608,17 @@ msgstr "Показывать закладки и места"
 #. 4.0->settings-schema.json->show-places-category->tooltip
 #. 5.8->settings-schema.json->show-places-category->tooltip
 msgid "Show bookmarks and places category in the menu"
-msgstr "Показывать в меню закладки и категории мест"
+msgstr "Показывать категорию закладок и мест в меню"
 
 #. 4.0->settings-schema.json->show-recents-category->description
 #. 5.8->settings-schema.json->show-recents-category->description
 msgid "Show recent items"
-msgstr "Показывать последние элементы"
+msgstr "Показывать недавние элементы"
 
 #. 4.0->settings-schema.json->show-recents-category->tooltip
 #. 5.8->settings-schema.json->show-recents-category->tooltip
 msgid "Show recent items category in the menu"
-msgstr "Показывать категорию последних элементов в меню"
+msgstr "Показывать категорию недавних элементов в меню"
 
 #. 4.0->settings-schema.json->show-favorite-apps-category->description
 #. 5.8->settings-schema.json->show-favorite-apps-category->description
@@ -635,12 +633,12 @@ msgstr "Показывать категорию избранных прилож�
 #. 4.0->settings-schema.json->show-home-folder-category->description
 #. 5.8->settings-schema.json->show-home-folder-category->description
 msgid "Show home folder"
-msgstr "Показывать домашний каталог"
+msgstr "Показывать домашнюю папку"
 
 #. 4.0->settings-schema.json->show-home-folder-category->tooltip
 #. 5.8->settings-schema.json->show-home-folder-category->tooltip
 msgid "Show home folder category in the menu"
-msgstr "Показывать категорию домашнего каталога в меню"
+msgstr "Показывать категорию домашней папки в меню"
 
 #. 4.0->settings-schema.json->show-emoji-category->description
 #. 5.8->settings-schema.json->show-emoji-category->description
@@ -665,22 +663,22 @@ msgstr "Сочетание клавиш для открытия и закрыт�
 #. 4.0->settings-schema.json->activate-on-hover->description
 #. 5.8->settings-schema.json->activate-on-hover->description
 msgid "Open menu on hover"
-msgstr "Открывать меню при наведении курсора мыши"
+msgstr "Открывать меню при наведении"
 
 #. 4.0->settings-schema.json->activate-on-hover->tooltip
 #. 5.8->settings-schema.json->activate-on-hover->tooltip
 msgid "Open the menu when I move my mouse over the panel icon"
-msgstr "Открывать меню при наведении мыши на значок панели"
+msgstr "Открывать меню при наведении указателя мыши на значок панели"
 
 #. 4.0->settings-schema.json->hover-delay->units
 #. 5.8->settings-schema.json->hover-delay->units
 msgid "milliseconds"
-msgstr "миллисекунды"
+msgstr "миллисекунд"
 
 #. 4.0->settings-schema.json->hover-delay->description
 #. 5.8->settings-schema.json->hover-delay->description
 msgid "Menu hover delay"
-msgstr "Задержка при наведении на меню"
+msgstr "Задержка наведения на меню"
 
 #. 4.0->settings-schema.json->enable-animation->description
 #. 5.8->settings-schema.json->enable-animation->description
@@ -690,32 +688,32 @@ msgstr "Использовать анимацию меню"
 #. 4.0->settings-schema.json->enable-animation->tooltip
 #. 5.8->settings-schema.json->enable-animation->tooltip
 msgid "Animate the menu on open and close"
-msgstr "Анимация меню при открытии и закрытии"
+msgstr "Анимировать меню при открытии и закрытии"
 
 #. 4.0->settings-schema.json->category-click->description
 #. 5.8->settings-schema.json->category-click->description
 msgid "Activate categories on click"
-msgstr "Активация категории по щелчку мыши"
+msgstr "Активировать категории по клику"
 
 #. 4.0->settings-schema.json->category-click->tooltip
 #. 5.8->settings-schema.json->category-click->tooltip
 msgid "Activate categories on click instead of on hover"
-msgstr "Активация категорий по щелчку, а не по наведению курсора"
+msgstr "Активировать категории по клику, а не при наведении"
 
 #. 4.0->settings-schema.json->open-on-category->description
 #. 5.8->settings-schema.json->open-on-category->description
 msgid "Open menu on category:"
-msgstr "Открыть меню в категории:"
+msgstr "Открывать меню на категории:"
 
 #. 4.0->settings-schema.json->open-on-category->tooltip
 #. 5.8->settings-schema.json->open-on-category->tooltip
 msgid "Always open the menu with this category selected"
-msgstr "Всегда открывать меню с избранной категорией"
+msgstr "Всегда открывать меню с выбранной этой категорией"
 
 #. 4.0->settings-schema.json->open-on-category->options
 #. 5.8->settings-schema.json->open-on-category->options
 msgid "Last used category"
-msgstr "Последняя используемая категория"
+msgstr "Последняя использованная категория"
 
 #. 4.0->settings-schema.json->enable-autoscroll->description
 #. 5.8->settings-schema.json->enable-autoscroll->description
@@ -730,12 +728,12 @@ msgstr "Автопрокрутка списка приложений при на
 #. 4.0->settings-schema.json->show-hidden-files->tooltip
 #. 5.8->settings-schema.json->show-hidden-files->tooltip
 msgid "Show hidden files in folder view"
-msgstr "Показывать скрытые файлы в режиме просмотра каталогов"
+msgstr "Показывать скрытые файлы в режиме просмотра папок"
 
 #. 4.0->settings-schema.json->enable-emoji-search->description
 #. 5.8->settings-schema.json->enable-emoji-search->description
 msgid "Emoji search"
-msgstr "Поиск по эмодзи"
+msgstr "Поиск эмодзи"
 
 #. 4.0->settings-schema.json->enable-emoji-search->tooltip
 #. 5.8->settings-schema.json->enable-emoji-search->tooltip
@@ -745,77 +743,77 @@ msgstr "Показывать эмодзи в результатах поиска
 #. 4.0->settings-schema.json->web-search-option->description
 #. 5.8->settings-schema.json->web-search-option->description
 msgid "Web search option"
-msgstr "Опция поиска в Интернете"
+msgstr "Параметр веб-поиска"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Bing"
-msgstr ""
+msgstr "Bing"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Baidu"
-msgstr ""
+msgstr "Baidu"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Yandex"
-msgstr ""
+msgstr "Яндекс"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "DuckDuckGo"
-msgstr ""
+msgstr "DuckDuckGo"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Ask"
-msgstr ""
+msgstr "Ask"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Ecosia"
-msgstr ""
+msgstr "Ecosia"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "AOL"
-msgstr ""
+msgstr "AOL"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Startpage"
-msgstr ""
+msgstr "Startpage"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Brave"
-msgstr ""
+msgstr "Brave"
 
 #. 4.0->settings-schema.json->web-search-option->options
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Qwant"
-msgstr ""
+msgstr "Qwant"
 
 #. 4.0->settings-schema.json->web-search-option->tooltip
 #. 5.8->settings-schema.json->web-search-option->tooltip
 msgid "Show an internet search option in search results"
-msgstr "Показывать опцию поиска в Интернете в результатах поиска"
+msgstr "Показывать опцию интернет-поиска в результатах"
 
 #. 4.0->settings-schema.json->web-suggestions->description
 #. 5.8->settings-schema.json->web-suggestions->description
 msgid "Web search suggestions"
-msgstr "Предложения по поиску в Интернете"
+msgstr "Подсказки веб-поиска"
 
 #. 4.0->settings-schema.json->web-suggestions->tooltip
 #. 5.8->settings-schema.json->web-suggestions->tooltip
@@ -823,23 +821,23 @@ msgid ""
 "With web search option, also show search suggestions. (Note: Search "
 "suggestions are provided by DuckDuckGo)"
 msgstr ""
-"Вместе с выбором поиской системы, так же показываются подсказки (Примечание: "
-"Поисковые подсказки предоставлены DuckDuckGo)"
+"Вместе с опцией веб-поиска также показывать поисковые подсказки. (Примечание: "
+"Подсказки предоставляются DuckDuckGo)"
 
 #. 4.0->settings-schema.json->enable-home-folder-search->description
 #. 5.8->settings-schema.json->enable-home-folder-search->description
 msgid "Search home folder"
-msgstr "Искать в домашнем каталоге"
+msgstr "Искать в домашней папке"
 
 #. 4.0->settings-schema.json->enable-home-folder-search->tooltip
 #. 5.8->settings-schema.json->enable-home-folder-search->tooltip
 msgid "When searching, also search my home folder for files"
-msgstr "При поиске искать файлы и в домашнем каталоге"
+msgstr "При поиске также искать файлы в домашней папке"
 
 #. 4.0->settings-schema.json->enable-web-history-search->description
 #. 5.8->settings-schema.json->enable-web-history-search->description
 msgid "Web history search"
-msgstr "История веб-поиска"
+msgstr "Поиск по истории веб-сайтов"
 
 #. 4.0->settings-schema.json->enable-web-history-search->tooltip
 #. 5.8->settings-schema.json->enable-web-history-search->tooltip
@@ -848,14 +846,14 @@ msgid ""
 "Opera, Vivaldi, Brave)\n"
 "Note: Firefox/LibreWolf history is not currently supported."
 msgstr ""
-"При поиске также искать в истории браузера (Google Chrome, Chromium, Opera, "
-"Vivaldi, Brave).\n"
-"Примечание: история Firefox/LibreWolf в настоящее время не поддерживается."
+"При поиске также искать по истории браузера (Google Chrome, Chromium, "
+"Opera, Vivaldi, Brave)\n"
+"Примечание: История Firefox/LibreWolf в настоящее время не поддерживается."
 
 #. 4.0->settings-schema.json->enable-web-bookmarks-search->description
 #. 5.8->settings-schema.json->enable-web-bookmarks-search->description
 msgid "Web bookmarks search"
-msgstr "Поиск веб-закладок"
+msgstr "Поиск по закладкам веб-сайтов"
 
 #. 4.0->settings-schema.json->enable-web-bookmarks-search->tooltip
 #. 5.8->settings-schema.json->enable-web-bookmarks-search->tooltip
@@ -866,11 +864,11 @@ msgid ""
 "gir1.2-gda-5.0 (Debian based distributions inc. Ubuntu & Linux Mint) or "
 "package libgda6 (Arch based distributions) and restart your computer."
 msgstr ""
-"При поиске также искать закладки в моем браузере (Google Chrome, Firefox, "
-"Chromium, Opera, Vivaldi, Brave, LibreWolf).\n"
-"Примечание: Для поиска закладок Firefox вам необходимо установить пакет "
-"gir1.2-gda-5.0 (дистрибутивы на базе Debian, включая Ubuntu и Linux Mint) "
-"или пакет libgda (дистрибутивы на базе Arch) и перезагрузить компьютер."
+"При поиске также искать по закладкам браузера (Google Chrome, "
+"Firefox, Chromium, Opera, Vivaldi, Brave, LibreWolf)\n"
+"Примечание: Для поиска по закладкам Firefox/LibreWolf необходимо установить пакет "
+"gir1.2-gda-5.0 (дистрибутивы на базе Debian, включая Ubuntu и Linux Mint) либо "
+"пакет libgda6 (дистрибутивы на базе Arch) и перезагрузить компьютер."
 
 #. 4.0->settings-schema.json->search-help->description
 #. 5.8->settings-schema.json->search-help->description
@@ -883,38 +881,38 @@ msgid ""
 "for web bookmarks search.\n"
 msgstr ""
 "\n"
-"Примечание: Некоторые параметры поиска можно использовать, даже если вы не "
-"включали их здесь, добавив префикс к поисковому запросу.\n"
-"Например, для поиска эмодзи введите 'e heart', чтобы найти эмодзи сердца. "
-"Аналогично, используйте префиксы 'f ' для поиска файлов, 'h ' для веб-"
-"истории и 'b ' для поиска веб-закладок.\n"
+"Примечание: Некоторые поисковые опции можно использовать, даже если вы не включили "
+"их здесь, добавляя префикс к поисковому запросу.\n"
+"Например: для поиска эмодзи введите 'e heart', чтобы найти эмодзи сердца. "
+"Аналогично используйте префиксы 'f ' для поиска файлов, 'h ' для истории веб-сайтов и 'b ' "
+"для поиска по закладкам.\n"
 
 #. 4.0->settings-schema.json->menu-icon-custom->description
 #. 5.8->settings-schema.json->menu-icon-custom->description
 msgid "Use a custom icon"
-msgstr "Использовать собственную иконку"
+msgstr "Использовать свой значок"
 
 #. 4.0->settings-schema.json->menu-icon-custom->tooltip
 #. 5.8->settings-schema.json->menu-icon-custom->tooltip
 msgid "Use a custom icon in the panel"
-msgstr "Использовать собственную иконку на панели"
+msgstr "Использовать собственный значок на панели"
 
 #. 4.0->settings-schema.json->menu-icon->description
 #. 4.0->settings-schema.json->menu-icon->tooltip
 #. 5.8->settings-schema.json->menu-icon->description
 #. 5.8->settings-schema.json->menu-icon->tooltip
 msgid "Panel icon"
-msgstr "Иконка панели"
+msgstr "Значок на панели"
 
 #. 4.0->settings-schema.json->menu-icon-size-custom->description
 #. 5.8->settings-schema.json->menu-icon-size-custom->description
 msgid "Use a custom icon size"
-msgstr "Использовать настраиваемый размер значка"
+msgstr "Использовать свой размер значка"
 
 #. 4.0->settings-schema.json->menu-icon-size-custom->tooltip
 #. 5.8->settings-schema.json->menu-icon-size-custom->tooltip
 msgid "Use a custom size for the panel icon"
-msgstr "Использовать настраиваемый размер для значка панели"
+msgstr "Использовать собственный размер значка на панели"
 
 #. 4.0->settings-schema.json->menu-icon-size->description
 #. 5.8->settings-schema.json->menu-icon-size->description
@@ -924,12 +922,12 @@ msgstr "Размер значка панели (в пикселях)"
 #. 4.0->settings-schema.json->menu-icon-size->tooltip
 #. 5.8->settings-schema.json->menu-icon-size->tooltip
 msgid "Choose a custom size for the panel icon"
-msgstr "Выбор произвольного размера для значка панели"
+msgstr "Выберите произвольный размер значка панели"
 
 #. 4.0->settings-schema.json->menu-label->description
 #. 5.8->settings-schema.json->menu-label->description
 msgid "Panel text"
-msgstr "Текст панели"
+msgstr "Текст на панели"
 
 #. 4.0->settings-schema.json->menu-label->tooltip
 #. 5.8->settings-schema.json->menu-label->tooltip
@@ -941,43 +939,43 @@ msgstr "Текст, отображаемый рядом со значком па
 #. 5.8->settings-schema.json->category-icon-size->description
 #. 5.8->settings-schema.json->category-icon-size->tooltip
 msgid "Category icon size (pixels)"
-msgstr "Размер значка категории (в пикселях)"
+msgstr "Размер значков категорий (в пикселях)"
 
 #. 4.0->settings-schema.json->apps-list-icon-size->description
 #. 4.0->settings-schema.json->apps-list-icon-size->tooltip
 #. 5.8->settings-schema.json->apps-list-icon-size->description
 #. 5.8->settings-schema.json->apps-list-icon-size->tooltip
 msgid "Applications list icon size (pixels)"
-msgstr "Размер значка списка приложений (в пикселях)"
+msgstr "Размер значков списка приложений (в пикселях)"
 
 #. 4.0->settings-schema.json->apps-grid-icon-size->description
 #. 4.0->settings-schema.json->apps-grid-icon-size->tooltip
 #. 5.8->settings-schema.json->apps-grid-icon-size->description
 #. 5.8->settings-schema.json->apps-grid-icon-size->tooltip
 msgid "Applications grid icon size (pixels)"
-msgstr "Размер значка приложений сетки (в пикселях)"
+msgstr "Размер значков сетки приложений (в пикселях)"
 
 #. 4.0->settings-schema.json->sidebar-icon-size->description
 #. 4.0->settings-schema.json->sidebar-icon-size->tooltip
 #. 5.8->settings-schema.json->sidebar-icon-size->description
 #. 5.8->settings-schema.json->sidebar-icon-size->tooltip
 msgid "Sidebar icon size (pixels)"
-msgstr "Размер значка боковой панели (в пикселях)"
+msgstr "Размер значков боковой панели (в пикселях)"
 
 #. 4.0->settings-schema.json->use-box-style->description
 #. 5.8->settings-schema.json->use-box-style->description
 msgid "Use sidebar box style"
-msgstr "Использование стиля боковой панели"
+msgstr "Использовать стиль блоков боковой панели"
 
 #. 4.0->settings-schema.json->use-box-style->tooltip
 #. 5.8->settings-schema.json->use-box-style->tooltip
 msgid "Use a sidebar box style"
-msgstr "Используйте стиль боковой панели"
+msgstr "Использовать стиль блоков для боковой панели"
 
 #. 4.0->settings-schema.json->use-tile-style->description
 #. 5.8->settings-schema.json->use-tile-style->description
 msgid "Use tile style"
-msgstr "Использовать стиль плитки"
+msgstr "Использовать плиточный стиль"
 
 #. 4.0->settings-schema.json->use-tile-style->tooltip
 #. 5.8->settings-schema.json->use-tile-style->tooltip
@@ -985,8 +983,7 @@ msgid ""
 "Use a tile style for the application buttons (Note: may not work on some "
 "themes)"
 msgstr ""
-"Использовать стиль плитки для кнопок приложений (Примечание: может не "
-"работать в некоторых темах)"
+"Использовать плиточный стиль для кнопок приложений (Примечание: может не работать в некоторых темах)"
 
 #. 4.0->settings-schema.json->info1->description
 #. 5.8->settings-schema.json->info1->description
@@ -995,7 +992,7 @@ msgid ""
 "• Drag on the menu edge to change the menu size."
 msgstr ""
 "\n"
-"• Перетащите край меню, чтобы изменить его размер."
+"• Перетащите край меню для изменения его размера."
 
 #. 4.0->settings-schema.json->info2->description
 #. 5.8->settings-schema.json->info3->description
@@ -1004,7 +1001,7 @@ msgid ""
 "• Drag and drop menu categories to change their order."
 msgstr ""
 "\n"
-"• Перетаскивайте категории меню, чтобы изменить их порядок."
+"• Перетаскивайте категории меню мышкой для изменения их порядка."
 
 #. 4.0->settings-schema.json->info3->description
 #. 5.8->settings-schema.json->info4->description
@@ -1014,8 +1011,7 @@ msgid ""
 "them."
 msgstr ""
 "\n"
-"• Папки можно добавлять и удалять как категории меню, щелкая по ним правой "
-"кнопкой мыши."
+"• Папки можно настраивать и удалять в качестве категорий меню с помощью контекстного меню (правая кнопка мыши)."
 
 #. 4.0->settings-schema.json->info4->description
 #. 5.8->settings-schema.json->info5->description
@@ -1026,21 +1022,20 @@ msgid ""
 "editor.\n"
 msgstr ""
 "\n"
-"• Дополнительные комбинации клавиш:\n"
-"ctrl-d — Открыть .desktop файл текущего выделенного приложение в текстовом "
-"редакторе по умолчанию.\n"
+"• Дополнительное сочетание клавиш:\n"
+"ctrl-d — Открыть .desktop-файл выделенного приложения в текстовом редакторе по умолчанию.\n"
 
 #. 5.8->settings-schema.json->web-search-option->options
 msgid "Custom"
-msgstr ""
+msgstr "Пользовательский"
 
 #. 5.8->settings-schema.json->web-search-custom-url->description
 msgid "URL for custom search"
-msgstr ""
+msgstr "URL для пользовательского поиска"
 
 #. 5.8->settings-schema.json->web-search-custom-url->tooltip
 msgid "Enter the URL that is prepended to the search query."
-msgstr ""
+msgstr "Введите URL, который добавляется перед поисковым запросом."
 
 #. 5.8->settings-schema.json->info2->description
 msgid ""
@@ -1048,4 +1043,4 @@ msgid ""
 "• Drag and drop apps, files, and folders onto the sidebar."
 msgstr ""
 "\n"
-"• Перетащите приложения, файлы и папки на боковую панель."
+"• Перетаскивайте приложения, файлы и папки на боковую панель."

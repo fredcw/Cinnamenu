@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cinnamenu 3.2.4\n"
+"Project-Id-Version: Cinnamenu 5.7\n"
 "Report-Msgid-Bugs-To: https://github.com/linuxmint/cinnamon-spices-applets/"
 "issues\n"
 "POT-Creation-Date: 2026-11-02 21:52+0300\n"
