@@ -31,6 +31,9 @@ const REMEMBER_RECENT_KEY = 'remember-recent-files';
 const SEARCH_THRESHOLD = 0.45;
 const SidebarPlacement = Object.freeze({TOP: 0, BOTTOM: 1, LEFT: 2, RIGHT: 3});
 
+const activeInstances = new Set();
+let lastToggleTimestamp = 0;
+
 /* This graph shows the classes in which other classes are instantiated and how they are
  * acessed. e.g. to call the update() method in categoriesView from contextMenu class use:
  * this.applet.display.categoriesView.update()
@@ -145,20 +148,6 @@ class CinnamenuApplet extends TextIconApplet {
         this.screenSaverProxy = new ScreenSaverProxy();
         this.sessionManager = new GnomeSession.SessionManager();
 
-        const updateKeybinding = () => {
-            Main.keybindingManager.addHotKey(
-                'overlay-key-' + this.instance_id,
-                this.settings.overlayKey,
-                () => {
-                    if (Main.overview.visible || Main.expo.visible) return;
-                    if (!this.menu.isOpen) {
-                        this.panel.peekPanel();
-                    }
-                    this.menu.toggle_with_options(this.settings.enableAnimation);
-                }
-            );
-        };
-
         const updateActivateOnHover = () => {
             const openMenu = () => {
                 if (!this._applet_context_menu.isOpen) {
@@ -209,7 +198,7 @@ class CinnamenuApplet extends TextIconApplet {
         { key: 'show-home-folder-category', value: 'showHomeFolder',        cb: this._onShowHomeFolderChange},
         { key: 'show-emoji-category',       value: 'showEmojiCategory',     cb: () => this.display.categoriesView.update() },
 
-        { key: 'overlay-key',               value: 'overlayKey',            cb: updateKeybinding },
+        { key: 'overlay-key',               value: 'overlayKey',            cb: this._updateKeybinding },
         { key: 'activate-on-hover',         value: 'activateOnHover',       cb: updateActivateOnHover },
         { key: 'hover-delay',               value: 'hoverDelayMs',          cb: updateActivateOnHover },
         { key: 'enable-animation',          value: 'enableAnimation',       cb: null },
@@ -252,7 +241,6 @@ class CinnamenuApplet extends TextIconApplet {
         this.recentApps = new RecentApps(this);
         this._onEnableRecentsChange();
         updateActivateOnHover();
-        updateKeybinding();
         this.display = new Display(this);
         this.display.sidebar.populate();
         this.display.categoriesView.update();
@@ -270,18 +258,23 @@ class CinnamenuApplet extends TextIconApplet {
     }
 
     on_applet_added_to_panel() {
+        activeInstances.add(this);
+        this._updateKeybinding();
         this._onShowHomeFolderChange();
     }
 
     on_applet_removed_from_panel() {
+        activeInstances.delete(this);
         Main.keybindingManager.removeHotKey('overlay-key-' + this.instance_id);
+
+        this.signals.disconnectAllSignals();
+        this.display.destroy();
+        this.menu.destroy();
+
         if (!this.appletSettings) {
             return;
         }
         this.appletSettings.finalize();
-        this.signals.disconnectAllSignals();
-        this.display.destroy();
-        this.menu.destroy();
     }
 
     on_applet_clicked() {
@@ -379,6 +372,43 @@ class CinnamenuApplet extends TextIconApplet {
                 this.display.categoriesView.update();
             }
         }
+    }
+
+    _updateKeybinding() {
+        Main.keybindingManager.addHotKey(
+            'overlay-key-' + this.instance_id,
+            this.settings.overlayKey,
+            () => {
+                if (Main.overview.visible || Main.expo.visible) return;
+
+                // Debounce guard to prevent double-firing when multiple instances register the same hotkey
+                const now = Date.now();
+                if (now - lastToggleTimestamp < 50) return;
+                lastToggleTimestamp = now;
+
+                // Determine which instance sits on the monitor currently holding the mouse
+                const currentMonitor = global.screen.get_current_monitor();
+
+                // Find the instance assigned to this monitor
+                let targetInstance = null;
+                for (const instance of activeInstances) {
+                    if (instance.panel && instance.panel.monitorIndex === currentMonitor) {
+                        targetInstance = instance;
+                        break;
+                    }
+                }
+
+                // Fallback to self if no specific monitor match is found
+                if (!targetInstance) {
+                    targetInstance = this;
+                }
+
+                if (!this.menu.isOpen) {
+                    this.panel.peekPanel();
+                }
+                targetInstance.menu.toggle_with_options(targetInstance.settings.enableAnimation);
+            }
+        );
     }
 //==================================================================
     getAppIconSize() {
